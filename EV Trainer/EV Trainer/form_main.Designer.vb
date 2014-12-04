@@ -22,6 +22,7 @@ Partial Class form_main
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmb_SelectedPok = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
@@ -69,10 +70,15 @@ Partial Class form_main
         Me.btn_3 = New System.Windows.Forms.Button()
         Me.btn_2 = New System.Windows.Forms.Button()
         Me.btn_1 = New System.Windows.Forms.Button()
+        Me.ContextMenuStrip_EnemyList = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.SortByToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PokédexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.ContextMenuStrip_EnemyList.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -344,6 +350,7 @@ Partial Class form_main
         'cmb_enemy
         '
         Me.cmb_enemy.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmb_enemy.ContextMenuStrip = Me.ContextMenuStrip_EnemyList
         Me.cmb_enemy.FormattingEnabled = True
         Me.cmb_enemy.Location = New System.Drawing.Point(10, 19)
         Me.cmb_enemy.Name = "cmb_enemy"
@@ -504,6 +511,31 @@ Partial Class form_main
         Me.btn_1.Text = "× 1"
         Me.btn_1.UseVisualStyleBackColor = True
         '
+        'ContextMenuStrip_EnemyList
+        '
+        Me.ContextMenuStrip_EnemyList.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SortByToolStripMenuItem})
+        Me.ContextMenuStrip_EnemyList.Name = "ContextMenuStrip_EnemyList"
+        Me.ContextMenuStrip_EnemyList.Size = New System.Drawing.Size(112, 26)
+        '
+        'SortByToolStripMenuItem
+        '
+        Me.SortByToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PokédexToolStripMenuItem, Me.NameToolStripMenuItem})
+        Me.SortByToolStripMenuItem.Name = "SortByToolStripMenuItem"
+        Me.SortByToolStripMenuItem.Size = New System.Drawing.Size(111, 22)
+        Me.SortByToolStripMenuItem.Text = "Sort by"
+        '
+        'PokédexToolStripMenuItem
+        '
+        Me.PokédexToolStripMenuItem.Name = "PokédexToolStripMenuItem"
+        Me.PokédexToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PokédexToolStripMenuItem.Text = "Pokédex #"
+        '
+        'NameToolStripMenuItem
+        '
+        Me.NameToolStripMenuItem.Name = "NameToolStripMenuItem"
+        Me.NameToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NameToolStripMenuItem.Text = "Name"
+        '
         'form_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -527,6 +559,7 @@ Partial Class form_main
         Me.GroupBox2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.ContextMenuStrip_EnemyList.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -578,5 +611,9 @@ Partial Class form_main
     Friend WithEvents btn_3 As System.Windows.Forms.Button
     Friend WithEvents btn_2 As System.Windows.Forms.Button
     Friend WithEvents btn_1 As System.Windows.Forms.Button
+    Friend WithEvents ContextMenuStrip_EnemyList As System.Windows.Forms.ContextMenuStrip
+    Friend WithEvents SortByToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PokédexToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NameToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class
