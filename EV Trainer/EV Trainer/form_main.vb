@@ -778,4 +778,21 @@
         cmb_enemy.AutoCompleteSource = AutoCompleteSource.ListItems
     End Sub
 
+    Private Sub cmb_enemy_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_enemy.SelectedIndexChanged
+        Dim selected As String = cmb_enemy.Text
+
+        For Each i As DataRow In table.AsEnumerable()
+
+            If i(1) = selected Then
+                lb_EnemyHP.Text = i(3)
+                lb_EnemyAtk.Text = i(4)
+                lb_EnemyDef.Text = i(5)
+                lb_EnemySpAtk.Text = i(6)
+                lb_EnemySpDef.Text = i(7)
+                lb_EnemySpd.Text = i(8)
+
+                Exit For
+            End If
+        Next
+    End Sub
 End Class
