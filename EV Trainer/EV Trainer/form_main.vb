@@ -754,4 +754,27 @@
         table.Rows.Add(719, "Diancie", 270, 0, 0, 1, 0, 2, 0, 3)
 
     End Sub
+
+    Private Sub PokédexToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PokédexToolStripMenuItem.Click 'Sort list by Pokédex entry
+        pokemonList("dex")
+    End Sub
+
+    Private Sub NameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NameToolStripMenuItem.Click 'Sort list by Pokédex entry
+        pokemonList("name")
+    End Sub
+
+    Private Sub pokemonList(ByVal type As String)
+        cmb_enemy.Items.Clear()
+
+        Dim values
+
+        If type = "name" Then
+            values = table.AsEnumerable().OrderBy(Function(row) row.Field(Of String)("Name")).Select(Function(row) row.Field(Of String)("Name")).ToArray()
+        Else
+            values = table.AsEnumerable().OrderBy(Function(row) row.Field(Of Integer)("#")).Select(Function(row) row.Field(Of String)("Name")).ToArray()
+        End If
+
+        cmb_enemy.Items.AddRange(values)
+    End Sub
+
 End Class

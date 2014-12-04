@@ -516,25 +516,25 @@ Partial Class form_main
         '
         Me.ContextMenuStrip_EnemyList.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SortByToolStripMenuItem})
         Me.ContextMenuStrip_EnemyList.Name = "ContextMenuStrip_EnemyList"
-        Me.ContextMenuStrip_EnemyList.Size = New System.Drawing.Size(112, 26)
+        Me.ContextMenuStrip_EnemyList.Size = New System.Drawing.Size(153, 48)
         '
         'SortByToolStripMenuItem
         '
         Me.SortByToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PokédexToolStripMenuItem, Me.NameToolStripMenuItem})
         Me.SortByToolStripMenuItem.Name = "SortByToolStripMenuItem"
-        Me.SortByToolStripMenuItem.Size = New System.Drawing.Size(111, 22)
+        Me.SortByToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.SortByToolStripMenuItem.Text = "Sort by"
         '
         'PokédexToolStripMenuItem
         '
         Me.PokédexToolStripMenuItem.Name = "PokédexToolStripMenuItem"
-        Me.PokédexToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.PokédexToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PokédexToolStripMenuItem.Text = "Pokédex #"
         '
         'NameToolStripMenuItem
         '
         Me.NameToolStripMenuItem.Name = "NameToolStripMenuItem"
-        Me.NameToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
+        Me.NameToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.NameToolStripMenuItem.Text = "Name"
         '
         'btn_details
