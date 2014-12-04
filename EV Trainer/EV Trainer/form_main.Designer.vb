@@ -23,52 +23,52 @@ Partial Class form_main
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cmb_SelectedPok = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ABOUTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.tb_PlannedHP = New System.Windows.Forms.TextBox()
+        Me.tb_CurrentHP = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.tb_CurrentAtk = New System.Windows.Forms.TextBox()
+        Me.tb_PlannedAtk = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.tb_CurrentDef = New System.Windows.Forms.TextBox()
+        Me.tb_PlannedDef = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.tb_CurrentSpAtk = New System.Windows.Forms.TextBox()
+        Me.tb_PlannedSpAtk = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.tb_CurrentSpDef = New System.Windows.Forms.TextBox()
+        Me.tb_PlannedSpDef = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.tb_CurrentSpd = New System.Windows.Forms.TextBox()
+        Me.tb_PlannedSpd = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.FILEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SAVEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DELETESAVEFILEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.cmb_enemy = New System.Windows.Forms.ComboBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
+        Me.lb_EnemyHP = New System.Windows.Forms.Label()
+        Me.lb_EnemyAtk = New System.Windows.Forms.Label()
+        Me.lb_EnemyDef = New System.Windows.Forms.Label()
+        Me.lb_EnemySpAtk = New System.Windows.Forms.Label()
+        Me.lb_EnemySpDef = New System.Windows.Forms.Label()
+        Me.lb_EnemySpd = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btn_3 = New System.Windows.Forms.Button()
+        Me.btn_2 = New System.Windows.Forms.Button()
+        Me.btn_1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -84,13 +84,13 @@ Partial Class form_main
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Training Pokémon:"
         '
-        'ComboBox1
+        'cmb_SelectedPok
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(112, 45)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(217, 21)
-        Me.ComboBox1.TabIndex = 2
+        Me.cmb_SelectedPok.FormattingEnabled = True
+        Me.cmb_SelectedPok.Location = New System.Drawing.Point(112, 45)
+        Me.cmb_SelectedPok.Name = "cmb_SelectedPok"
+        Me.cmb_SelectedPok.Size = New System.Drawing.Size(217, 21)
+        Me.cmb_SelectedPok.TabIndex = 2
         '
         'MenuStrip1
         '
@@ -105,36 +105,36 @@ Partial Class form_main
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(47, 19)
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(47, 20)
         Me.ToolStripMenuItem1.Text = "HELP"
         '
         'ABOUTToolStripMenuItem
         '
         Me.ABOUTToolStripMenuItem.Name = "ABOUTToolStripMenuItem"
-        Me.ABOUTToolStripMenuItem.Size = New System.Drawing.Size(58, 19)
+        Me.ABOUTToolStripMenuItem.Size = New System.Drawing.Size(58, 20)
         Me.ABOUTToolStripMenuItem.Text = "ABOUT"
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.TextBox11)
-        Me.GroupBox1.Controls.Add(Me.TextBox12)
+        Me.GroupBox1.Controls.Add(Me.tb_CurrentSpd)
+        Me.GroupBox1.Controls.Add(Me.tb_PlannedSpd)
         Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.TextBox9)
-        Me.GroupBox1.Controls.Add(Me.TextBox10)
+        Me.GroupBox1.Controls.Add(Me.tb_CurrentSpDef)
+        Me.GroupBox1.Controls.Add(Me.tb_PlannedSpDef)
         Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.TextBox7)
-        Me.GroupBox1.Controls.Add(Me.TextBox8)
+        Me.GroupBox1.Controls.Add(Me.tb_CurrentSpAtk)
+        Me.GroupBox1.Controls.Add(Me.tb_PlannedSpAtk)
         Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
-        Me.GroupBox1.Controls.Add(Me.TextBox6)
+        Me.GroupBox1.Controls.Add(Me.tb_CurrentDef)
+        Me.GroupBox1.Controls.Add(Me.tb_PlannedDef)
         Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
+        Me.GroupBox1.Controls.Add(Me.tb_CurrentAtk)
+        Me.GroupBox1.Controls.Add(Me.tb_PlannedAtk)
         Me.GroupBox1.Controls.Add(Me.Label5)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.tb_CurrentHP)
+        Me.GroupBox1.Controls.Add(Me.tb_PlannedHP)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(15, 96)
         Me.GroupBox1.Name = "GroupBox1"
@@ -152,19 +152,19 @@ Partial Class form_main
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "HP"
         '
-        'TextBox1
+        'tb_PlannedHP
         '
-        Me.TextBox1.Location = New System.Drawing.Point(97, 32)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.tb_PlannedHP.Location = New System.Drawing.Point(97, 32)
+        Me.tb_PlannedHP.Name = "tb_PlannedHP"
+        Me.tb_PlannedHP.Size = New System.Drawing.Size(100, 20)
+        Me.tb_PlannedHP.TabIndex = 1
         '
-        'TextBox2
+        'tb_CurrentHP
         '
-        Me.TextBox2.Location = New System.Drawing.Point(203, 32)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 2
+        Me.tb_CurrentHP.Location = New System.Drawing.Point(203, 32)
+        Me.tb_CurrentHP.Name = "tb_CurrentHP"
+        Me.tb_CurrentHP.Size = New System.Drawing.Size(100, 20)
+        Me.tb_CurrentHP.TabIndex = 2
         '
         'Label3
         '
@@ -184,19 +184,19 @@ Partial Class form_main
         Me.Label4.TabIndex = 4
         Me.Label4.Text = "CURRENT"
         '
-        'TextBox3
+        'tb_CurrentAtk
         '
-        Me.TextBox3.Location = New System.Drawing.Point(203, 58)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 7
+        Me.tb_CurrentAtk.Location = New System.Drawing.Point(203, 58)
+        Me.tb_CurrentAtk.Name = "tb_CurrentAtk"
+        Me.tb_CurrentAtk.Size = New System.Drawing.Size(100, 20)
+        Me.tb_CurrentAtk.TabIndex = 7
         '
-        'TextBox4
+        'tb_PlannedAtk
         '
-        Me.TextBox4.Location = New System.Drawing.Point(97, 58)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 6
+        Me.tb_PlannedAtk.Location = New System.Drawing.Point(97, 58)
+        Me.tb_PlannedAtk.Name = "tb_PlannedAtk"
+        Me.tb_PlannedAtk.Size = New System.Drawing.Size(100, 20)
+        Me.tb_PlannedAtk.TabIndex = 6
         '
         'Label5
         '
@@ -207,19 +207,19 @@ Partial Class form_main
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "Attack"
         '
-        'TextBox5
+        'tb_CurrentDef
         '
-        Me.TextBox5.Location = New System.Drawing.Point(203, 84)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox5.TabIndex = 10
+        Me.tb_CurrentDef.Location = New System.Drawing.Point(203, 84)
+        Me.tb_CurrentDef.Name = "tb_CurrentDef"
+        Me.tb_CurrentDef.Size = New System.Drawing.Size(100, 20)
+        Me.tb_CurrentDef.TabIndex = 10
         '
-        'TextBox6
+        'tb_PlannedDef
         '
-        Me.TextBox6.Location = New System.Drawing.Point(97, 84)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox6.TabIndex = 9
+        Me.tb_PlannedDef.Location = New System.Drawing.Point(97, 84)
+        Me.tb_PlannedDef.Name = "tb_PlannedDef"
+        Me.tb_PlannedDef.Size = New System.Drawing.Size(100, 20)
+        Me.tb_PlannedDef.TabIndex = 9
         '
         'Label6
         '
@@ -230,19 +230,19 @@ Partial Class form_main
         Me.Label6.TabIndex = 8
         Me.Label6.Text = "Defence"
         '
-        'TextBox7
+        'tb_CurrentSpAtk
         '
-        Me.TextBox7.Location = New System.Drawing.Point(203, 110)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox7.TabIndex = 13
+        Me.tb_CurrentSpAtk.Location = New System.Drawing.Point(203, 110)
+        Me.tb_CurrentSpAtk.Name = "tb_CurrentSpAtk"
+        Me.tb_CurrentSpAtk.Size = New System.Drawing.Size(100, 20)
+        Me.tb_CurrentSpAtk.TabIndex = 13
         '
-        'TextBox8
+        'tb_PlannedSpAtk
         '
-        Me.TextBox8.Location = New System.Drawing.Point(97, 110)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox8.TabIndex = 12
+        Me.tb_PlannedSpAtk.Location = New System.Drawing.Point(97, 110)
+        Me.tb_PlannedSpAtk.Name = "tb_PlannedSpAtk"
+        Me.tb_PlannedSpAtk.Size = New System.Drawing.Size(100, 20)
+        Me.tb_PlannedSpAtk.TabIndex = 12
         '
         'Label7
         '
@@ -253,19 +253,19 @@ Partial Class form_main
         Me.Label7.TabIndex = 11
         Me.Label7.Text = "Special Attack"
         '
-        'TextBox9
+        'tb_CurrentSpDef
         '
-        Me.TextBox9.Location = New System.Drawing.Point(203, 136)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox9.TabIndex = 16
+        Me.tb_CurrentSpDef.Location = New System.Drawing.Point(203, 136)
+        Me.tb_CurrentSpDef.Name = "tb_CurrentSpDef"
+        Me.tb_CurrentSpDef.Size = New System.Drawing.Size(100, 20)
+        Me.tb_CurrentSpDef.TabIndex = 16
         '
-        'TextBox10
+        'tb_PlannedSpDef
         '
-        Me.TextBox10.Location = New System.Drawing.Point(97, 136)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox10.TabIndex = 15
+        Me.tb_PlannedSpDef.Location = New System.Drawing.Point(97, 136)
+        Me.tb_PlannedSpDef.Name = "tb_PlannedSpDef"
+        Me.tb_PlannedSpDef.Size = New System.Drawing.Size(100, 20)
+        Me.tb_PlannedSpDef.TabIndex = 15
         '
         'Label8
         '
@@ -276,19 +276,19 @@ Partial Class form_main
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "Special Defence"
         '
-        'TextBox11
+        'tb_CurrentSpd
         '
-        Me.TextBox11.Location = New System.Drawing.Point(203, 162)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox11.TabIndex = 19
+        Me.tb_CurrentSpd.Location = New System.Drawing.Point(203, 162)
+        Me.tb_CurrentSpd.Name = "tb_CurrentSpd"
+        Me.tb_CurrentSpd.Size = New System.Drawing.Size(100, 20)
+        Me.tb_CurrentSpd.TabIndex = 19
         '
-        'TextBox12
+        'tb_PlannedSpd
         '
-        Me.TextBox12.Location = New System.Drawing.Point(97, 162)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox12.TabIndex = 18
+        Me.tb_PlannedSpd.Location = New System.Drawing.Point(97, 162)
+        Me.tb_PlannedSpd.Name = "tb_PlannedSpd"
+        Me.tb_PlannedSpd.Size = New System.Drawing.Size(100, 20)
+        Me.tb_PlannedSpd.TabIndex = 18
         '
         'Label9
         '
@@ -321,19 +321,19 @@ Partial Class form_main
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.Panel1)
-        Me.GroupBox2.Controls.Add(Me.Label21)
-        Me.GroupBox2.Controls.Add(Me.Label20)
-        Me.GroupBox2.Controls.Add(Me.Label19)
-        Me.GroupBox2.Controls.Add(Me.Label18)
-        Me.GroupBox2.Controls.Add(Me.Label17)
-        Me.GroupBox2.Controls.Add(Me.Label16)
+        Me.GroupBox2.Controls.Add(Me.lb_EnemySpd)
+        Me.GroupBox2.Controls.Add(Me.lb_EnemySpDef)
+        Me.GroupBox2.Controls.Add(Me.lb_EnemySpAtk)
+        Me.GroupBox2.Controls.Add(Me.lb_EnemyDef)
+        Me.GroupBox2.Controls.Add(Me.lb_EnemyAtk)
+        Me.GroupBox2.Controls.Add(Me.lb_EnemyHP)
         Me.GroupBox2.Controls.Add(Me.Label10)
         Me.GroupBox2.Controls.Add(Me.Label11)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Controls.Add(Me.Label13)
         Me.GroupBox2.Controls.Add(Me.Label14)
         Me.GroupBox2.Controls.Add(Me.Label15)
-        Me.GroupBox2.Controls.Add(Me.ComboBox2)
+        Me.GroupBox2.Controls.Add(Me.cmb_enemy)
         Me.GroupBox2.Location = New System.Drawing.Point(15, 298)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(314, 172)
@@ -341,13 +341,14 @@ Partial Class form_main
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "BATTLED POKÉMON"
         '
-        'ComboBox2
+        'cmb_enemy
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(10, 19)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(293, 21)
-        Me.ComboBox2.TabIndex = 4
+        Me.cmb_enemy.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmb_enemy.FormattingEnabled = True
+        Me.cmb_enemy.Location = New System.Drawing.Point(10, 19)
+        Me.cmb_enemy.Name = "cmb_enemy"
+        Me.cmb_enemy.Size = New System.Drawing.Size(293, 21)
+        Me.cmb_enemy.TabIndex = 4
         '
         'Label10
         '
@@ -403,105 +404,105 @@ Partial Class form_main
         Me.Label15.TabIndex = 18
         Me.Label15.Text = "HP"
         '
-        'Label16
+        'lb_EnemyHP
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(74, 53)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(45, 13)
-        Me.Label16.TabIndex = 24
-        Me.Label16.Text = "Label16"
+        Me.lb_EnemyHP.AutoSize = True
+        Me.lb_EnemyHP.Location = New System.Drawing.Point(74, 53)
+        Me.lb_EnemyHP.Name = "lb_EnemyHP"
+        Me.lb_EnemyHP.Size = New System.Drawing.Size(45, 13)
+        Me.lb_EnemyHP.TabIndex = 24
+        Me.lb_EnemyHP.Text = "Label16"
         '
-        'Label17
+        'lb_EnemyAtk
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(74, 79)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(45, 13)
-        Me.Label17.TabIndex = 25
-        Me.Label17.Text = "Label17"
+        Me.lb_EnemyAtk.AutoSize = True
+        Me.lb_EnemyAtk.Location = New System.Drawing.Point(74, 79)
+        Me.lb_EnemyAtk.Name = "lb_EnemyAtk"
+        Me.lb_EnemyAtk.Size = New System.Drawing.Size(45, 13)
+        Me.lb_EnemyAtk.TabIndex = 25
+        Me.lb_EnemyAtk.Text = "Label17"
         '
-        'Label18
+        'lb_EnemyDef
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(74, 105)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(45, 13)
-        Me.Label18.TabIndex = 26
-        Me.Label18.Text = "Label18"
+        Me.lb_EnemyDef.AutoSize = True
+        Me.lb_EnemyDef.Location = New System.Drawing.Point(74, 105)
+        Me.lb_EnemyDef.Name = "lb_EnemyDef"
+        Me.lb_EnemyDef.Size = New System.Drawing.Size(45, 13)
+        Me.lb_EnemyDef.TabIndex = 26
+        Me.lb_EnemyDef.Text = "Label18"
         '
-        'Label19
+        'lb_EnemySpAtk
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(258, 53)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(45, 13)
-        Me.Label19.TabIndex = 27
-        Me.Label19.Text = "Label19"
+        Me.lb_EnemySpAtk.AutoSize = True
+        Me.lb_EnemySpAtk.Location = New System.Drawing.Point(258, 53)
+        Me.lb_EnemySpAtk.Name = "lb_EnemySpAtk"
+        Me.lb_EnemySpAtk.Size = New System.Drawing.Size(45, 13)
+        Me.lb_EnemySpAtk.TabIndex = 27
+        Me.lb_EnemySpAtk.Text = "Label19"
         '
-        'Label20
+        'lb_EnemySpDef
         '
-        Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(258, 79)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(45, 13)
-        Me.Label20.TabIndex = 28
-        Me.Label20.Text = "Label20"
+        Me.lb_EnemySpDef.AutoSize = True
+        Me.lb_EnemySpDef.Location = New System.Drawing.Point(258, 79)
+        Me.lb_EnemySpDef.Name = "lb_EnemySpDef"
+        Me.lb_EnemySpDef.Size = New System.Drawing.Size(45, 13)
+        Me.lb_EnemySpDef.TabIndex = 28
+        Me.lb_EnemySpDef.Text = "Label20"
         '
-        'Label21
+        'lb_EnemySpd
         '
-        Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(258, 105)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(45, 13)
-        Me.Label21.TabIndex = 29
-        Me.Label21.Text = "Label21"
+        Me.lb_EnemySpd.AutoSize = True
+        Me.lb_EnemySpd.Location = New System.Drawing.Point(258, 105)
+        Me.lb_EnemySpd.Name = "lb_EnemySpd"
+        Me.lb_EnemySpd.Size = New System.Drawing.Size(45, 13)
+        Me.lb_EnemySpd.TabIndex = 29
+        Me.lb_EnemySpd.Text = "Label21"
         '
         'Panel1
         '
         Me.Panel1.AutoSize = True
         Me.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Panel1.Controls.Add(Me.Button3)
-        Me.Panel1.Controls.Add(Me.Button2)
-        Me.Panel1.Controls.Add(Me.Button1)
+        Me.Panel1.Controls.Add(Me.btn_3)
+        Me.Panel1.Controls.Add(Me.btn_2)
+        Me.Panel1.Controls.Add(Me.btn_1)
         Me.Panel1.Location = New System.Drawing.Point(97, 130)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Padding = New System.Windows.Forms.Padding(0, 0, 6, 6)
         Me.Panel1.Size = New System.Drawing.Size(125, 42)
         Me.Panel1.TabIndex = 33
         '
-        'Button3
+        'btn_3
         '
-        Me.Button3.AutoSize = True
-        Me.Button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Button3.Location = New System.Drawing.Point(84, 10)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(32, 23)
-        Me.Button3.TabIndex = 35
-        Me.Button3.Text = "× 5"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btn_3.AutoSize = True
+        Me.btn_3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_3.Location = New System.Drawing.Point(84, 10)
+        Me.btn_3.Name = "btn_3"
+        Me.btn_3.Size = New System.Drawing.Size(32, 23)
+        Me.btn_3.TabIndex = 35
+        Me.btn_3.Text = "× 5"
+        Me.btn_3.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btn_2
         '
-        Me.Button2.AutoSize = True
-        Me.Button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Button2.Location = New System.Drawing.Point(47, 10)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(32, 23)
-        Me.Button2.TabIndex = 34
-        Me.Button2.Text = "× 2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btn_2.AutoSize = True
+        Me.btn_2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_2.Location = New System.Drawing.Point(47, 10)
+        Me.btn_2.Name = "btn_2"
+        Me.btn_2.Size = New System.Drawing.Size(32, 23)
+        Me.btn_2.TabIndex = 34
+        Me.btn_2.Text = "× 2"
+        Me.btn_2.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btn_1
         '
-        Me.Button1.AutoSize = True
-        Me.Button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Button1.Location = New System.Drawing.Point(10, 10)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(32, 23)
-        Me.Button1.TabIndex = 33
-        Me.Button1.Text = "× 1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btn_1.AutoSize = True
+        Me.btn_1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_1.Location = New System.Drawing.Point(10, 10)
+        Me.btn_1.Name = "btn_1"
+        Me.btn_1.Size = New System.Drawing.Size(32, 23)
+        Me.btn_1.TabIndex = 33
+        Me.btn_1.Text = "× 1"
+        Me.btn_1.UseVisualStyleBackColor = True
         '
         'form_main
         '
@@ -510,12 +511,14 @@ Partial Class form_main
         Me.ClientSize = New System.Drawing.Size(342, 475)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.cmb_SelectedPok)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.MaximizeBox = False
         Me.Name = "form_main"
-        Me.Text = "Form1"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "EV Counter"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -529,7 +532,7 @@ Partial Class form_main
 
     End Sub
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents cmb_SelectedPok As System.Windows.Forms.ComboBox
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ABOUTToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
@@ -537,43 +540,43 @@ Partial Class form_main
     Friend WithEvents SAVEToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DELETESAVEFILEToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
+    Friend WithEvents tb_CurrentSpd As System.Windows.Forms.TextBox
+    Friend WithEvents tb_PlannedSpd As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
+    Friend WithEvents tb_CurrentSpDef As System.Windows.Forms.TextBox
+    Friend WithEvents tb_PlannedSpDef As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
+    Friend WithEvents tb_CurrentSpAtk As System.Windows.Forms.TextBox
+    Friend WithEvents tb_PlannedSpAtk As System.Windows.Forms.TextBox
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
+    Friend WithEvents tb_CurrentDef As System.Windows.Forms.TextBox
+    Friend WithEvents tb_PlannedDef As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents tb_CurrentAtk As System.Windows.Forms.TextBox
+    Friend WithEvents tb_PlannedAtk As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents tb_CurrentHP As System.Windows.Forms.TextBox
+    Friend WithEvents tb_PlannedHP As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents Label21 As System.Windows.Forms.Label
-    Friend WithEvents Label20 As System.Windows.Forms.Label
-    Friend WithEvents Label19 As System.Windows.Forms.Label
-    Friend WithEvents Label18 As System.Windows.Forms.Label
-    Friend WithEvents Label17 As System.Windows.Forms.Label
-    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents lb_EnemySpd As System.Windows.Forms.Label
+    Friend WithEvents lb_EnemySpDef As System.Windows.Forms.Label
+    Friend WithEvents lb_EnemySpAtk As System.Windows.Forms.Label
+    Friend WithEvents lb_EnemyDef As System.Windows.Forms.Label
+    Friend WithEvents lb_EnemyAtk As System.Windows.Forms.Label
+    Friend WithEvents lb_EnemyHP As System.Windows.Forms.Label
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label13 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents cmb_enemy As System.Windows.Forms.ComboBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents btn_3 As System.Windows.Forms.Button
+    Friend WithEvents btn_2 As System.Windows.Forms.Button
+    Friend WithEvents btn_1 As System.Windows.Forms.Button
 
 End Class
