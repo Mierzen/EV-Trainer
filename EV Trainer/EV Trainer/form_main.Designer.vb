@@ -54,7 +54,7 @@ Partial Class form_main
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btn_3 = New System.Windows.Forms.Button()
+        Me.btn_5 = New System.Windows.Forms.Button()
         Me.btn_2 = New System.Windows.Forms.Button()
         Me.btn_1 = New System.Windows.Forms.Button()
         Me.lb_EnemySpd = New System.Windows.Forms.Label()
@@ -352,7 +352,7 @@ Partial Class form_main
         '
         Me.Panel1.AutoSize = True
         Me.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Panel1.Controls.Add(Me.btn_3)
+        Me.Panel1.Controls.Add(Me.btn_5)
         Me.Panel1.Controls.Add(Me.btn_2)
         Me.Panel1.Controls.Add(Me.btn_1)
         Me.Panel1.Location = New System.Drawing.Point(97, 130)
@@ -361,16 +361,16 @@ Partial Class form_main
         Me.Panel1.Size = New System.Drawing.Size(125, 42)
         Me.Panel1.TabIndex = 33
         '
-        'btn_3
+        'btn_5
         '
-        Me.btn_3.AutoSize = True
-        Me.btn_3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btn_3.Location = New System.Drawing.Point(84, 10)
-        Me.btn_3.Name = "btn_3"
-        Me.btn_3.Size = New System.Drawing.Size(32, 23)
-        Me.btn_3.TabIndex = 35
-        Me.btn_3.Text = "× 5"
-        Me.btn_3.UseVisualStyleBackColor = True
+        Me.btn_5.AutoSize = True
+        Me.btn_5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_5.Location = New System.Drawing.Point(84, 10)
+        Me.btn_5.Name = "btn_5"
+        Me.btn_5.Size = New System.Drawing.Size(32, 23)
+        Me.btn_5.TabIndex = 35
+        Me.btn_5.Text = "× 5"
+        Me.btn_5.UseVisualStyleBackColor = True
         '
         'btn_2
         '
@@ -624,7 +624,7 @@ Partial Class form_main
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents cmb_enemy As System.Windows.Forms.ComboBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents btn_3 As System.Windows.Forms.Button
+    Friend WithEvents btn_5 As System.Windows.Forms.Button
     Friend WithEvents btn_2 As System.Windows.Forms.Button
     Friend WithEvents btn_1 As System.Windows.Forms.Button
     Friend WithEvents ContextMenuStrip_EnemyList As System.Windows.Forms.ContextMenuStrip

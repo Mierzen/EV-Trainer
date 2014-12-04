@@ -809,4 +809,34 @@
 
         ResumeLayout()
     End Sub
+
+    Private Sub btn_1_Click(sender As Object, e As EventArgs) Handles btn_1.Click
+        train(1)
+    End Sub
+
+    Private Sub btn_2_Click(sender As Object, e As EventArgs) Handles btn_2.Click
+        train(2)
+    End Sub
+
+    Private Sub btn_3_Click(sender As Object, e As EventArgs) Handles btn_5.Click
+        train(5)
+    End Sub
+
+    Private Sub train(enemyCount As Integer)
+        If cmb_enemy.Text = "" Then
+            MsgBox("Please select the Pokémon that you are battling against.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
+            Exit Sub
+        End If
+
+        SuspendLayout()
+
+        tb_CurrentHP.Text = Val(tb_CurrentHP.Text) + CInt(lb_EnemyHP.Text) * enemyCount
+        tb_CurrentAtk.Text = Val(tb_CurrentAtk.Text) + CInt(lb_EnemyAtk.Text) * enemyCount
+        tb_CurrentDef.Text = Val(tb_CurrentDef.Text) + CInt(lb_EnemyDef.Text) * enemyCount
+        tb_CurrentSpAtk.Text = Val(tb_CurrentSpAtk.Text) + CInt(lb_EnemySpAtk.Text) * enemyCount
+        tb_CurrentSpDef.Text = Val(tb_CurrentSpDef.Text) + CInt(lb_EnemySpDef.Text) * enemyCount
+        tb_CurrentSpd.Text = Val(tb_CurrentSpd.Text) + CInt(lb_EnemySpd.Text) * enemyCount
+
+        ResumeLayout()
+    End Sub
 End Class
