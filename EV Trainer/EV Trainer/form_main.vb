@@ -1,4 +1,5 @@
 ﻿Public Class form_main
+    Public table As New DataTable
 
     Private Sub form_main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         createTable()
@@ -7,8 +8,6 @@
     End Sub
 
     Private Sub createTable()
-        Dim table As New DataTable
-
         'Data taken from Bulbapedia http://bulbapedia.bulbagarden.net/w/index.php?title=List_of_Pok%C3%A9mon_by_effort_value_yield&oldid=2168747
         table.Columns.Add("#", GetType(Integer))
         table.Columns.Add("Name", GetType(String))
