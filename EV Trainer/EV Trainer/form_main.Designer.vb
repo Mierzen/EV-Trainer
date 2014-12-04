@@ -26,54 +26,55 @@ Partial Class form_main
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cmb_SelectedPok = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ABOUTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.tb_PlannedHP = New System.Windows.Forms.TextBox()
-        Me.tb_CurrentHP = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.tb_CurrentAtk = New System.Windows.Forms.TextBox()
-        Me.tb_PlannedAtk = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.tb_CurrentDef = New System.Windows.Forms.TextBox()
-        Me.tb_PlannedDef = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.tb_CurrentSpAtk = New System.Windows.Forms.TextBox()
-        Me.tb_PlannedSpAtk = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.tb_CurrentSpDef = New System.Windows.Forms.TextBox()
-        Me.tb_PlannedSpDef = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.tb_CurrentSpd = New System.Windows.Forms.TextBox()
-        Me.tb_PlannedSpd = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.FILEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SAVEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DELETESAVEFILEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ABOUTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.tb_CurrentSpd = New System.Windows.Forms.TextBox()
+        Me.tb_PlannedSpd = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.tb_CurrentSpDef = New System.Windows.Forms.TextBox()
+        Me.tb_PlannedSpDef = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.tb_CurrentSpAtk = New System.Windows.Forms.TextBox()
+        Me.tb_PlannedSpAtk = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.tb_CurrentDef = New System.Windows.Forms.TextBox()
+        Me.tb_PlannedDef = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.tb_CurrentAtk = New System.Windows.Forms.TextBox()
+        Me.tb_PlannedAtk = New System.Windows.Forms.TextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.tb_CurrentHP = New System.Windows.Forms.TextBox()
+        Me.tb_PlannedHP = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.cmb_enemy = New System.Windows.Forms.ComboBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btn_3 = New System.Windows.Forms.Button()
+        Me.btn_2 = New System.Windows.Forms.Button()
+        Me.btn_1 = New System.Windows.Forms.Button()
+        Me.lb_EnemySpd = New System.Windows.Forms.Label()
+        Me.lb_EnemySpDef = New System.Windows.Forms.Label()
+        Me.lb_EnemySpAtk = New System.Windows.Forms.Label()
+        Me.lb_EnemyDef = New System.Windows.Forms.Label()
+        Me.lb_EnemyAtk = New System.Windows.Forms.Label()
+        Me.lb_EnemyHP = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.lb_EnemyHP = New System.Windows.Forms.Label()
-        Me.lb_EnemyAtk = New System.Windows.Forms.Label()
-        Me.lb_EnemyDef = New System.Windows.Forms.Label()
-        Me.lb_EnemySpAtk = New System.Windows.Forms.Label()
-        Me.lb_EnemySpDef = New System.Windows.Forms.Label()
-        Me.lb_EnemySpd = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btn_3 = New System.Windows.Forms.Button()
-        Me.btn_2 = New System.Windows.Forms.Button()
-        Me.btn_1 = New System.Windows.Forms.Button()
+        Me.cmb_enemy = New System.Windows.Forms.ComboBox()
         Me.ContextMenuStrip_EnemyList = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.SortByToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PokédexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btn_details = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -107,6 +108,25 @@ Partial Class form_main
         Me.MenuStrip1.Size = New System.Drawing.Size(342, 24)
         Me.MenuStrip1.TabIndex = 3
         Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'FILEToolStripMenuItem
+        '
+        Me.FILEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SAVEToolStripMenuItem, Me.DELETESAVEFILEToolStripMenuItem})
+        Me.FILEToolStripMenuItem.Name = "FILEToolStripMenuItem"
+        Me.FILEToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
+        Me.FILEToolStripMenuItem.Text = "FILE"
+        '
+        'SAVEToolStripMenuItem
+        '
+        Me.SAVEToolStripMenuItem.Name = "SAVEToolStripMenuItem"
+        Me.SAVEToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.SAVEToolStripMenuItem.Text = "SAVE"
+        '
+        'DELETESAVEFILEToolStripMenuItem
+        '
+        Me.DELETESAVEFILEToolStripMenuItem.Name = "DELETESAVEFILEToolStripMenuItem"
+        Me.DELETESAVEFILEToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.DELETESAVEFILEToolStripMenuItem.Text = "DELETE SAVE FILE"
         '
         'ToolStripMenuItem1
         '
@@ -149,115 +169,28 @@ Partial Class form_main
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "EV STATS"
         '
-        'Label2
+        'tb_CurrentSpd
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(7, 35)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(22, 13)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "HP"
+        Me.tb_CurrentSpd.Location = New System.Drawing.Point(203, 162)
+        Me.tb_CurrentSpd.Name = "tb_CurrentSpd"
+        Me.tb_CurrentSpd.Size = New System.Drawing.Size(100, 20)
+        Me.tb_CurrentSpd.TabIndex = 19
         '
-        'tb_PlannedHP
+        'tb_PlannedSpd
         '
-        Me.tb_PlannedHP.Location = New System.Drawing.Point(97, 32)
-        Me.tb_PlannedHP.Name = "tb_PlannedHP"
-        Me.tb_PlannedHP.Size = New System.Drawing.Size(100, 20)
-        Me.tb_PlannedHP.TabIndex = 1
+        Me.tb_PlannedSpd.Location = New System.Drawing.Point(97, 162)
+        Me.tb_PlannedSpd.Name = "tb_PlannedSpd"
+        Me.tb_PlannedSpd.Size = New System.Drawing.Size(100, 20)
+        Me.tb_PlannedSpd.TabIndex = 18
         '
-        'tb_CurrentHP
+        'Label9
         '
-        Me.tb_CurrentHP.Location = New System.Drawing.Point(203, 32)
-        Me.tb_CurrentHP.Name = "tb_CurrentHP"
-        Me.tb_CurrentHP.Size = New System.Drawing.Size(100, 20)
-        Me.tb_CurrentHP.TabIndex = 2
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(118, 16)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(58, 13)
-        Me.Label3.TabIndex = 3
-        Me.Label3.Text = "PLANNED"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(223, 16)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(60, 13)
-        Me.Label4.TabIndex = 4
-        Me.Label4.Text = "CURRENT"
-        '
-        'tb_CurrentAtk
-        '
-        Me.tb_CurrentAtk.Location = New System.Drawing.Point(203, 58)
-        Me.tb_CurrentAtk.Name = "tb_CurrentAtk"
-        Me.tb_CurrentAtk.Size = New System.Drawing.Size(100, 20)
-        Me.tb_CurrentAtk.TabIndex = 7
-        '
-        'tb_PlannedAtk
-        '
-        Me.tb_PlannedAtk.Location = New System.Drawing.Point(97, 58)
-        Me.tb_PlannedAtk.Name = "tb_PlannedAtk"
-        Me.tb_PlannedAtk.Size = New System.Drawing.Size(100, 20)
-        Me.tb_PlannedAtk.TabIndex = 6
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(7, 61)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(38, 13)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Attack"
-        '
-        'tb_CurrentDef
-        '
-        Me.tb_CurrentDef.Location = New System.Drawing.Point(203, 84)
-        Me.tb_CurrentDef.Name = "tb_CurrentDef"
-        Me.tb_CurrentDef.Size = New System.Drawing.Size(100, 20)
-        Me.tb_CurrentDef.TabIndex = 10
-        '
-        'tb_PlannedDef
-        '
-        Me.tb_PlannedDef.Location = New System.Drawing.Point(97, 84)
-        Me.tb_PlannedDef.Name = "tb_PlannedDef"
-        Me.tb_PlannedDef.Size = New System.Drawing.Size(100, 20)
-        Me.tb_PlannedDef.TabIndex = 9
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(7, 87)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(48, 13)
-        Me.Label6.TabIndex = 8
-        Me.Label6.Text = "Defence"
-        '
-        'tb_CurrentSpAtk
-        '
-        Me.tb_CurrentSpAtk.Location = New System.Drawing.Point(203, 110)
-        Me.tb_CurrentSpAtk.Name = "tb_CurrentSpAtk"
-        Me.tb_CurrentSpAtk.Size = New System.Drawing.Size(100, 20)
-        Me.tb_CurrentSpAtk.TabIndex = 13
-        '
-        'tb_PlannedSpAtk
-        '
-        Me.tb_PlannedSpAtk.Location = New System.Drawing.Point(97, 110)
-        Me.tb_PlannedSpAtk.Name = "tb_PlannedSpAtk"
-        Me.tb_PlannedSpAtk.Size = New System.Drawing.Size(100, 20)
-        Me.tb_PlannedSpAtk.TabIndex = 12
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(7, 113)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(76, 13)
-        Me.Label7.TabIndex = 11
-        Me.Label7.Text = "Special Attack"
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(7, 165)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(38, 13)
+        Me.Label9.TabIndex = 17
+        Me.Label9.Text = "Speed"
         '
         'tb_CurrentSpDef
         '
@@ -282,47 +215,115 @@ Partial Class form_main
         Me.Label8.TabIndex = 14
         Me.Label8.Text = "Special Defence"
         '
-        'tb_CurrentSpd
+        'tb_CurrentSpAtk
         '
-        Me.tb_CurrentSpd.Location = New System.Drawing.Point(203, 162)
-        Me.tb_CurrentSpd.Name = "tb_CurrentSpd"
-        Me.tb_CurrentSpd.Size = New System.Drawing.Size(100, 20)
-        Me.tb_CurrentSpd.TabIndex = 19
+        Me.tb_CurrentSpAtk.Location = New System.Drawing.Point(203, 110)
+        Me.tb_CurrentSpAtk.Name = "tb_CurrentSpAtk"
+        Me.tb_CurrentSpAtk.Size = New System.Drawing.Size(100, 20)
+        Me.tb_CurrentSpAtk.TabIndex = 13
         '
-        'tb_PlannedSpd
+        'tb_PlannedSpAtk
         '
-        Me.tb_PlannedSpd.Location = New System.Drawing.Point(97, 162)
-        Me.tb_PlannedSpd.Name = "tb_PlannedSpd"
-        Me.tb_PlannedSpd.Size = New System.Drawing.Size(100, 20)
-        Me.tb_PlannedSpd.TabIndex = 18
+        Me.tb_PlannedSpAtk.Location = New System.Drawing.Point(97, 110)
+        Me.tb_PlannedSpAtk.Name = "tb_PlannedSpAtk"
+        Me.tb_PlannedSpAtk.Size = New System.Drawing.Size(100, 20)
+        Me.tb_PlannedSpAtk.TabIndex = 12
         '
-        'Label9
+        'Label7
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(7, 165)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(38, 13)
-        Me.Label9.TabIndex = 17
-        Me.Label9.Text = "Speed"
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(7, 113)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(76, 13)
+        Me.Label7.TabIndex = 11
+        Me.Label7.Text = "Special Attack"
         '
-        'FILEToolStripMenuItem
+        'tb_CurrentDef
         '
-        Me.FILEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SAVEToolStripMenuItem, Me.DELETESAVEFILEToolStripMenuItem})
-        Me.FILEToolStripMenuItem.Name = "FILEToolStripMenuItem"
-        Me.FILEToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
-        Me.FILEToolStripMenuItem.Text = "FILE"
+        Me.tb_CurrentDef.Location = New System.Drawing.Point(203, 84)
+        Me.tb_CurrentDef.Name = "tb_CurrentDef"
+        Me.tb_CurrentDef.Size = New System.Drawing.Size(100, 20)
+        Me.tb_CurrentDef.TabIndex = 10
         '
-        'SAVEToolStripMenuItem
+        'tb_PlannedDef
         '
-        Me.SAVEToolStripMenuItem.Name = "SAVEToolStripMenuItem"
-        Me.SAVEToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
-        Me.SAVEToolStripMenuItem.Text = "SAVE"
+        Me.tb_PlannedDef.Location = New System.Drawing.Point(97, 84)
+        Me.tb_PlannedDef.Name = "tb_PlannedDef"
+        Me.tb_PlannedDef.Size = New System.Drawing.Size(100, 20)
+        Me.tb_PlannedDef.TabIndex = 9
         '
-        'DELETESAVEFILEToolStripMenuItem
+        'Label6
         '
-        Me.DELETESAVEFILEToolStripMenuItem.Name = "DELETESAVEFILEToolStripMenuItem"
-        Me.DELETESAVEFILEToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
-        Me.DELETESAVEFILEToolStripMenuItem.Text = "DELETE SAVE FILE"
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(7, 87)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(48, 13)
+        Me.Label6.TabIndex = 8
+        Me.Label6.Text = "Defence"
+        '
+        'tb_CurrentAtk
+        '
+        Me.tb_CurrentAtk.Location = New System.Drawing.Point(203, 58)
+        Me.tb_CurrentAtk.Name = "tb_CurrentAtk"
+        Me.tb_CurrentAtk.Size = New System.Drawing.Size(100, 20)
+        Me.tb_CurrentAtk.TabIndex = 7
+        '
+        'tb_PlannedAtk
+        '
+        Me.tb_PlannedAtk.Location = New System.Drawing.Point(97, 58)
+        Me.tb_PlannedAtk.Name = "tb_PlannedAtk"
+        Me.tb_PlannedAtk.Size = New System.Drawing.Size(100, 20)
+        Me.tb_PlannedAtk.TabIndex = 6
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(7, 61)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(38, 13)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Attack"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(223, 16)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(60, 13)
+        Me.Label4.TabIndex = 4
+        Me.Label4.Text = "CURRENT"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(118, 16)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(58, 13)
+        Me.Label3.TabIndex = 3
+        Me.Label3.Text = "PLANNED"
+        '
+        'tb_CurrentHP
+        '
+        Me.tb_CurrentHP.Location = New System.Drawing.Point(203, 32)
+        Me.tb_CurrentHP.Name = "tb_CurrentHP"
+        Me.tb_CurrentHP.Size = New System.Drawing.Size(100, 20)
+        Me.tb_CurrentHP.TabIndex = 2
+        '
+        'tb_PlannedHP
+        '
+        Me.tb_PlannedHP.Location = New System.Drawing.Point(97, 32)
+        Me.tb_PlannedHP.Name = "tb_PlannedHP"
+        Me.tb_PlannedHP.Size = New System.Drawing.Size(100, 20)
+        Me.tb_PlannedHP.TabIndex = 1
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(7, 35)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(22, 13)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "HP"
         '
         'GroupBox2
         '
@@ -347,15 +348,105 @@ Partial Class form_main
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "BATTLED POKÉMON"
         '
-        'cmb_enemy
+        'Panel1
         '
-        Me.cmb_enemy.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.cmb_enemy.ContextMenuStrip = Me.ContextMenuStrip_EnemyList
-        Me.cmb_enemy.FormattingEnabled = True
-        Me.cmb_enemy.Location = New System.Drawing.Point(10, 19)
-        Me.cmb_enemy.Name = "cmb_enemy"
-        Me.cmb_enemy.Size = New System.Drawing.Size(293, 21)
-        Me.cmb_enemy.TabIndex = 4
+        Me.Panel1.AutoSize = True
+        Me.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Panel1.Controls.Add(Me.btn_3)
+        Me.Panel1.Controls.Add(Me.btn_2)
+        Me.Panel1.Controls.Add(Me.btn_1)
+        Me.Panel1.Location = New System.Drawing.Point(97, 130)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Padding = New System.Windows.Forms.Padding(0, 0, 6, 6)
+        Me.Panel1.Size = New System.Drawing.Size(125, 42)
+        Me.Panel1.TabIndex = 33
+        '
+        'btn_3
+        '
+        Me.btn_3.AutoSize = True
+        Me.btn_3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_3.Location = New System.Drawing.Point(84, 10)
+        Me.btn_3.Name = "btn_3"
+        Me.btn_3.Size = New System.Drawing.Size(32, 23)
+        Me.btn_3.TabIndex = 35
+        Me.btn_3.Text = "× 5"
+        Me.btn_3.UseVisualStyleBackColor = True
+        '
+        'btn_2
+        '
+        Me.btn_2.AutoSize = True
+        Me.btn_2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_2.Location = New System.Drawing.Point(47, 10)
+        Me.btn_2.Name = "btn_2"
+        Me.btn_2.Size = New System.Drawing.Size(32, 23)
+        Me.btn_2.TabIndex = 34
+        Me.btn_2.Text = "× 2"
+        Me.btn_2.UseVisualStyleBackColor = True
+        '
+        'btn_1
+        '
+        Me.btn_1.AutoSize = True
+        Me.btn_1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_1.Location = New System.Drawing.Point(10, 10)
+        Me.btn_1.Name = "btn_1"
+        Me.btn_1.Size = New System.Drawing.Size(32, 23)
+        Me.btn_1.TabIndex = 33
+        Me.btn_1.Text = "× 1"
+        Me.btn_1.UseVisualStyleBackColor = True
+        '
+        'lb_EnemySpd
+        '
+        Me.lb_EnemySpd.AutoSize = True
+        Me.lb_EnemySpd.Location = New System.Drawing.Point(258, 105)
+        Me.lb_EnemySpd.Name = "lb_EnemySpd"
+        Me.lb_EnemySpd.Size = New System.Drawing.Size(45, 13)
+        Me.lb_EnemySpd.TabIndex = 29
+        Me.lb_EnemySpd.Text = "Label21"
+        '
+        'lb_EnemySpDef
+        '
+        Me.lb_EnemySpDef.AutoSize = True
+        Me.lb_EnemySpDef.Location = New System.Drawing.Point(258, 79)
+        Me.lb_EnemySpDef.Name = "lb_EnemySpDef"
+        Me.lb_EnemySpDef.Size = New System.Drawing.Size(45, 13)
+        Me.lb_EnemySpDef.TabIndex = 28
+        Me.lb_EnemySpDef.Text = "Label20"
+        '
+        'lb_EnemySpAtk
+        '
+        Me.lb_EnemySpAtk.AutoSize = True
+        Me.lb_EnemySpAtk.Location = New System.Drawing.Point(258, 53)
+        Me.lb_EnemySpAtk.Name = "lb_EnemySpAtk"
+        Me.lb_EnemySpAtk.Size = New System.Drawing.Size(45, 13)
+        Me.lb_EnemySpAtk.TabIndex = 27
+        Me.lb_EnemySpAtk.Text = "Label19"
+        '
+        'lb_EnemyDef
+        '
+        Me.lb_EnemyDef.AutoSize = True
+        Me.lb_EnemyDef.Location = New System.Drawing.Point(74, 105)
+        Me.lb_EnemyDef.Name = "lb_EnemyDef"
+        Me.lb_EnemyDef.Size = New System.Drawing.Size(45, 13)
+        Me.lb_EnemyDef.TabIndex = 26
+        Me.lb_EnemyDef.Text = "Label18"
+        '
+        'lb_EnemyAtk
+        '
+        Me.lb_EnemyAtk.AutoSize = True
+        Me.lb_EnemyAtk.Location = New System.Drawing.Point(74, 79)
+        Me.lb_EnemyAtk.Name = "lb_EnemyAtk"
+        Me.lb_EnemyAtk.Size = New System.Drawing.Size(45, 13)
+        Me.lb_EnemyAtk.TabIndex = 25
+        Me.lb_EnemyAtk.Text = "Label17"
+        '
+        'lb_EnemyHP
+        '
+        Me.lb_EnemyHP.AutoSize = True
+        Me.lb_EnemyHP.Location = New System.Drawing.Point(74, 53)
+        Me.lb_EnemyHP.Name = "lb_EnemyHP"
+        Me.lb_EnemyHP.Size = New System.Drawing.Size(45, 13)
+        Me.lb_EnemyHP.TabIndex = 24
+        Me.lb_EnemyHP.Text = "Label16"
         '
         'Label10
         '
@@ -411,105 +502,15 @@ Partial Class form_main
         Me.Label15.TabIndex = 18
         Me.Label15.Text = "HP"
         '
-        'lb_EnemyHP
+        'cmb_enemy
         '
-        Me.lb_EnemyHP.AutoSize = True
-        Me.lb_EnemyHP.Location = New System.Drawing.Point(74, 53)
-        Me.lb_EnemyHP.Name = "lb_EnemyHP"
-        Me.lb_EnemyHP.Size = New System.Drawing.Size(45, 13)
-        Me.lb_EnemyHP.TabIndex = 24
-        Me.lb_EnemyHP.Text = "Label16"
-        '
-        'lb_EnemyAtk
-        '
-        Me.lb_EnemyAtk.AutoSize = True
-        Me.lb_EnemyAtk.Location = New System.Drawing.Point(74, 79)
-        Me.lb_EnemyAtk.Name = "lb_EnemyAtk"
-        Me.lb_EnemyAtk.Size = New System.Drawing.Size(45, 13)
-        Me.lb_EnemyAtk.TabIndex = 25
-        Me.lb_EnemyAtk.Text = "Label17"
-        '
-        'lb_EnemyDef
-        '
-        Me.lb_EnemyDef.AutoSize = True
-        Me.lb_EnemyDef.Location = New System.Drawing.Point(74, 105)
-        Me.lb_EnemyDef.Name = "lb_EnemyDef"
-        Me.lb_EnemyDef.Size = New System.Drawing.Size(45, 13)
-        Me.lb_EnemyDef.TabIndex = 26
-        Me.lb_EnemyDef.Text = "Label18"
-        '
-        'lb_EnemySpAtk
-        '
-        Me.lb_EnemySpAtk.AutoSize = True
-        Me.lb_EnemySpAtk.Location = New System.Drawing.Point(258, 53)
-        Me.lb_EnemySpAtk.Name = "lb_EnemySpAtk"
-        Me.lb_EnemySpAtk.Size = New System.Drawing.Size(45, 13)
-        Me.lb_EnemySpAtk.TabIndex = 27
-        Me.lb_EnemySpAtk.Text = "Label19"
-        '
-        'lb_EnemySpDef
-        '
-        Me.lb_EnemySpDef.AutoSize = True
-        Me.lb_EnemySpDef.Location = New System.Drawing.Point(258, 79)
-        Me.lb_EnemySpDef.Name = "lb_EnemySpDef"
-        Me.lb_EnemySpDef.Size = New System.Drawing.Size(45, 13)
-        Me.lb_EnemySpDef.TabIndex = 28
-        Me.lb_EnemySpDef.Text = "Label20"
-        '
-        'lb_EnemySpd
-        '
-        Me.lb_EnemySpd.AutoSize = True
-        Me.lb_EnemySpd.Location = New System.Drawing.Point(258, 105)
-        Me.lb_EnemySpd.Name = "lb_EnemySpd"
-        Me.lb_EnemySpd.Size = New System.Drawing.Size(45, 13)
-        Me.lb_EnemySpd.TabIndex = 29
-        Me.lb_EnemySpd.Text = "Label21"
-        '
-        'Panel1
-        '
-        Me.Panel1.AutoSize = True
-        Me.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Panel1.Controls.Add(Me.btn_3)
-        Me.Panel1.Controls.Add(Me.btn_2)
-        Me.Panel1.Controls.Add(Me.btn_1)
-        Me.Panel1.Location = New System.Drawing.Point(97, 130)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Padding = New System.Windows.Forms.Padding(0, 0, 6, 6)
-        Me.Panel1.Size = New System.Drawing.Size(125, 42)
-        Me.Panel1.TabIndex = 33
-        '
-        'btn_3
-        '
-        Me.btn_3.AutoSize = True
-        Me.btn_3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btn_3.Location = New System.Drawing.Point(84, 10)
-        Me.btn_3.Name = "btn_3"
-        Me.btn_3.Size = New System.Drawing.Size(32, 23)
-        Me.btn_3.TabIndex = 35
-        Me.btn_3.Text = "× 5"
-        Me.btn_3.UseVisualStyleBackColor = True
-        '
-        'btn_2
-        '
-        Me.btn_2.AutoSize = True
-        Me.btn_2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btn_2.Location = New System.Drawing.Point(47, 10)
-        Me.btn_2.Name = "btn_2"
-        Me.btn_2.Size = New System.Drawing.Size(32, 23)
-        Me.btn_2.TabIndex = 34
-        Me.btn_2.Text = "× 2"
-        Me.btn_2.UseVisualStyleBackColor = True
-        '
-        'btn_1
-        '
-        Me.btn_1.AutoSize = True
-        Me.btn_1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btn_1.Location = New System.Drawing.Point(10, 10)
-        Me.btn_1.Name = "btn_1"
-        Me.btn_1.Size = New System.Drawing.Size(32, 23)
-        Me.btn_1.TabIndex = 33
-        Me.btn_1.Text = "× 1"
-        Me.btn_1.UseVisualStyleBackColor = True
+        Me.cmb_enemy.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmb_enemy.ContextMenuStrip = Me.ContextMenuStrip_EnemyList
+        Me.cmb_enemy.FormattingEnabled = True
+        Me.cmb_enemy.Location = New System.Drawing.Point(10, 19)
+        Me.cmb_enemy.Name = "cmb_enemy"
+        Me.cmb_enemy.Size = New System.Drawing.Size(293, 21)
+        Me.cmb_enemy.TabIndex = 4
         '
         'ContextMenuStrip_EnemyList
         '
@@ -527,14 +528,28 @@ Partial Class form_main
         'PokédexToolStripMenuItem
         '
         Me.PokédexToolStripMenuItem.Name = "PokédexToolStripMenuItem"
-        Me.PokédexToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PokédexToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
         Me.PokédexToolStripMenuItem.Text = "Pokédex #"
         '
         'NameToolStripMenuItem
         '
         Me.NameToolStripMenuItem.Name = "NameToolStripMenuItem"
-        Me.NameToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NameToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
         Me.NameToolStripMenuItem.Text = "Name"
+        '
+        'btn_details
+        '
+        Me.btn_details.AutoSize = True
+        Me.btn_details.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_details.FlatAppearance.BorderSize = 0
+        Me.btn_details.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_details.Location = New System.Drawing.Point(304, 64)
+        Me.btn_details.Margin = New System.Windows.Forms.Padding(0)
+        Me.btn_details.Name = "btn_details"
+        Me.btn_details.Size = New System.Drawing.Size(26, 23)
+        Me.btn_details.TabIndex = 6
+        Me.btn_details.Text = "..."
+        Me.btn_details.UseVisualStyleBackColor = True
         '
         'form_main
         '
@@ -546,6 +561,7 @@ Partial Class form_main
         Me.Controls.Add(Me.cmb_SelectedPok)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.btn_details)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
         Me.Name = "form_main"
@@ -615,5 +631,6 @@ Partial Class form_main
     Friend WithEvents SortByToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PokédexToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NameToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents btn_details As System.Windows.Forms.Button
 
 End Class
