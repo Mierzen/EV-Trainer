@@ -2,9 +2,19 @@
     Public table As New DataTable
 
     Private Sub form_main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        SuspendLayout()
+
+        lb_EnemyHP.Text = ""
+        lb_EnemyAtk.Text = ""
+        lb_EnemyDef.Text = ""
+        lb_EnemySpAtk.Text = ""
+        lb_EnemySpDef.Text = ""
+        lb_EnemySpd.Text = ""
+
         createTable()
         pokemonList("name")
 
+        ResumeLayout()
     End Sub
 
     Private Sub createTable()
@@ -781,6 +791,8 @@
     Private Sub cmb_enemy_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_enemy.SelectedIndexChanged
         Dim selected As String = cmb_enemy.Text
 
+        SuspendLayout()
+
         For Each i As DataRow In table.AsEnumerable()
 
             If i(1) = selected Then
@@ -794,5 +806,7 @@
                 Exit For
             End If
         Next
+
+        ResumeLayout()
     End Sub
 End Class
