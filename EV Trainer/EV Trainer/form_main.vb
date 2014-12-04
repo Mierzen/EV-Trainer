@@ -3,7 +3,7 @@
 
     Private Sub form_main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         createTable()
-
+        pokemonList("name")
 
     End Sub
 
@@ -775,6 +775,7 @@
         End If
 
         cmb_enemy.Items.AddRange(values)
+        cmb_enemy.AutoCompleteSource = AutoCompleteSource.ListItems
     End Sub
 
 End Class
