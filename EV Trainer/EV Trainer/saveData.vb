@@ -62,6 +62,39 @@ Module saveData
         fs.Close()
     End Sub
 
+    Public Sub loadStats(pok As String)
+        Dim fileReader As System.IO.StreamReader
+        fileReader = My.Computer.FileSystem.OpenTextFileReader(saveDirMain & "\" & pok & ".txt")
+
+        Dim line As String
+        Dim eqPos As Integer
+        Dim currentSetting As String
+        Dim currentValue As Integer
+        Dim tbName As String
+
+        Do While fileReader.Peek() <> -1
+            line = fileReader.ReadLine()
+            eqPos = InStr(line, "=")
+
+            If eqPos <> 0 Then
+                currentSetting = Left(line, eqPos - 1)
+                currentValue = Len(line) - eqPos
+
+                If currentSetting = "MaxEV" Then
+                    If currentValue = 255 Then
+                        form_main.rd_255.Checked = True
+                    Else
+                        form_main.rd_252.Checked = True
+                    End If
+                Else
+                    tbName = "tb_" & currentSetting
+                    Dim myTextbox As TextBox = DirectCast(form_main.Controls.Find(tbName, True)(0), TextBox)
+                    myTextbox.Text = Right(line, currentValue)
+                End If
+            End If
+        Loop
+    End Sub
+
     Private Sub checkDirMain()
         If My.Computer.FileSystem.DirectoryExists(saveDirMain) = False Then
             My.Computer.FileSystem.CreateDirectory(saveDirMain)

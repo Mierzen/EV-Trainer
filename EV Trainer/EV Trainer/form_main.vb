@@ -1,5 +1,6 @@
 ﻿Public Class form_main
     Public table As New DataTable
+    Dim previousPok As String
 
     Private Sub form_main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SuspendLayout()
@@ -18,6 +19,7 @@
         battlePokemonList("name")
 
         saveData.trainPokemonList()
+        previousPok = Nothing
 
         ResumeLayout()
     End Sub
@@ -951,15 +953,7 @@
     End Sub
 
     Private Sub form_main_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        If checkValidAll() = False Then
-            Exit Sub
-        End If
-
-        Dim currentPok As String = cmb_SelectedPok.Text
-
-        If currentPok <> Nothing AndAlso saveData.askSave(currentPok) = True Then
-            saveData.savePok(currentPok)
-        End If
+        testAndSave(cmb_SelectedPok.Text)
     End Sub
 
     Private Function checkValidAll() As Boolean
@@ -994,15 +988,7 @@
     End Function
 
     Private Sub SAVEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SAVEToolStripMenuItem.Click
-        If checkValidAll() = False Then
-            Exit Sub
-        End If
-
-        Dim currentPok As String = cmb_SelectedPok.Text
-
-        If currentPok <> Nothing AndAlso saveData.askSave(currentPok) = True Then
-            saveData.savePok(currentPok)
-        End If
+        testAndSave(cmb_SelectedPok.Text)
     End Sub
 
     Private Sub DELETESAVEFILEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DELETESAVEFILEToolStripMenuItem.Click
@@ -1011,20 +997,24 @@
 
     Private Sub cmb_SelectedPok_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_SelectedPok.SelectedIndexChanged
 
+        testAndSave(previousPok)
+
+        saveData.loadStats(cmb_SelectedPok.Text)
+    End Sub
+
+    Private Sub testAndSave(pokToCheck As String)
         If checkValidAll() = False Then
             Exit Sub
         End If
 
-        Dim currentPok As String = cmb_SelectedPok.Text
+        'Dim currentPok As String = cmb_SelectedPok.Text
 
-        If currentPok <> Nothing AndAlso saveData.askSave(currentPok) = True Then
-            saveData.savePok(currentPok)
+        If pokToCheck <> Nothing AndAlso saveData.askSave(pokToCheck) = True Then
+            saveData.savePok(pokToCheck)
         End If
+    End Sub
 
-        If currentPok = "" Then
-            DELETESAVEFILEToolStripMenuItem.Enabled = False
-        Else
-            DELETESAVEFILEToolStripMenuItem.Enabled = True
-        End If
+    Private Sub cmb_SelectedPok_Enter(sender As Object, e As EventArgs) Handles cmb_SelectedPok.Enter
+        previousPok = cmb_SelectedPok.Text
     End Sub
 End Class
