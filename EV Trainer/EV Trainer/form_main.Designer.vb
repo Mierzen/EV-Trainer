@@ -32,6 +32,9 @@ Partial Class form_main
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ABOUTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lb_TotalCurrent = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.lb_TotalPlanned = New System.Windows.Forms.Label()
         Me.tb_CurrentSpd = New System.Windows.Forms.TextBox()
         Me.tb_PlannedSpd = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -75,6 +78,7 @@ Partial Class form_main
         Me.PokédexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_details = New System.Windows.Forms.Button()
+        Me.chk_clear = New System.Windows.Forms.CheckBox()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -142,6 +146,9 @@ Partial Class form_main
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.lb_TotalCurrent)
+        Me.GroupBox1.Controls.Add(Me.Label17)
+        Me.GroupBox1.Controls.Add(Me.lb_TotalPlanned)
         Me.GroupBox1.Controls.Add(Me.tb_CurrentSpd)
         Me.GroupBox1.Controls.Add(Me.tb_PlannedSpd)
         Me.GroupBox1.Controls.Add(Me.Label9)
@@ -164,10 +171,37 @@ Partial Class form_main
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Location = New System.Drawing.Point(15, 96)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(314, 195)
+        Me.GroupBox1.Size = New System.Drawing.Size(314, 223)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "EV STATS"
+        '
+        'lb_TotalCurrent
+        '
+        Me.lb_TotalCurrent.AutoSize = True
+        Me.lb_TotalCurrent.Location = New System.Drawing.Point(223, 199)
+        Me.lb_TotalCurrent.Name = "lb_TotalCurrent"
+        Me.lb_TotalCurrent.Size = New System.Drawing.Size(60, 13)
+        Me.lb_TotalCurrent.TabIndex = 22
+        Me.lb_TotalCurrent.Text = "CURRENT"
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(48, 199)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(42, 13)
+        Me.Label17.TabIndex = 21
+        Me.Label17.Text = "TOTAL"
+        '
+        'lb_TotalPlanned
+        '
+        Me.lb_TotalPlanned.AutoSize = True
+        Me.lb_TotalPlanned.Location = New System.Drawing.Point(118, 199)
+        Me.lb_TotalPlanned.Name = "lb_TotalPlanned"
+        Me.lb_TotalPlanned.Size = New System.Drawing.Size(58, 13)
+        Me.lb_TotalPlanned.TabIndex = 20
+        Me.lb_TotalPlanned.Text = "PLANNED"
         '
         'tb_CurrentSpd
         '
@@ -327,6 +361,7 @@ Partial Class form_main
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.chk_clear)
         Me.GroupBox2.Controls.Add(Me.Panel1)
         Me.GroupBox2.Controls.Add(Me.lb_EnemySpd)
         Me.GroupBox2.Controls.Add(Me.lb_EnemySpDef)
@@ -341,7 +376,7 @@ Partial Class form_main
         Me.GroupBox2.Controls.Add(Me.Label14)
         Me.GroupBox2.Controls.Add(Me.Label15)
         Me.GroupBox2.Controls.Add(Me.cmb_enemy)
-        Me.GroupBox2.Location = New System.Drawing.Point(15, 298)
+        Me.GroupBox2.Location = New System.Drawing.Point(16, 325)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(314, 172)
         Me.GroupBox2.TabIndex = 5
@@ -551,11 +586,22 @@ Partial Class form_main
         Me.btn_details.Text = "..."
         Me.btn_details.UseVisualStyleBackColor = True
         '
+        'chk_clear
+        '
+        Me.chk_clear.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.chk_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.chk_clear.Location = New System.Drawing.Point(16, 135)
+        Me.chk_clear.Name = "chk_clear"
+        Me.chk_clear.Size = New System.Drawing.Size(76, 33)
+        Me.chk_clear.TabIndex = 34
+        Me.chk_clear.Text = "Clear after adding?"
+        Me.chk_clear.UseVisualStyleBackColor = True
+        '
         'form_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(342, 475)
+        Me.ClientSize = New System.Drawing.Size(342, 510)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.cmb_SelectedPok)
@@ -632,5 +678,9 @@ Partial Class form_main
     Friend WithEvents PokédexToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NameToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents btn_details As System.Windows.Forms.Button
+    Friend WithEvents lb_TotalCurrent As System.Windows.Forms.Label
+    Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents lb_TotalPlanned As System.Windows.Forms.Label
+    Friend WithEvents chk_clear As System.Windows.Forms.CheckBox
 
 End Class

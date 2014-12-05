@@ -11,6 +11,9 @@
         lb_EnemySpDef.Text = ""
         lb_EnemySpd.Text = ""
 
+        lb_TotalPlanned.Text = ""
+        lb_TotalCurrent.Text = ""
+
         createTable()
         pokemonList("name")
 
@@ -793,6 +796,18 @@
 
         SuspendLayout()
 
+        If selected = "" Then
+            lb_EnemyHP.Text = ""
+            lb_EnemyAtk.Text = ""
+            lb_EnemyDef.Text = ""
+            lb_EnemySpAtk.Text = ""
+            lb_EnemySpDef.Text = ""
+            lb_EnemySpd.Text = ""
+
+            ResumeLayout()
+            Exit Sub
+        End If
+
         For Each i As DataRow In table.AsEnumerable()
 
             If i(1) = selected Then
@@ -823,6 +838,11 @@
     End Sub
 
     Private Sub train(enemyCount As Integer)
+        If cmb_SelectedPok.Text = "" Then
+            MsgBox("Please select the Pokémon that you are training.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
+            Exit Sub
+        End If
+
         If cmb_enemy.Text = "" Then
             MsgBox("Please select the Pokémon that you are battling against.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
             Exit Sub
@@ -837,6 +857,56 @@
         tb_CurrentSpDef.Text = Val(tb_CurrentSpDef.Text) + CInt(lb_EnemySpDef.Text) * enemyCount
         tb_CurrentSpd.Text = Val(tb_CurrentSpd.Text) + CInt(lb_EnemySpd.Text) * enemyCount
 
+        statsUpdated()
+
+        If chk_clear.Checked = True Then
+            cmb_enemy.SelectedIndex = -1
+        End If
         ResumeLayout()
+    End Sub
+
+    Private Sub statsUpdated()
+        SuspendLayout()
+
+        lb_TotalPlanned.Text = Val(tb_PlannedHP.Text) + Val(tb_PlannedAtk.Text) + Val(tb_PlannedDef.Text) + Val(tb_PlannedSpAtk.Text) + Val(tb_PlannedSpDef.Text) + Val(tb_PlannedSpd.Text)
+        lb_TotalCurrent.Text = Val(tb_CurrentHP.Text) + Val(tb_CurrentAtk.Text) + Val(tb_CurrentDef.Text) + Val(tb_CurrentSpAtk.Text) + Val(tb_CurrentSpDef.Text) + Val(tb_CurrentSpd.Text)
+
+        If Val(lb_TotalPlanned.Text) > 510 Then
+            lb_TotalPlanned.ForeColor = Color.DarkRed
+        Else
+            lb_TotalPlanned.ForeColor = SystemColors.ControlText
+        End If
+
+        If Val(lb_TotalCurrent.Text) > 510 Then
+            lb_TotalPlanned.ForeColor = Color.DarkRed
+        Else
+            lb_TotalPlanned.ForeColor = SystemColors.ControlText
+        End If
+
+        ResumeLayout()
+    End Sub
+
+    Private Sub tb_PlannedHP_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedHP.TextChanged
+        statsUpdated()
+    End Sub
+
+    Private Sub tb_PlannedAtk_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedAtk.TextChanged
+        statsUpdated()
+    End Sub
+
+    Private Sub tb_PlannedDef_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedDef.TextChanged
+        statsUpdated()
+    End Sub
+
+    Private Sub tb_PlannedSpAtk_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedSpAtk.TextChanged
+        statsUpdated()
+    End Sub
+
+    Private Sub tb_PlannedSpDef_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedSpDef.TextChanged
+        statsUpdated()
+    End Sub
+
+    Private Sub tb_PlannedSpd_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedSpd.TextChanged
+        statsUpdated()
     End Sub
 End Class
