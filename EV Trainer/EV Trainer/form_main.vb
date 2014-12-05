@@ -970,4 +970,12 @@
         seeMax(tb_PlannedSpDef)
         seeMax(tb_PlannedSpd)
     End Sub
+
+    Private Sub form_main_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Dim currentPok As String = cmb_SelectedPok.Text
+
+        If currentPok <> Nothing AndAlso saveData.askSave(currentPok) = True Then
+            saveData.savePok(currentPok)
+        End If
+    End Sub
 End Class
