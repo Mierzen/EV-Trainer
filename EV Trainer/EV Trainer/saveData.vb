@@ -2,7 +2,10 @@
 Imports System.IO
 Imports System.Text
 
+
 Module saveData
+    Dim saveDirMain As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\" & My.Application.Info.Title.ToString
+
     Public Function askSave(pok As String) As Boolean
         Dim result As MsgBoxResult
         result = MsgBox("Do you want to save changes to " & pok & "?", MsgBoxStyle.YesNo, "Save changes?")
@@ -11,12 +14,7 @@ Module saveData
 
     Public Sub savePok(pok As String)
         'Check if main save folder exists. If not, create it
-        Dim saveDirMain As String
-        saveDirMain = My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\" & My.Application.Info.Title.ToString
-
-        If My.Computer.FileSystem.DirectoryExists(saveDirMain) = False Then
-            My.Computer.FileSystem.CreateDirectory(saveDirMain)
-        End If
+        checkDirMain()
 
         Dim savePathPok As String
         savePathPok = saveDirMain & "\" & pok & ".txt"
@@ -45,5 +43,11 @@ Module saveData
         Dim info As Byte() = New UTF8Encoding(True).GetBytes(str)
         fs.Write(info, 0, info.Length)
         fs.Close()
+    End Sub
+
+    Private Sub checkDirMain()
+        If My.Computer.FileSystem.DirectoryExists(saveDirMain) = False Then
+            My.Computer.FileSystem.CreateDirectory(saveDirMain)
+        End If
     End Sub
 End Module

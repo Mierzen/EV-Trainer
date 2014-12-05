@@ -990,4 +990,39 @@
 
         Return True
     End Function
+
+    Private Sub SAVEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SAVEToolStripMenuItem.Click
+        If checkValidAll() = False Then
+            Exit Sub
+        End If
+
+        Dim currentPok As String = cmb_SelectedPok.Text
+
+        If currentPok <> Nothing AndAlso saveData.askSave(currentPok) = True Then
+            saveData.savePok(currentPok)
+        End If
+    End Sub
+
+    Private Sub DELETESAVEFILEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DELETESAVEFILEToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub cmb_SelectedPok_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_SelectedPok.SelectedIndexChanged
+
+        If checkValidAll() = False Then
+            Exit Sub
+        End If
+
+        Dim currentPok As String = cmb_SelectedPok.Text
+
+        If currentPok <> Nothing AndAlso saveData.askSave(currentPok) = True Then
+            saveData.savePok(currentPok)
+        End If
+
+        If currentPok = "" Then
+            DELETESAVEFILEToolStripMenuItem.Enabled = False
+        Else
+            DELETESAVEFILEToolStripMenuItem.Enabled = True
+        End If
+    End Sub
 End Class
