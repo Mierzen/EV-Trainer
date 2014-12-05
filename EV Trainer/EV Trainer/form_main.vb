@@ -892,7 +892,23 @@
     End Sub
 
     Private Sub seeMax(stat As Control)
-        MsgBox(stat.Name.ToString)
+        If rd_255.Checked = False AndAlso rd_252.Checked = False Then
+            MsgBox("Please select the maximum number of EVs per stat.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
+            Exit Sub
+        End If
+
+        Dim max As Integer
+        If rd_255.Checked = True Then
+            max = 255
+        Else
+            max = 252
+        End If
+
+        If Val(stat.Text) > max Then
+            stat.ForeColor = Color.DarkRed
+        Else
+            stat.ForeColor = SystemColors.ControlText
+        End If
     End Sub
 
     Private Sub tb_PlannedHP_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedHP.TextChanged
@@ -923,5 +939,23 @@
     Private Sub tb_PlannedSpd_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedSpd.TextChanged
         seeMax(tb_PlannedSpd)
         statsUpdated()
+    End Sub
+
+    Private Sub rd_255_CheckedChanged(sender As Object, e As EventArgs) Handles rd_255.CheckedChanged
+        seeMax(tb_PlannedHP)
+        seeMax(tb_PlannedAtk)
+        seeMax(tb_PlannedDef)
+        seeMax(tb_PlannedSpAtk)
+        seeMax(tb_PlannedSpDef)
+        seeMax(tb_PlannedSpd)
+    End Sub
+
+    Private Sub rd_252_CheckedChanged(sender As Object, e As EventArgs) Handles rd_252.CheckedChanged
+        seeMax(tb_PlannedHP)
+        seeMax(tb_PlannedAtk)
+        seeMax(tb_PlannedDef)
+        seeMax(tb_PlannedSpAtk)
+        seeMax(tb_PlannedSpDef)
+        seeMax(tb_PlannedSpd)
     End Sub
 End Class
