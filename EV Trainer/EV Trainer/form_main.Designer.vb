@@ -32,6 +32,9 @@ Partial Class form_main
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ABOUTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.rd_252 = New System.Windows.Forms.RadioButton()
+        Me.rd_255 = New System.Windows.Forms.RadioButton()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.lb_TotalCurrent = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.lb_TotalPlanned = New System.Windows.Forms.Label()
@@ -56,6 +59,7 @@ Partial Class form_main
         Me.tb_PlannedHP = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.chk_clear = New System.Windows.Forms.CheckBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btn_5 = New System.Windows.Forms.Button()
         Me.btn_2 = New System.Windows.Forms.Button()
@@ -78,10 +82,6 @@ Partial Class form_main
         Me.PokédexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_details = New System.Windows.Forms.Button()
-        Me.chk_clear = New System.Windows.Forms.CheckBox()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.rd_255 = New System.Windows.Forms.RadioButton()
-        Me.rd_252 = New System.Windows.Forms.RadioButton()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -181,6 +181,39 @@ Partial Class form_main
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "EV STATS"
+        '
+        'rd_252
+        '
+        Me.rd_252.AutoSize = True
+        Me.rd_252.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.rd_252.Location = New System.Drawing.Point(100, 36)
+        Me.rd_252.Name = "rd_252"
+        Me.rd_252.Size = New System.Drawing.Size(84, 17)
+        Me.rd_252.TabIndex = 27
+        Me.rd_252.TabStop = True
+        Me.rd_252.Text = "252 (Gen VI)"
+        Me.rd_252.UseVisualStyleBackColor = True
+        '
+        'rd_255
+        '
+        Me.rd_255.AutoSize = True
+        Me.rd_255.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.rd_255.Location = New System.Drawing.Point(100, 18)
+        Me.rd_255.Name = "rd_255"
+        Me.rd_255.Size = New System.Drawing.Size(93, 17)
+        Me.rd_255.TabIndex = 26
+        Me.rd_255.TabStop = True
+        Me.rd_255.Text = "255 (Gen III-V)"
+        Me.rd_255.UseVisualStyleBackColor = True
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(7, 20)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(90, 13)
+        Me.Label16.TabIndex = 23
+        Me.Label16.Text = "Max EVs per stat:"
         '
         'lb_TotalCurrent
         '
@@ -389,6 +422,17 @@ Partial Class form_main
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "BATTLED POKÉMON"
         '
+        'chk_clear
+        '
+        Me.chk_clear.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.chk_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.chk_clear.Location = New System.Drawing.Point(16, 135)
+        Me.chk_clear.Name = "chk_clear"
+        Me.chk_clear.Size = New System.Drawing.Size(76, 33)
+        Me.chk_clear.TabIndex = 34
+        Me.chk_clear.Text = "Clear after adding?"
+        Me.chk_clear.UseVisualStyleBackColor = True
+        '
         'Panel1
         '
         Me.Panel1.AutoSize = True
@@ -546,7 +590,7 @@ Partial Class form_main
         '
         'cmb_enemy
         '
-        Me.cmb_enemy.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmb_enemy.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cmb_enemy.ContextMenuStrip = Me.ContextMenuStrip_EnemyList
         Me.cmb_enemy.FormattingEnabled = True
         Me.cmb_enemy.Location = New System.Drawing.Point(10, 19)
@@ -592,50 +636,6 @@ Partial Class form_main
         Me.btn_details.TabIndex = 6
         Me.btn_details.Text = "..."
         Me.btn_details.UseVisualStyleBackColor = True
-        '
-        'chk_clear
-        '
-        Me.chk_clear.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.chk_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.chk_clear.Location = New System.Drawing.Point(16, 135)
-        Me.chk_clear.Name = "chk_clear"
-        Me.chk_clear.Size = New System.Drawing.Size(76, 33)
-        Me.chk_clear.TabIndex = 34
-        Me.chk_clear.Text = "Clear after adding?"
-        Me.chk_clear.UseVisualStyleBackColor = True
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(7, 20)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(90, 13)
-        Me.Label16.TabIndex = 23
-        Me.Label16.Text = "Max EVs per stat:"
-        '
-        'rd_255
-        '
-        Me.rd_255.AutoSize = True
-        Me.rd_255.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.rd_255.Location = New System.Drawing.Point(100, 18)
-        Me.rd_255.Name = "rd_255"
-        Me.rd_255.Size = New System.Drawing.Size(93, 17)
-        Me.rd_255.TabIndex = 26
-        Me.rd_255.TabStop = True
-        Me.rd_255.Text = "255 (Gen III-V)"
-        Me.rd_255.UseVisualStyleBackColor = True
-        '
-        'rd_252
-        '
-        Me.rd_252.AutoSize = True
-        Me.rd_252.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.rd_252.Location = New System.Drawing.Point(100, 36)
-        Me.rd_252.Name = "rd_252"
-        Me.rd_252.Size = New System.Drawing.Size(84, 17)
-        Me.rd_252.TabIndex = 27
-        Me.rd_252.TabStop = True
-        Me.rd_252.Text = "252 (Gen VI)"
-        Me.rd_252.UseVisualStyleBackColor = True
         '
         'form_main
         '

@@ -853,6 +853,18 @@
             Exit Sub
         End If
 
+        Dim isRealPok As Boolean = False
+        For Each i As String In table.AsEnumerable().Select(Function(row) row.Field(Of String)("Name"))
+            If cmb_enemy.Text = i Then
+                isRealPok = True
+                Exit For
+            End If
+        Next
+        If isRealPok = False Then
+            MsgBox("Please select a real Pokémon that you are battling against.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
+            Exit Sub
+        End If
+
         SuspendLayout()
 
         tb_CurrentHP.Text = Val(tb_CurrentHP.Text) + CInt(lb_EnemyHP.Text) * enemyCount
