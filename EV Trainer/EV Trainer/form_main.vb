@@ -838,30 +838,7 @@
     End Sub
 
     Private Sub train(enemyCount As Integer)
-        If cmb_SelectedPok.Text = "" Then
-            MsgBox("Please select the Pokémon that you are training.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
-            Exit Sub
-        End If
-
-        If rd_255.Checked = False AndAlso rd_252.Checked = False Then
-            MsgBox("Please select the maximum number of EVs per stat.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
-            Exit Sub
-        End If
-
-        If cmb_enemy.Text = "" Then
-            MsgBox("Please select the Pokémon that you are battling against.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
-            Exit Sub
-        End If
-
-        Dim isRealPok As Boolean = False
-        For Each i As String In table.AsEnumerable().Select(Function(row) row.Field(Of String)("Name"))
-            If cmb_enemy.Text = i Then
-                isRealPok = True
-                Exit For
-            End If
-        Next
-        If isRealPok = False Then
-            MsgBox("Please select a real Pokémon that you are battling against.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
+        If checkValidAll() = False Then
             Exit Sub
         End If
 
@@ -972,10 +949,45 @@
     End Sub
 
     Private Sub form_main_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If checkValidAll() = False Then
+            Exit Sub
+        End If
+
         Dim currentPok As String = cmb_SelectedPok.Text
 
         If currentPok <> Nothing AndAlso saveData.askSave(currentPok) = True Then
             saveData.savePok(currentPok)
         End If
     End Sub
+
+    Private Function checkValidAll() As Boolean
+        If cmb_SelectedPok.Text = "" Then
+            MsgBox("Please select the Pokémon that you are training.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
+            Return False
+        End If
+
+        If rd_255.Checked = False AndAlso rd_252.Checked = False Then
+            MsgBox("Please select the maximum number of EVs per stat.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
+            Return False
+        End If
+
+        If cmb_enemy.Text = "" Then
+            MsgBox("Please select the Pokémon that you are battling against.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
+            Return False
+        End If
+
+        Dim isRealPok As Boolean = False
+        For Each i As String In table.AsEnumerable().Select(Function(row) row.Field(Of String)("Name"))
+            If cmb_enemy.Text = i Then
+                isRealPok = True
+                Exit For
+            End If
+        Next
+        If isRealPok = False Then
+            MsgBox("Please select a real Pokémon that you are battling against.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
+            Return False
+        End If
+
+        Return True
+    End Function
 End Class
