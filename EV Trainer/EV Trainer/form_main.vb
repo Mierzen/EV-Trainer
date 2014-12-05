@@ -843,6 +843,11 @@
             Exit Sub
         End If
 
+        If rd_255.Checked = False AndAlso rd_252.Checked = False Then
+            MsgBox("Please select the maximum number of EVs per stat.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
+            Exit Sub
+        End If
+
         If cmb_enemy.Text = "" Then
             MsgBox("Please select the Pokémon that you are battling against.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
             Exit Sub
@@ -886,27 +891,37 @@
         ResumeLayout()
     End Sub
 
+    Private Sub seeMax(stat As Control)
+        MsgBox(stat.Name.ToString)
+    End Sub
+
     Private Sub tb_PlannedHP_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedHP.TextChanged
+        seeMax(tb_PlannedHP)
         statsUpdated()
     End Sub
 
     Private Sub tb_PlannedAtk_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedAtk.TextChanged
+        seeMax(tb_PlannedAtk)
         statsUpdated()
     End Sub
 
     Private Sub tb_PlannedDef_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedDef.TextChanged
+        seeMax(tb_PlannedDef)
         statsUpdated()
     End Sub
 
     Private Sub tb_PlannedSpAtk_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedSpAtk.TextChanged
+        seeMax(tb_PlannedSpAtk)
         statsUpdated()
     End Sub
 
     Private Sub tb_PlannedSpDef_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedSpDef.TextChanged
+        seeMax(tb_PlannedSpDef)
         statsUpdated()
     End Sub
 
     Private Sub tb_PlannedSpd_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedSpd.TextChanged
+        seeMax(tb_PlannedSpd)
         statsUpdated()
     End Sub
 End Class

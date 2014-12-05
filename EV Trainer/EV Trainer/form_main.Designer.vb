@@ -79,6 +79,9 @@ Partial Class form_main
         Me.NameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_details = New System.Windows.Forms.Button()
         Me.chk_clear = New System.Windows.Forms.CheckBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.rd_255 = New System.Windows.Forms.RadioButton()
+        Me.rd_252 = New System.Windows.Forms.RadioButton()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -100,7 +103,7 @@ Partial Class form_main
         Me.cmb_SelectedPok.FormattingEnabled = True
         Me.cmb_SelectedPok.Location = New System.Drawing.Point(112, 45)
         Me.cmb_SelectedPok.Name = "cmb_SelectedPok"
-        Me.cmb_SelectedPok.Size = New System.Drawing.Size(217, 21)
+        Me.cmb_SelectedPok.Size = New System.Drawing.Size(189, 21)
         Me.cmb_SelectedPok.TabIndex = 2
         '
         'MenuStrip1
@@ -109,7 +112,7 @@ Partial Class form_main
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FILEToolStripMenuItem, Me.ToolStripMenuItem1, Me.ABOUTToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(342, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(346, 24)
         Me.MenuStrip1.TabIndex = 3
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -146,6 +149,9 @@ Partial Class form_main
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.rd_252)
+        Me.GroupBox1.Controls.Add(Me.rd_255)
+        Me.GroupBox1.Controls.Add(Me.Label16)
         Me.GroupBox1.Controls.Add(Me.lb_TotalCurrent)
         Me.GroupBox1.Controls.Add(Me.Label17)
         Me.GroupBox1.Controls.Add(Me.lb_TotalPlanned)
@@ -169,9 +175,9 @@ Partial Class form_main
         Me.GroupBox1.Controls.Add(Me.tb_CurrentHP)
         Me.GroupBox1.Controls.Add(Me.tb_PlannedHP)
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(15, 96)
+        Me.GroupBox1.Location = New System.Drawing.Point(15, 90)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(314, 223)
+        Me.GroupBox1.Size = New System.Drawing.Size(314, 274)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "EV STATS"
@@ -179,7 +185,7 @@ Partial Class form_main
         'lb_TotalCurrent
         '
         Me.lb_TotalCurrent.AutoSize = True
-        Me.lb_TotalCurrent.Location = New System.Drawing.Point(223, 199)
+        Me.lb_TotalCurrent.Location = New System.Drawing.Point(222, 249)
         Me.lb_TotalCurrent.Name = "lb_TotalCurrent"
         Me.lb_TotalCurrent.Size = New System.Drawing.Size(60, 13)
         Me.lb_TotalCurrent.TabIndex = 22
@@ -188,7 +194,7 @@ Partial Class form_main
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(48, 199)
+        Me.Label17.Location = New System.Drawing.Point(47, 249)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(42, 13)
         Me.Label17.TabIndex = 21
@@ -197,7 +203,7 @@ Partial Class form_main
         'lb_TotalPlanned
         '
         Me.lb_TotalPlanned.AutoSize = True
-        Me.lb_TotalPlanned.Location = New System.Drawing.Point(118, 199)
+        Me.lb_TotalPlanned.Location = New System.Drawing.Point(117, 249)
         Me.lb_TotalPlanned.Name = "lb_TotalPlanned"
         Me.lb_TotalPlanned.Size = New System.Drawing.Size(58, 13)
         Me.lb_TotalPlanned.TabIndex = 20
@@ -205,14 +211,14 @@ Partial Class form_main
         '
         'tb_CurrentSpd
         '
-        Me.tb_CurrentSpd.Location = New System.Drawing.Point(203, 162)
+        Me.tb_CurrentSpd.Location = New System.Drawing.Point(202, 212)
         Me.tb_CurrentSpd.Name = "tb_CurrentSpd"
         Me.tb_CurrentSpd.Size = New System.Drawing.Size(100, 20)
         Me.tb_CurrentSpd.TabIndex = 19
         '
         'tb_PlannedSpd
         '
-        Me.tb_PlannedSpd.Location = New System.Drawing.Point(97, 162)
+        Me.tb_PlannedSpd.Location = New System.Drawing.Point(96, 212)
         Me.tb_PlannedSpd.Name = "tb_PlannedSpd"
         Me.tb_PlannedSpd.Size = New System.Drawing.Size(100, 20)
         Me.tb_PlannedSpd.TabIndex = 18
@@ -220,7 +226,7 @@ Partial Class form_main
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(7, 165)
+        Me.Label9.Location = New System.Drawing.Point(6, 215)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(38, 13)
         Me.Label9.TabIndex = 17
@@ -228,14 +234,14 @@ Partial Class form_main
         '
         'tb_CurrentSpDef
         '
-        Me.tb_CurrentSpDef.Location = New System.Drawing.Point(203, 136)
+        Me.tb_CurrentSpDef.Location = New System.Drawing.Point(202, 186)
         Me.tb_CurrentSpDef.Name = "tb_CurrentSpDef"
         Me.tb_CurrentSpDef.Size = New System.Drawing.Size(100, 20)
         Me.tb_CurrentSpDef.TabIndex = 16
         '
         'tb_PlannedSpDef
         '
-        Me.tb_PlannedSpDef.Location = New System.Drawing.Point(97, 136)
+        Me.tb_PlannedSpDef.Location = New System.Drawing.Point(96, 186)
         Me.tb_PlannedSpDef.Name = "tb_PlannedSpDef"
         Me.tb_PlannedSpDef.Size = New System.Drawing.Size(100, 20)
         Me.tb_PlannedSpDef.TabIndex = 15
@@ -243,7 +249,7 @@ Partial Class form_main
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(7, 139)
+        Me.Label8.Location = New System.Drawing.Point(6, 189)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(86, 13)
         Me.Label8.TabIndex = 14
@@ -251,14 +257,14 @@ Partial Class form_main
         '
         'tb_CurrentSpAtk
         '
-        Me.tb_CurrentSpAtk.Location = New System.Drawing.Point(203, 110)
+        Me.tb_CurrentSpAtk.Location = New System.Drawing.Point(202, 160)
         Me.tb_CurrentSpAtk.Name = "tb_CurrentSpAtk"
         Me.tb_CurrentSpAtk.Size = New System.Drawing.Size(100, 20)
         Me.tb_CurrentSpAtk.TabIndex = 13
         '
         'tb_PlannedSpAtk
         '
-        Me.tb_PlannedSpAtk.Location = New System.Drawing.Point(97, 110)
+        Me.tb_PlannedSpAtk.Location = New System.Drawing.Point(96, 160)
         Me.tb_PlannedSpAtk.Name = "tb_PlannedSpAtk"
         Me.tb_PlannedSpAtk.Size = New System.Drawing.Size(100, 20)
         Me.tb_PlannedSpAtk.TabIndex = 12
@@ -266,7 +272,7 @@ Partial Class form_main
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(7, 113)
+        Me.Label7.Location = New System.Drawing.Point(6, 163)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(76, 13)
         Me.Label7.TabIndex = 11
@@ -274,14 +280,14 @@ Partial Class form_main
         '
         'tb_CurrentDef
         '
-        Me.tb_CurrentDef.Location = New System.Drawing.Point(203, 84)
+        Me.tb_CurrentDef.Location = New System.Drawing.Point(202, 134)
         Me.tb_CurrentDef.Name = "tb_CurrentDef"
         Me.tb_CurrentDef.Size = New System.Drawing.Size(100, 20)
         Me.tb_CurrentDef.TabIndex = 10
         '
         'tb_PlannedDef
         '
-        Me.tb_PlannedDef.Location = New System.Drawing.Point(97, 84)
+        Me.tb_PlannedDef.Location = New System.Drawing.Point(96, 134)
         Me.tb_PlannedDef.Name = "tb_PlannedDef"
         Me.tb_PlannedDef.Size = New System.Drawing.Size(100, 20)
         Me.tb_PlannedDef.TabIndex = 9
@@ -289,7 +295,7 @@ Partial Class form_main
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(7, 87)
+        Me.Label6.Location = New System.Drawing.Point(6, 137)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(48, 13)
         Me.Label6.TabIndex = 8
@@ -297,14 +303,14 @@ Partial Class form_main
         '
         'tb_CurrentAtk
         '
-        Me.tb_CurrentAtk.Location = New System.Drawing.Point(203, 58)
+        Me.tb_CurrentAtk.Location = New System.Drawing.Point(202, 108)
         Me.tb_CurrentAtk.Name = "tb_CurrentAtk"
         Me.tb_CurrentAtk.Size = New System.Drawing.Size(100, 20)
         Me.tb_CurrentAtk.TabIndex = 7
         '
         'tb_PlannedAtk
         '
-        Me.tb_PlannedAtk.Location = New System.Drawing.Point(97, 58)
+        Me.tb_PlannedAtk.Location = New System.Drawing.Point(96, 108)
         Me.tb_PlannedAtk.Name = "tb_PlannedAtk"
         Me.tb_PlannedAtk.Size = New System.Drawing.Size(100, 20)
         Me.tb_PlannedAtk.TabIndex = 6
@@ -312,7 +318,7 @@ Partial Class form_main
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(7, 61)
+        Me.Label5.Location = New System.Drawing.Point(6, 111)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(38, 13)
         Me.Label5.TabIndex = 5
@@ -321,7 +327,7 @@ Partial Class form_main
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(223, 16)
+        Me.Label4.Location = New System.Drawing.Point(222, 66)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(60, 13)
         Me.Label4.TabIndex = 4
@@ -330,7 +336,7 @@ Partial Class form_main
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(118, 16)
+        Me.Label3.Location = New System.Drawing.Point(117, 66)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(58, 13)
         Me.Label3.TabIndex = 3
@@ -338,14 +344,14 @@ Partial Class form_main
         '
         'tb_CurrentHP
         '
-        Me.tb_CurrentHP.Location = New System.Drawing.Point(203, 32)
+        Me.tb_CurrentHP.Location = New System.Drawing.Point(202, 82)
         Me.tb_CurrentHP.Name = "tb_CurrentHP"
         Me.tb_CurrentHP.Size = New System.Drawing.Size(100, 20)
         Me.tb_CurrentHP.TabIndex = 2
         '
         'tb_PlannedHP
         '
-        Me.tb_PlannedHP.Location = New System.Drawing.Point(97, 32)
+        Me.tb_PlannedHP.Location = New System.Drawing.Point(96, 82)
         Me.tb_PlannedHP.Name = "tb_PlannedHP"
         Me.tb_PlannedHP.Size = New System.Drawing.Size(100, 20)
         Me.tb_PlannedHP.TabIndex = 1
@@ -353,7 +359,7 @@ Partial Class form_main
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(7, 35)
+        Me.Label2.Location = New System.Drawing.Point(6, 85)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(22, 13)
         Me.Label2.TabIndex = 0
@@ -376,7 +382,7 @@ Partial Class form_main
         Me.GroupBox2.Controls.Add(Me.Label14)
         Me.GroupBox2.Controls.Add(Me.Label15)
         Me.GroupBox2.Controls.Add(Me.cmb_enemy)
-        Me.GroupBox2.Location = New System.Drawing.Point(16, 325)
+        Me.GroupBox2.Location = New System.Drawing.Point(16, 370)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(314, 172)
         Me.GroupBox2.TabIndex = 5
@@ -387,6 +393,7 @@ Partial Class form_main
         '
         Me.Panel1.AutoSize = True
         Me.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.btn_5)
         Me.Panel1.Controls.Add(Me.btn_2)
         Me.Panel1.Controls.Add(Me.btn_1)
@@ -578,7 +585,7 @@ Partial Class form_main
         Me.btn_details.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btn_details.FlatAppearance.BorderSize = 0
         Me.btn_details.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_details.Location = New System.Drawing.Point(304, 64)
+        Me.btn_details.Location = New System.Drawing.Point(303, 44)
         Me.btn_details.Margin = New System.Windows.Forms.Padding(0)
         Me.btn_details.Name = "btn_details"
         Me.btn_details.Size = New System.Drawing.Size(26, 23)
@@ -597,11 +604,44 @@ Partial Class form_main
         Me.chk_clear.Text = "Clear after adding?"
         Me.chk_clear.UseVisualStyleBackColor = True
         '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Location = New System.Drawing.Point(7, 20)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(90, 13)
+        Me.Label16.TabIndex = 23
+        Me.Label16.Text = "Max EVs per stat:"
+        '
+        'rd_255
+        '
+        Me.rd_255.AutoSize = True
+        Me.rd_255.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.rd_255.Location = New System.Drawing.Point(100, 18)
+        Me.rd_255.Name = "rd_255"
+        Me.rd_255.Size = New System.Drawing.Size(93, 17)
+        Me.rd_255.TabIndex = 26
+        Me.rd_255.TabStop = True
+        Me.rd_255.Text = "255 (Gen III-V)"
+        Me.rd_255.UseVisualStyleBackColor = True
+        '
+        'rd_252
+        '
+        Me.rd_252.AutoSize = True
+        Me.rd_252.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.rd_252.Location = New System.Drawing.Point(100, 36)
+        Me.rd_252.Name = "rd_252"
+        Me.rd_252.Size = New System.Drawing.Size(84, 17)
+        Me.rd_252.TabIndex = 27
+        Me.rd_252.TabStop = True
+        Me.rd_252.Text = "252 (Gen VI)"
+        Me.rd_252.UseVisualStyleBackColor = True
+        '
         'form_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(342, 510)
+        Me.ClientSize = New System.Drawing.Size(346, 559)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.cmb_SelectedPok)
@@ -682,5 +722,8 @@ Partial Class form_main
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents lb_TotalPlanned As System.Windows.Forms.Label
     Friend WithEvents chk_clear As System.Windows.Forms.CheckBox
+    Friend WithEvents Label16 As System.Windows.Forms.Label
+    Friend WithEvents rd_252 As System.Windows.Forms.RadioButton
+    Friend WithEvents rd_255 As System.Windows.Forms.RadioButton
 
 End Class
