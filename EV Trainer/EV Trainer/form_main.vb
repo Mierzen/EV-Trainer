@@ -15,7 +15,9 @@
         lb_TotalCurrent.Text = ""
 
         createTable()
-        pokemonList("name")
+        battlePokemonList("name")
+
+        saveData.trainPokemonList()
 
         ResumeLayout()
     End Sub
@@ -769,14 +771,14 @@
     End Sub
 
     Private Sub PokédexToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PokédexToolStripMenuItem.Click 'Sort list by Pokédex entry
-        pokemonList("dex")
+        battlePokemonList("dex")
     End Sub
 
     Private Sub NameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NameToolStripMenuItem.Click 'Sort list by Pokédex entry
-        pokemonList("name")
+        battlePokemonList("name")
     End Sub
 
-    Private Sub pokemonList(ByVal type As String)
+    Private Sub battlePokemonList(ByVal type As String)
         cmb_enemy.Items.Clear()
 
         Dim values

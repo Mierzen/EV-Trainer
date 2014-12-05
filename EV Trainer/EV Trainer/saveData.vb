@@ -6,6 +6,23 @@ Imports System.Text
 Module saveData
     Dim saveDirMain As String = My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\" & My.Application.Info.Title.ToString
 
+    Public Sub trainPokemonList()
+        If My.Computer.FileSystem.DirectoryExists(saveDirMain) = False Then
+            Exit Sub
+        Else
+            Dim folder As New DirectoryInfo(saveDirMain)
+
+            Dim longName As String, shortName As String
+
+            For Each finfo In folder.EnumerateFiles("*.txt", SearchOption.AllDirectories)
+                longName = finfo.Name.ToString()
+                shortName = Left(longName, Len(longName) - 4)
+
+                form_main.cmb_SelectedPok.Items.Add(shortName)
+            Next
+        End If
+    End Sub
+
     Public Function askSave(pok As String) As Boolean
         Dim result As MsgBoxResult
         result = MsgBox("Do you want to save changes to " & pok & "?", MsgBoxStyle.YesNo, "Save changes?")
