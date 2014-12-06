@@ -82,6 +82,7 @@ Partial Class form_main
         Me.PokédexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_details = New System.Windows.Forms.Button()
+        Me.btn_addNewPok = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.gb_TrainingPok.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -100,6 +101,7 @@ Partial Class form_main
         '
         'cmb_SelectedPok
         '
+        Me.cmb_SelectedPok.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmb_SelectedPok.FormattingEnabled = True
         Me.cmb_SelectedPok.Location = New System.Drawing.Point(112, 45)
         Me.cmb_SelectedPok.Name = "cmb_SelectedPok"
@@ -406,6 +408,7 @@ Partial Class form_main
         Me.GroupBox2.Controls.Add(Me.lb_EnemySpDef)
         Me.GroupBox2.Controls.Add(Me.lb_EnemySpAtk)
         Me.GroupBox2.Controls.Add(Me.lb_EnemyDef)
+        Me.GroupBox2.Controls.Add(Me.btn_details)
         Me.GroupBox2.Controls.Add(Me.lb_EnemyAtk)
         Me.GroupBox2.Controls.Add(Me.lb_EnemyHP)
         Me.GroupBox2.Controls.Add(Me.Label10)
@@ -629,7 +632,7 @@ Partial Class form_main
         Me.btn_details.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.btn_details.FlatAppearance.BorderSize = 0
         Me.btn_details.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_details.Location = New System.Drawing.Point(303, 44)
+        Me.btn_details.Location = New System.Drawing.Point(285, 146)
         Me.btn_details.Margin = New System.Windows.Forms.Padding(0)
         Me.btn_details.Name = "btn_details"
         Me.btn_details.Size = New System.Drawing.Size(26, 23)
@@ -637,17 +640,27 @@ Partial Class form_main
         Me.btn_details.Text = "..."
         Me.btn_details.UseVisualStyleBackColor = True
         '
+        'btn_addNewPok
+        '
+        Me.btn_addNewPok.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_addNewPok.Location = New System.Drawing.Point(303, 45)
+        Me.btn_addNewPok.Name = "btn_addNewPok"
+        Me.btn_addNewPok.Size = New System.Drawing.Size(24, 21)
+        Me.btn_addNewPok.TabIndex = 6
+        Me.btn_addNewPok.Text = "+"
+        Me.btn_addNewPok.UseVisualStyleBackColor = True
+        '
         'form_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(346, 559)
+        Me.Controls.Add(Me.btn_addNewPok)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.gb_TrainingPok)
         Me.Controls.Add(Me.cmb_SelectedPok)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.btn_details)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.MaximizeBox = False
         Me.Name = "form_main"
@@ -725,5 +738,6 @@ Partial Class form_main
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents rd_252 As System.Windows.Forms.RadioButton
     Friend WithEvents rd_255 As System.Windows.Forms.RadioButton
+    Friend WithEvents btn_addNewPok As System.Windows.Forms.Button
 
 End Class

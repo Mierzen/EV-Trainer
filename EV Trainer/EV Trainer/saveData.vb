@@ -28,7 +28,12 @@ Module saveData
     Public Function askSave(pok As String) As Boolean
         Dim result As MsgBoxResult
         result = MsgBox("Do you want to save changes to " & pok & "?", MsgBoxStyle.YesNo, "Save changes?")
-        Return result
+
+        If result = vbYes Then
+            Return True
+        Else
+            Return False
+        End If
     End Function
 
     Public Sub savePok(pok As String)
@@ -37,26 +42,24 @@ Module saveData
 
         Dim savePathPok As String
         savePathPok = saveDirMain & "\" & pok & ".txt"
-        'MsgBox(savePathPok)
-
 
         Dim fs As FileStream = File.Create(savePathPok)
 
         Dim str As String
         str = pok & vbNewLine & _
                 "MaxEV=" & If(form_main.rd_255.Checked = True, "255", "252") & vbNewLine & _
-                "PlannedHP=" & form_main.tb_PlannedHP.Text & vbNewLine & _
-                "PlannedAtk=" & form_main.tb_PlannedAtk.Text & vbNewLine & _
-                "PlannedDef=" & form_main.tb_PlannedDef.Text & vbNewLine & _
-                "PlannedSpAtk=" & form_main.tb_PlannedSpAtk.Text & vbNewLine & _
-                "PlannedSpDef=" & form_main.tb_PlannedSpDef.Text & vbNewLine & _
-                "PlannedSpd=" & form_main.tb_PlannedSpd.Text & vbNewLine & _
-                "CurrentHP=" & form_main.tb_CurrentHP.Text & vbNewLine & _
-                "CurrentAtk=" & form_main.tb_CurrentAtk.Text & vbNewLine & _
-                "CurrentDef=" & form_main.tb_CurrentDef.Text & vbNewLine & _
-                "CurrentSpAtk=" & form_main.tb_CurrentSpAtk.Text & vbNewLine & _
-                "CurrentSpDef=" & form_main.tb_CurrentSpDef.Text & vbNewLine & _
-                "CurrentSpd=" & form_main.tb_CurrentSpd.Text & vbNewLine & vbNewLine & _
+                "PlannedHP=" & Val(form_main.tb_PlannedHP.Text) & vbNewLine & _
+                "PlannedAtk=" & Val(form_main.tb_PlannedAtk.Text) & vbNewLine & _
+                "PlannedDef=" & Val(form_main.tb_PlannedDef.Text) & vbNewLine & _
+                "PlannedSpAtk=" & Val(form_main.tb_PlannedSpAtk.Text) & vbNewLine & _
+                "PlannedSpDef=" & Val(form_main.tb_PlannedSpDef.Text) & vbNewLine & _
+                "PlannedSpd=" & Val(form_main.tb_PlannedSpd.Text) & vbNewLine & _
+                "CurrentHP=" & Val(form_main.tb_CurrentHP.Text) & vbNewLine & _
+                "CurrentAtk=" & Val(form_main.tb_CurrentAtk.Text) & vbNewLine & _
+                "CurrentDef=" & Val(form_main.tb_CurrentDef.Text) & vbNewLine & _
+                "CurrentSpAtk=" & Val(form_main.tb_CurrentSpAtk.Text) & vbNewLine & _
+                "CurrentSpDef=" & Val(form_main.tb_CurrentSpDef.Text) & vbNewLine & _
+                "CurrentSpd=" & Val(form_main.tb_CurrentSpd.Text) & vbNewLine & vbNewLine & _
                 "Battled Pokémon" & vbNewLine '
 
         Dim info As Byte() = New UTF8Encoding(True).GetBytes(str)
@@ -91,7 +94,8 @@ Module saveData
                 Else
                     tbName = "tb_" & currentSetting
                     Dim myTextbox As TextBox = DirectCast(form_main.Controls.Find(tbName, True)(0), TextBox)
-                    myTextbox.Text = Right(line, currentValue)
+                    Dim value As String = Right(line, currentValue)
+                    myTextbox.Text = If(value = 0, "", value)
                 End If
             End If
         Loop

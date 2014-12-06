@@ -28,6 +28,8 @@
             AddHandler tb.TextChanged, AddressOf tbTextChanged
         Next
 
+        Me.Select()
+
         ResumeLayout()
     End Sub
 
@@ -849,7 +851,7 @@
     End Sub
 
     Private Sub train(enemyCount As Integer)
-        If checkValidAll() = False Then
+        If checkValidAll(True) = False Then
             Exit Sub
         End If
 
@@ -937,7 +939,9 @@
     End Sub
 
     Private Sub form_main_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        testAndSave(cmb_SelectedPok.Text)
+        If isDirty = True Then
+            testAndSave(cmb_SelectedPok.Text, False, True)
+        End If
     End Sub
 
     Private Function checkValidAll(Optional ByVal battleAsWell As Boolean = True) As Boolean
@@ -974,7 +978,7 @@
     End Function
 
     Private Sub SAVEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SAVEToolStripMenuItem.Click
-        testAndSave(cmb_SelectedPok.Text)
+        testAndSave(cmb_SelectedPok.Text, False, False)
     End Sub
 
     Private Sub DELETESAVEFILEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DELETESAVEFILEToolStripMenuItem.Click
@@ -983,7 +987,9 @@
 
     Private Sub cmb_SelectedPok_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_SelectedPok.SelectedIndexChanged
 
-        testAndSave(previousPok, False)
+        If isDirty = True Then
+            testAndSave(previousPok, False, True)
+        End If
 
         saveData.loadStats(cmb_SelectedPok.Text)
 
@@ -992,20 +998,42 @@
         isDirty = False
     End Sub
 
-    Private Sub testAndSave(pokToCheck As String, Optional battleAsWell As Boolean = True)
-        If checkValidAll(battleAsWell) = False Then
+    Private Sub testAndSave(pokToCheck As String, shouldCheckBattleAsWell As Boolean, shouldAskToSave As Boolean)
+        If checkValidAll(shouldCheckBattleAsWell) = False Then
             Exit Sub
         End If
 
         'Dim currentPok As String = cmb_SelectedPok.Text
 
-        If pokToCheck <> Nothing AndAlso saveData.askSave(pokToCheck) = True Then
+        Dim askResult As Boolean
+        If shouldAskToSave = True Then
+            askResult = saveData.askSave(pokToCheck)
+        Else
+            askResult = True
+        End If
+
+        If pokToCheck <> Nothing AndAlso askResult = True Then
             saveData.savePok(pokToCheck)
+            isDirty = False
         End If
     End Sub
 
     Private Sub cmb_SelectedPok_Enter(sender As Object, e As EventArgs) Handles cmb_SelectedPok.Enter
         previousPok = cmb_SelectedPok.Text
+
+        'If cmb_SelectedPok.Items.Count = 0 Then
+        '    cmb_SelectedPok.Items.Add(InputBox("No Pokémon being trained has been added yet." & vbNewLine & vbNewLine & "Please enter the name of your first Pokémon.", "Enter Pokémon name"))
+        'End If
+
         saveData.trainPokemonList()
+    End Sub
+
+    Private Sub btn_addNewPok_Click(sender As Object, e As EventArgs) Handles btn_addNewPok.Click
+        Dim newPok As String
+        newPok = InputBox("Please enter the name of the Pokémon being trained.", "Enter Pokémon name")
+
+        saveData.savePok(newPok)
+
+        cmb_SelectedPok.SelectedItem = newPok
     End Sub
 End Class
