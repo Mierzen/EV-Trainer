@@ -867,6 +867,14 @@
         tb_CurrentSpDef.Text = Val(tb_CurrentSpDef.Text) + CInt(lb_EnemySpDef.Text) * enemyCount
         tb_CurrentSpd.Text = Val(tb_CurrentSpd.Text) + CInt(lb_EnemySpd.Text) * enemyCount
 
+        For Each tb In gb_TrainingPok.Controls.OfType(Of TextBox)()
+            If InStr(tb.Name.ToString, "tb_Current") <> 0 Then
+                If Val(tb.Text) = 0 Then
+                    tb.Text = ""
+                End If
+            End If
+        Next
+
         statsUpdated()
 
         If chk_clear.Checked = True Then
