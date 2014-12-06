@@ -47,20 +47,13 @@ Module saveData
 
         Dim str As String
         str = pok & vbNewLine & _
-                "MaxEV=" & If(form_main.rd_255.Checked = True, "255", "252") & vbNewLine & _
-                "PlannedHP=" & Val(form_main.tb_PlannedHP.Text) & vbNewLine & _
-                "PlannedAtk=" & Val(form_main.tb_PlannedAtk.Text) & vbNewLine & _
-                "PlannedDef=" & Val(form_main.tb_PlannedDef.Text) & vbNewLine & _
-                "PlannedSpAtk=" & Val(form_main.tb_PlannedSpAtk.Text) & vbNewLine & _
-                "PlannedSpDef=" & Val(form_main.tb_PlannedSpDef.Text) & vbNewLine & _
-                "PlannedSpd=" & Val(form_main.tb_PlannedSpd.Text) & vbNewLine & _
-                "CurrentHP=" & Val(form_main.tb_CurrentHP.Text) & vbNewLine & _
-                "CurrentAtk=" & Val(form_main.tb_CurrentAtk.Text) & vbNewLine & _
-                "CurrentDef=" & Val(form_main.tb_CurrentDef.Text) & vbNewLine & _
-                "CurrentSpAtk=" & Val(form_main.tb_CurrentSpAtk.Text) & vbNewLine & _
-                "CurrentSpDef=" & Val(form_main.tb_CurrentSpDef.Text) & vbNewLine & _
-                "CurrentSpd=" & Val(form_main.tb_CurrentSpd.Text) & vbNewLine & vbNewLine & _
-                "Battled Pokémon" & vbNewLine '
+                "MaxEV=" & If(form_main.rd_255.Checked = True, "255", "252") & vbNewLine
+
+        For Each tb In form_main.gb_TrainingPok.Controls.OfType(Of TextBox)()
+            str += Right(tb.Name.ToString, Len(tb.Name.ToString) - Len("tb_")) & "=" & Val(tb.Text) & vbNewLine
+        Next
+
+        str += "Battled Pokémon" & vbNewLine '
 
         Dim info As Byte() = New UTF8Encoding(True).GetBytes(str)
         fs.Write(info, 0, info.Length)
