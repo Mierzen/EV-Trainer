@@ -58,7 +58,7 @@ Partial Class form_main
         Me.tb_CurrentHP = New System.Windows.Forms.TextBox()
         Me.tb_PlannedHP = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.gb_enemy = New System.Windows.Forms.GroupBox()
         Me.chk_clear = New System.Windows.Forms.CheckBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btn_5 = New System.Windows.Forms.Button()
@@ -68,6 +68,7 @@ Partial Class form_main
         Me.lb_EnemySpDef = New System.Windows.Forms.Label()
         Me.lb_EnemySpAtk = New System.Windows.Forms.Label()
         Me.lb_EnemyDef = New System.Windows.Forms.Label()
+        Me.btn_details = New System.Windows.Forms.Button()
         Me.lb_EnemyAtk = New System.Windows.Forms.Label()
         Me.lb_EnemyHP = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -81,11 +82,10 @@ Partial Class form_main
         Me.SortByToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PokédexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.btn_details = New System.Windows.Forms.Button()
         Me.btn_addNewPok = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.gb_TrainingPok.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
+        Me.gb_enemy.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.ContextMenuStrip_EnemyList.SuspendLayout()
         Me.SuspendLayout()
@@ -400,30 +400,30 @@ Partial Class form_main
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "HP"
         '
-        'GroupBox2
+        'gb_enemy
         '
-        Me.GroupBox2.Controls.Add(Me.chk_clear)
-        Me.GroupBox2.Controls.Add(Me.Panel1)
-        Me.GroupBox2.Controls.Add(Me.lb_EnemySpd)
-        Me.GroupBox2.Controls.Add(Me.lb_EnemySpDef)
-        Me.GroupBox2.Controls.Add(Me.lb_EnemySpAtk)
-        Me.GroupBox2.Controls.Add(Me.lb_EnemyDef)
-        Me.GroupBox2.Controls.Add(Me.btn_details)
-        Me.GroupBox2.Controls.Add(Me.lb_EnemyAtk)
-        Me.GroupBox2.Controls.Add(Me.lb_EnemyHP)
-        Me.GroupBox2.Controls.Add(Me.Label10)
-        Me.GroupBox2.Controls.Add(Me.Label11)
-        Me.GroupBox2.Controls.Add(Me.Label12)
-        Me.GroupBox2.Controls.Add(Me.Label13)
-        Me.GroupBox2.Controls.Add(Me.Label14)
-        Me.GroupBox2.Controls.Add(Me.Label15)
-        Me.GroupBox2.Controls.Add(Me.cmb_enemy)
-        Me.GroupBox2.Location = New System.Drawing.Point(16, 370)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(314, 172)
-        Me.GroupBox2.TabIndex = 5
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "BATTLED POKÉMON"
+        Me.gb_enemy.Controls.Add(Me.chk_clear)
+        Me.gb_enemy.Controls.Add(Me.Panel1)
+        Me.gb_enemy.Controls.Add(Me.lb_EnemySpd)
+        Me.gb_enemy.Controls.Add(Me.lb_EnemySpDef)
+        Me.gb_enemy.Controls.Add(Me.lb_EnemySpAtk)
+        Me.gb_enemy.Controls.Add(Me.lb_EnemyDef)
+        Me.gb_enemy.Controls.Add(Me.btn_details)
+        Me.gb_enemy.Controls.Add(Me.lb_EnemyAtk)
+        Me.gb_enemy.Controls.Add(Me.lb_EnemyHP)
+        Me.gb_enemy.Controls.Add(Me.Label10)
+        Me.gb_enemy.Controls.Add(Me.Label11)
+        Me.gb_enemy.Controls.Add(Me.Label12)
+        Me.gb_enemy.Controls.Add(Me.Label13)
+        Me.gb_enemy.Controls.Add(Me.Label14)
+        Me.gb_enemy.Controls.Add(Me.Label15)
+        Me.gb_enemy.Controls.Add(Me.cmb_enemy)
+        Me.gb_enemy.Location = New System.Drawing.Point(16, 370)
+        Me.gb_enemy.Name = "gb_enemy"
+        Me.gb_enemy.Size = New System.Drawing.Size(314, 172)
+        Me.gb_enemy.TabIndex = 5
+        Me.gb_enemy.TabStop = False
+        Me.gb_enemy.Text = "BATTLED POKÉMON"
         '
         'chk_clear
         '
@@ -518,6 +518,20 @@ Partial Class form_main
         Me.lb_EnemyDef.Size = New System.Drawing.Size(45, 13)
         Me.lb_EnemyDef.TabIndex = 26
         Me.lb_EnemyDef.Text = "Label18"
+        '
+        'btn_details
+        '
+        Me.btn_details.AutoSize = True
+        Me.btn_details.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_details.FlatAppearance.BorderSize = 0
+        Me.btn_details.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_details.Location = New System.Drawing.Point(285, 146)
+        Me.btn_details.Margin = New System.Windows.Forms.Padding(0)
+        Me.btn_details.Name = "btn_details"
+        Me.btn_details.Size = New System.Drawing.Size(26, 23)
+        Me.btn_details.TabIndex = 6
+        Me.btn_details.Text = "..."
+        Me.btn_details.UseVisualStyleBackColor = True
         '
         'lb_EnemyAtk
         '
@@ -626,20 +640,6 @@ Partial Class form_main
         Me.NameToolStripMenuItem.Size = New System.Drawing.Size(128, 22)
         Me.NameToolStripMenuItem.Text = "Name"
         '
-        'btn_details
-        '
-        Me.btn_details.AutoSize = True
-        Me.btn_details.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btn_details.FlatAppearance.BorderSize = 0
-        Me.btn_details.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_details.Location = New System.Drawing.Point(285, 146)
-        Me.btn_details.Margin = New System.Windows.Forms.Padding(0)
-        Me.btn_details.Name = "btn_details"
-        Me.btn_details.Size = New System.Drawing.Size(26, 23)
-        Me.btn_details.TabIndex = 6
-        Me.btn_details.Text = "..."
-        Me.btn_details.UseVisualStyleBackColor = True
-        '
         'btn_addNewPok
         '
         Me.btn_addNewPok.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -656,7 +656,7 @@ Partial Class form_main
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(346, 559)
         Me.Controls.Add(Me.btn_addNewPok)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.gb_enemy)
         Me.Controls.Add(Me.gb_TrainingPok)
         Me.Controls.Add(Me.cmb_SelectedPok)
         Me.Controls.Add(Me.Label1)
@@ -670,8 +670,8 @@ Partial Class form_main
         Me.MenuStrip1.PerformLayout()
         Me.gb_TrainingPok.ResumeLayout(False)
         Me.gb_TrainingPok.PerformLayout()
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
+        Me.gb_enemy.ResumeLayout(False)
+        Me.gb_enemy.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ContextMenuStrip_EnemyList.ResumeLayout(False)
@@ -708,7 +708,7 @@ Partial Class form_main
     Friend WithEvents tb_CurrentHP As System.Windows.Forms.TextBox
     Friend WithEvents tb_PlannedHP As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents gb_enemy As System.Windows.Forms.GroupBox
     Friend WithEvents lb_EnemySpd As System.Windows.Forms.Label
     Friend WithEvents lb_EnemySpDef As System.Windows.Forms.Label
     Friend WithEvents lb_EnemySpAtk As System.Windows.Forms.Label

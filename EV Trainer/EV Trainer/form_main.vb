@@ -23,6 +23,9 @@
         previousPok = Nothing
         isDirty = False
 
+        gb_TrainingPok.Enabled = False
+        gb_enemy.Enabled = False
+
         Dim textboxes = gb_TrainingPok.Controls.OfType(Of TextBox)()
         For Each tb In textboxes
             AddHandler tb.TextChanged, AddressOf tbTextChanged
@@ -986,6 +989,15 @@
     End Sub
 
     Private Sub cmb_SelectedPok_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_SelectedPok.SelectedIndexChanged
+        SuspendLayout()
+        If cmb_SelectedPok.Text = "" Then
+            gb_TrainingPok.Enabled = False
+            gb_enemy.Enabled = False
+        Else
+            gb_TrainingPok.Enabled = True
+            gb_enemy.Enabled = True
+        End If
+        ResumeLayout()
 
         If isDirty = True Then
             testAndSave(previousPok, False, True)
