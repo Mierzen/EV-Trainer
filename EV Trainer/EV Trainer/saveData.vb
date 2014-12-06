@@ -10,6 +10,8 @@ Module saveData
         If My.Computer.FileSystem.DirectoryExists(saveDirMain) = False Then
             Exit Sub
         Else
+            form_main.cmb_SelectedPok.Items.Clear()
+
             Dim folder As New DirectoryInfo(saveDirMain)
 
             Dim longName As String, shortName As String
@@ -93,6 +95,8 @@ Module saveData
                 End If
             End If
         Loop
+
+        fileReader.Close()
     End Sub
 
     Private Sub checkDirMain()

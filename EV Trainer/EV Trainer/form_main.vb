@@ -956,7 +956,7 @@
         testAndSave(cmb_SelectedPok.Text)
     End Sub
 
-    Private Function checkValidAll() As Boolean
+    Private Function checkValidAll(Optional ByVal battleAsWell As Boolean = True) As Boolean
         If cmb_SelectedPok.Text = "" Then
             MsgBox("Please select the Pokémon that you are training.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
             Return False
@@ -967,21 +967,23 @@
             Return False
         End If
 
-        If cmb_enemy.Text = "" Then
-            MsgBox("Please select the Pokémon that you are battling against.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
-            Return False
-        End If
-
-        Dim isRealPok As Boolean = False
-        For Each i As String In table.AsEnumerable().Select(Function(row) row.Field(Of String)("Name"))
-            If cmb_enemy.Text = i Then
-                isRealPok = True
-                Exit For
+        If battleAsWell = True Then
+            If cmb_enemy.Text = "" Then
+                MsgBox("Please select the Pokémon that you are battling against.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
+                Return False
             End If
-        Next
-        If isRealPok = False Then
-            MsgBox("Please select a real Pokémon that you are battling against.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
-            Return False
+
+            Dim isRealPok As Boolean = False
+            For Each i As String In table.AsEnumerable().Select(Function(row) row.Field(Of String)("Name"))
+                If cmb_enemy.Text = i Then
+                    isRealPok = True
+                    Exit For
+                End If
+            Next
+            If isRealPok = False Then
+                MsgBox("Please select a real Pokémon that you are battling against.", MsgBoxStyle.Exclamation Or MsgBoxStyle.OkOnly, "Incomplete data")
+                Return False
+            End If
         End If
 
         Return True
@@ -997,13 +999,15 @@
 
     Private Sub cmb_SelectedPok_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_SelectedPok.SelectedIndexChanged
 
-        testAndSave(previousPok)
+        testAndSave(previousPok, False)
 
         saveData.loadStats(cmb_SelectedPok.Text)
+
+        Me.Select() 'remove focus from the combobox, so that values can be saved when changing the index again
     End Sub
 
-    Private Sub testAndSave(pokToCheck As String)
-        If checkValidAll() = False Then
+    Private Sub testAndSave(pokToCheck As String, Optional battleAsWell As Boolean = True)
+        If checkValidAll(battleAsWell) = False Then
             Exit Sub
         End If
 
@@ -1016,5 +1020,6 @@
 
     Private Sub cmb_SelectedPok_Enter(sender As Object, e As EventArgs) Handles cmb_SelectedPok.Enter
         previousPok = cmb_SelectedPok.Text
+        saveData.trainPokemonList()
     End Sub
 End Class
