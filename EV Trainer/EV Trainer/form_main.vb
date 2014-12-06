@@ -1,6 +1,7 @@
 ﻿Public Class form_main
     Public table As New DataTable
     Dim previousPok As String
+    Dim isDirty As Boolean
 
     Private Sub form_main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SuspendLayout()
@@ -20,6 +21,12 @@
 
         saveData.trainPokemonList()
         previousPok = Nothing
+        isDirty = False
+
+        Dim textboxes = gb_TrainingPok.Controls.OfType(Of TextBox)()
+        For Each tb In textboxes
+            AddHandler tb.TextChanged, AddressOf tbTextChanged
+        Next
 
         ResumeLayout()
     End Sub
@@ -904,34 +911,11 @@
         End If
     End Sub
 
-    Private Sub tb_PlannedHP_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedHP.TextChanged
-        seeMax(tb_PlannedHP)
+    Private Sub tbTextChanged(sender As Object, e As EventArgs)
+        Dim tb = DirectCast(sender, TextBox)
+        seeMax(tb)
         statsUpdated()
-    End Sub
-
-    Private Sub tb_PlannedAtk_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedAtk.TextChanged
-        seeMax(tb_PlannedAtk)
-        statsUpdated()
-    End Sub
-
-    Private Sub tb_PlannedDef_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedDef.TextChanged
-        seeMax(tb_PlannedDef)
-        statsUpdated()
-    End Sub
-
-    Private Sub tb_PlannedSpAtk_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedSpAtk.TextChanged
-        seeMax(tb_PlannedSpAtk)
-        statsUpdated()
-    End Sub
-
-    Private Sub tb_PlannedSpDef_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedSpDef.TextChanged
-        seeMax(tb_PlannedSpDef)
-        statsUpdated()
-    End Sub
-
-    Private Sub tb_PlannedSpd_TextChanged(sender As Object, e As EventArgs) Handles tb_PlannedSpd.TextChanged
-        seeMax(tb_PlannedSpd)
-        statsUpdated()
+        isDirty = True
     End Sub
 
     Private Sub rd_255_CheckedChanged(sender As Object, e As EventArgs) Handles rd_255.CheckedChanged
@@ -1004,6 +988,8 @@
         saveData.loadStats(cmb_SelectedPok.Text)
 
         Me.Select() 'remove focus from the combobox, so that values can be saved when changing the index again
+
+        isDirty = False
     End Sub
 
     Private Sub testAndSave(pokToCheck As String, Optional battleAsWell As Boolean = True)

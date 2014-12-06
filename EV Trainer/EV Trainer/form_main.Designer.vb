@@ -31,7 +31,7 @@ Partial Class form_main
         Me.DELETESAVEFILEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ABOUTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.gb_TrainingPok = New System.Windows.Forms.GroupBox()
         Me.rd_252 = New System.Windows.Forms.RadioButton()
         Me.rd_255 = New System.Windows.Forms.RadioButton()
         Me.Label16 = New System.Windows.Forms.Label()
@@ -83,7 +83,7 @@ Partial Class form_main
         Me.NameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_details = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.gb_TrainingPok.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.ContextMenuStrip_EnemyList.SuspendLayout()
@@ -147,40 +147,40 @@ Partial Class form_main
         Me.ABOUTToolStripMenuItem.Size = New System.Drawing.Size(58, 20)
         Me.ABOUTToolStripMenuItem.Text = "ABOUT"
         '
-        'GroupBox1
+        'gb_TrainingPok
         '
-        Me.GroupBox1.Controls.Add(Me.rd_252)
-        Me.GroupBox1.Controls.Add(Me.rd_255)
-        Me.GroupBox1.Controls.Add(Me.Label16)
-        Me.GroupBox1.Controls.Add(Me.lb_TotalCurrent)
-        Me.GroupBox1.Controls.Add(Me.Label17)
-        Me.GroupBox1.Controls.Add(Me.lb_TotalPlanned)
-        Me.GroupBox1.Controls.Add(Me.tb_CurrentSpd)
-        Me.GroupBox1.Controls.Add(Me.tb_PlannedSpd)
-        Me.GroupBox1.Controls.Add(Me.Label9)
-        Me.GroupBox1.Controls.Add(Me.tb_CurrentSpDef)
-        Me.GroupBox1.Controls.Add(Me.tb_PlannedSpDef)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.tb_CurrentSpAtk)
-        Me.GroupBox1.Controls.Add(Me.tb_PlannedSpAtk)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.tb_CurrentDef)
-        Me.GroupBox1.Controls.Add(Me.tb_PlannedDef)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.tb_CurrentAtk)
-        Me.GroupBox1.Controls.Add(Me.tb_PlannedAtk)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.tb_CurrentHP)
-        Me.GroupBox1.Controls.Add(Me.tb_PlannedHP)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(15, 90)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(314, 274)
-        Me.GroupBox1.TabIndex = 4
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "EV STATS"
+        Me.gb_TrainingPok.Controls.Add(Me.rd_252)
+        Me.gb_TrainingPok.Controls.Add(Me.rd_255)
+        Me.gb_TrainingPok.Controls.Add(Me.Label16)
+        Me.gb_TrainingPok.Controls.Add(Me.lb_TotalCurrent)
+        Me.gb_TrainingPok.Controls.Add(Me.Label17)
+        Me.gb_TrainingPok.Controls.Add(Me.lb_TotalPlanned)
+        Me.gb_TrainingPok.Controls.Add(Me.tb_CurrentSpd)
+        Me.gb_TrainingPok.Controls.Add(Me.tb_PlannedSpd)
+        Me.gb_TrainingPok.Controls.Add(Me.Label9)
+        Me.gb_TrainingPok.Controls.Add(Me.tb_CurrentSpDef)
+        Me.gb_TrainingPok.Controls.Add(Me.tb_PlannedSpDef)
+        Me.gb_TrainingPok.Controls.Add(Me.Label8)
+        Me.gb_TrainingPok.Controls.Add(Me.tb_CurrentSpAtk)
+        Me.gb_TrainingPok.Controls.Add(Me.tb_PlannedSpAtk)
+        Me.gb_TrainingPok.Controls.Add(Me.Label7)
+        Me.gb_TrainingPok.Controls.Add(Me.tb_CurrentDef)
+        Me.gb_TrainingPok.Controls.Add(Me.tb_PlannedDef)
+        Me.gb_TrainingPok.Controls.Add(Me.Label6)
+        Me.gb_TrainingPok.Controls.Add(Me.tb_CurrentAtk)
+        Me.gb_TrainingPok.Controls.Add(Me.tb_PlannedAtk)
+        Me.gb_TrainingPok.Controls.Add(Me.Label5)
+        Me.gb_TrainingPok.Controls.Add(Me.Label4)
+        Me.gb_TrainingPok.Controls.Add(Me.Label3)
+        Me.gb_TrainingPok.Controls.Add(Me.tb_CurrentHP)
+        Me.gb_TrainingPok.Controls.Add(Me.tb_PlannedHP)
+        Me.gb_TrainingPok.Controls.Add(Me.Label2)
+        Me.gb_TrainingPok.Location = New System.Drawing.Point(15, 90)
+        Me.gb_TrainingPok.Name = "gb_TrainingPok"
+        Me.gb_TrainingPok.Size = New System.Drawing.Size(314, 274)
+        Me.gb_TrainingPok.TabIndex = 4
+        Me.gb_TrainingPok.TabStop = False
+        Me.gb_TrainingPok.Text = "EV STATS"
         '
         'rd_252
         '
@@ -643,7 +643,7 @@ Partial Class form_main
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(346, 559)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.gb_TrainingPok)
         Me.Controls.Add(Me.cmb_SelectedPok)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
@@ -655,8 +655,8 @@ Partial Class form_main
         Me.Text = "EV Counter"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.gb_TrainingPok.ResumeLayout(False)
+        Me.gb_TrainingPok.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -674,7 +674,7 @@ Partial Class form_main
     Friend WithEvents FILEToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SAVEToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents DELETESAVEFILEToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents gb_TrainingPok As System.Windows.Forms.GroupBox
     Friend WithEvents tb_CurrentSpd As System.Windows.Forms.TextBox
     Friend WithEvents tb_PlannedSpd As System.Windows.Forms.TextBox
     Friend WithEvents Label9 As System.Windows.Forms.Label
