@@ -1029,8 +1029,11 @@
     End Sub
 
     Private Sub btn_addNewPok_Click(sender As Object, e As EventArgs) Handles btn_addNewPok.Click
-        Dim newPok As String
-        newPok = InputBox("Please enter the name of the Pokémon being trained.", "Enter Pokémon name")
+        Dim newPok As String = Nothing
+
+        While newPok = Nothing OrElse cmb_SelectedPok.Items.Contains(newPok) = True
+            newPok = InputBox("Please enter the name of the Pokémon being trained.", "Enter Pokémon name")
+        End While
 
         saveData.savePok(newPok)
 
