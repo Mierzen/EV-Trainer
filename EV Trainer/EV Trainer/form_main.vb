@@ -883,9 +883,9 @@
         End If
 
         If Val(lb_TotalCurrent.Text) > 510 Then
-            lb_TotalPlanned.ForeColor = Color.DarkRed
+            lb_TotalCurrent.ForeColor = Color.DarkRed
         Else
-            lb_TotalPlanned.ForeColor = SystemColors.ControlText
+            lb_TotalCurrent.ForeColor = SystemColors.ControlText
         End If
 
         ResumeLayout()
