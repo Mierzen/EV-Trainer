@@ -96,6 +96,14 @@ Module saveData
         fileReader.Close()
     End Sub
 
+    Public Sub delete(pok As String)
+        form_main.cmb_SelectedPok.SelectedIndex = -1
+
+        My.Computer.FileSystem.DeleteFile(saveDirMain & "\" & pok & ".txt")
+
+        trainPokemonList()
+    End Sub
+
     Private Sub checkDirMain()
         If My.Computer.FileSystem.DirectoryExists(saveDirMain) = False Then
             My.Computer.FileSystem.CreateDirectory(saveDirMain)

@@ -993,14 +993,19 @@
     End Sub
 
     Private Sub DELETESAVEFILEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DELETESAVEFILEToolStripMenuItem.Click
+        If MsgBox("Are you sure you want to delete the save file for " & cmb_SelectedPok.Text & "?", MsgBoxStyle.YesNo Or MsgBoxStyle.Exclamation Or MsgBoxStyle.ApplicationModal, "Sure to delte?") = vbYes Then
+            saveData.delete(cmb_SelectedPok.Text)
+        End If
 
     End Sub
 
-    Private Sub cmb_SelectedPok_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_SelectedPok.SelectedIndexChanged
+    Public Sub cmb_SelectedPok_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmb_SelectedPok.SelectedIndexChanged
         SuspendLayout()
         If cmb_SelectedPok.Text = "" Then
-            gb_TrainingPok.Enabled = False
-            gb_enemy.Enabled = False
+            clearForm()
+
+            ResumeLayout()
+            Exit Sub
         Else
             gb_TrainingPok.Enabled = True
             gb_enemy.Enabled = True
@@ -1058,5 +1063,21 @@
         saveData.savePok(newPok)
 
         cmb_SelectedPok.SelectedItem = newPok
+    End Sub
+
+    Private Sub clearForm()
+        For Each tb In gb_TrainingPok.Controls.OfType(Of TextBox)()
+            RemoveHandler tb.TextChanged, AddressOf tbTextChanged
+
+            tb.Text = ""
+
+            AddHandler tb.TextChanged, AddressOf tbTextChanged
+        Next
+
+        lb_TotalPlanned.Text = ""
+        lb_TotalCurrent.Text = ""
+
+        gb_TrainingPok.Enabled = False
+        gb_enemy.Enabled = False
     End Sub
 End Class
