@@ -938,6 +938,8 @@
         seeMax(tb_PlannedSpAtk)
         seeMax(tb_PlannedSpDef)
         seeMax(tb_PlannedSpd)
+
+        isDirty = True
     End Sub
 
     Private Sub rd_252_CheckedChanged(sender As Object, e As EventArgs) Handles rd_252.CheckedChanged
@@ -947,6 +949,8 @@
         seeMax(tb_PlannedSpAtk)
         seeMax(tb_PlannedSpDef)
         seeMax(tb_PlannedSpd)
+
+        isDirty = True
     End Sub
 
     Private Sub form_main_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
