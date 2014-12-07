@@ -96,7 +96,7 @@ Partial Class form_main
         Me.Label1.Location = New System.Drawing.Point(12, 48)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(96, 13)
-        Me.Label1.TabIndex = 1
+        Me.Label1.TabIndex = 0
         Me.Label1.Text = "Training Pokémon:"
         '
         'cmb_SelectedPok
@@ -106,7 +106,7 @@ Partial Class form_main
         Me.cmb_SelectedPok.Location = New System.Drawing.Point(112, 45)
         Me.cmb_SelectedPok.Name = "cmb_SelectedPok"
         Me.cmb_SelectedPok.Size = New System.Drawing.Size(189, 21)
-        Me.cmb_SelectedPok.TabIndex = 2
+        Me.cmb_SelectedPok.TabIndex = 1
         '
         'MenuStrip1
         '
@@ -180,7 +180,7 @@ Partial Class form_main
         Me.gb_TrainingPok.Location = New System.Drawing.Point(15, 90)
         Me.gb_TrainingPok.Name = "gb_TrainingPok"
         Me.gb_TrainingPok.Size = New System.Drawing.Size(314, 274)
-        Me.gb_TrainingPok.TabIndex = 4
+        Me.gb_TrainingPok.TabIndex = 3
         Me.gb_TrainingPok.TabStop = False
         Me.gb_TrainingPok.Text = "EV STATS"
         '
@@ -191,7 +191,7 @@ Partial Class form_main
         Me.rd_252.Location = New System.Drawing.Point(100, 36)
         Me.rd_252.Name = "rd_252"
         Me.rd_252.Size = New System.Drawing.Size(84, 17)
-        Me.rd_252.TabIndex = 27
+        Me.rd_252.TabIndex = 2
         Me.rd_252.TabStop = True
         Me.rd_252.Text = "252 (Gen VI)"
         Me.rd_252.UseVisualStyleBackColor = True
@@ -203,7 +203,7 @@ Partial Class form_main
         Me.rd_255.Location = New System.Drawing.Point(100, 18)
         Me.rd_255.Name = "rd_255"
         Me.rd_255.Size = New System.Drawing.Size(93, 17)
-        Me.rd_255.TabIndex = 26
+        Me.rd_255.TabIndex = 1
         Me.rd_255.TabStop = True
         Me.rd_255.Text = "255 (Gen III-V)"
         Me.rd_255.UseVisualStyleBackColor = True
@@ -214,7 +214,7 @@ Partial Class form_main
         Me.Label16.Location = New System.Drawing.Point(7, 20)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(90, 13)
-        Me.Label16.TabIndex = 23
+        Me.Label16.TabIndex = 0
         Me.Label16.Text = "Max EVs per stat:"
         '
         'lb_TotalCurrent
@@ -223,7 +223,7 @@ Partial Class form_main
         Me.lb_TotalCurrent.Location = New System.Drawing.Point(222, 249)
         Me.lb_TotalCurrent.Name = "lb_TotalCurrent"
         Me.lb_TotalCurrent.Size = New System.Drawing.Size(60, 13)
-        Me.lb_TotalCurrent.TabIndex = 22
+        Me.lb_TotalCurrent.TabIndex = 25
         Me.lb_TotalCurrent.Text = "CURRENT"
         '
         'Label17
@@ -232,7 +232,7 @@ Partial Class form_main
         Me.Label17.Location = New System.Drawing.Point(47, 249)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(42, 13)
-        Me.Label17.TabIndex = 21
+        Me.Label17.TabIndex = 23
         Me.Label17.Text = "TOTAL"
         '
         'lb_TotalPlanned
@@ -241,7 +241,7 @@ Partial Class form_main
         Me.lb_TotalPlanned.Location = New System.Drawing.Point(117, 249)
         Me.lb_TotalPlanned.Name = "lb_TotalPlanned"
         Me.lb_TotalPlanned.Size = New System.Drawing.Size(58, 13)
-        Me.lb_TotalPlanned.TabIndex = 20
+        Me.lb_TotalPlanned.TabIndex = 24
         Me.lb_TotalPlanned.Text = "PLANNED"
         '
         'tb_CurrentSpd
@@ -249,14 +249,14 @@ Partial Class form_main
         Me.tb_CurrentSpd.Location = New System.Drawing.Point(202, 212)
         Me.tb_CurrentSpd.Name = "tb_CurrentSpd"
         Me.tb_CurrentSpd.Size = New System.Drawing.Size(100, 20)
-        Me.tb_CurrentSpd.TabIndex = 19
+        Me.tb_CurrentSpd.TabIndex = 22
         '
         'tb_PlannedSpd
         '
         Me.tb_PlannedSpd.Location = New System.Drawing.Point(96, 212)
         Me.tb_PlannedSpd.Name = "tb_PlannedSpd"
         Me.tb_PlannedSpd.Size = New System.Drawing.Size(100, 20)
-        Me.tb_PlannedSpd.TabIndex = 18
+        Me.tb_PlannedSpd.TabIndex = 15
         '
         'Label9
         '
@@ -264,7 +264,7 @@ Partial Class form_main
         Me.Label9.Location = New System.Drawing.Point(6, 215)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(38, 13)
-        Me.Label9.TabIndex = 17
+        Me.Label9.TabIndex = 8
         Me.Label9.Text = "Speed"
         '
         'tb_CurrentSpDef
@@ -272,14 +272,14 @@ Partial Class form_main
         Me.tb_CurrentSpDef.Location = New System.Drawing.Point(202, 186)
         Me.tb_CurrentSpDef.Name = "tb_CurrentSpDef"
         Me.tb_CurrentSpDef.Size = New System.Drawing.Size(100, 20)
-        Me.tb_CurrentSpDef.TabIndex = 16
+        Me.tb_CurrentSpDef.TabIndex = 21
         '
         'tb_PlannedSpDef
         '
         Me.tb_PlannedSpDef.Location = New System.Drawing.Point(96, 186)
         Me.tb_PlannedSpDef.Name = "tb_PlannedSpDef"
         Me.tb_PlannedSpDef.Size = New System.Drawing.Size(100, 20)
-        Me.tb_PlannedSpDef.TabIndex = 15
+        Me.tb_PlannedSpDef.TabIndex = 14
         '
         'Label8
         '
@@ -287,7 +287,7 @@ Partial Class form_main
         Me.Label8.Location = New System.Drawing.Point(6, 189)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(86, 13)
-        Me.Label8.TabIndex = 14
+        Me.Label8.TabIndex = 7
         Me.Label8.Text = "Special Defence"
         '
         'tb_CurrentSpAtk
@@ -295,14 +295,14 @@ Partial Class form_main
         Me.tb_CurrentSpAtk.Location = New System.Drawing.Point(202, 160)
         Me.tb_CurrentSpAtk.Name = "tb_CurrentSpAtk"
         Me.tb_CurrentSpAtk.Size = New System.Drawing.Size(100, 20)
-        Me.tb_CurrentSpAtk.TabIndex = 13
+        Me.tb_CurrentSpAtk.TabIndex = 20
         '
         'tb_PlannedSpAtk
         '
         Me.tb_PlannedSpAtk.Location = New System.Drawing.Point(96, 160)
         Me.tb_PlannedSpAtk.Name = "tb_PlannedSpAtk"
         Me.tb_PlannedSpAtk.Size = New System.Drawing.Size(100, 20)
-        Me.tb_PlannedSpAtk.TabIndex = 12
+        Me.tb_PlannedSpAtk.TabIndex = 13
         '
         'Label7
         '
@@ -310,7 +310,7 @@ Partial Class form_main
         Me.Label7.Location = New System.Drawing.Point(6, 163)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(76, 13)
-        Me.Label7.TabIndex = 11
+        Me.Label7.TabIndex = 6
         Me.Label7.Text = "Special Attack"
         '
         'tb_CurrentDef
@@ -318,14 +318,14 @@ Partial Class form_main
         Me.tb_CurrentDef.Location = New System.Drawing.Point(202, 134)
         Me.tb_CurrentDef.Name = "tb_CurrentDef"
         Me.tb_CurrentDef.Size = New System.Drawing.Size(100, 20)
-        Me.tb_CurrentDef.TabIndex = 10
+        Me.tb_CurrentDef.TabIndex = 19
         '
         'tb_PlannedDef
         '
         Me.tb_PlannedDef.Location = New System.Drawing.Point(96, 134)
         Me.tb_PlannedDef.Name = "tb_PlannedDef"
         Me.tb_PlannedDef.Size = New System.Drawing.Size(100, 20)
-        Me.tb_PlannedDef.TabIndex = 9
+        Me.tb_PlannedDef.TabIndex = 12
         '
         'Label6
         '
@@ -333,7 +333,7 @@ Partial Class form_main
         Me.Label6.Location = New System.Drawing.Point(6, 137)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(48, 13)
-        Me.Label6.TabIndex = 8
+        Me.Label6.TabIndex = 5
         Me.Label6.Text = "Defence"
         '
         'tb_CurrentAtk
@@ -341,14 +341,14 @@ Partial Class form_main
         Me.tb_CurrentAtk.Location = New System.Drawing.Point(202, 108)
         Me.tb_CurrentAtk.Name = "tb_CurrentAtk"
         Me.tb_CurrentAtk.Size = New System.Drawing.Size(100, 20)
-        Me.tb_CurrentAtk.TabIndex = 7
+        Me.tb_CurrentAtk.TabIndex = 18
         '
         'tb_PlannedAtk
         '
         Me.tb_PlannedAtk.Location = New System.Drawing.Point(96, 108)
         Me.tb_PlannedAtk.Name = "tb_PlannedAtk"
         Me.tb_PlannedAtk.Size = New System.Drawing.Size(100, 20)
-        Me.tb_PlannedAtk.TabIndex = 6
+        Me.tb_PlannedAtk.TabIndex = 11
         '
         'Label5
         '
@@ -356,7 +356,7 @@ Partial Class form_main
         Me.Label5.Location = New System.Drawing.Point(6, 111)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(38, 13)
-        Me.Label5.TabIndex = 5
+        Me.Label5.TabIndex = 4
         Me.Label5.Text = "Attack"
         '
         'Label4
@@ -365,7 +365,7 @@ Partial Class form_main
         Me.Label4.Location = New System.Drawing.Point(222, 66)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(60, 13)
-        Me.Label4.TabIndex = 4
+        Me.Label4.TabIndex = 16
         Me.Label4.Text = "CURRENT"
         '
         'Label3
@@ -374,7 +374,7 @@ Partial Class form_main
         Me.Label3.Location = New System.Drawing.Point(117, 66)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(58, 13)
-        Me.Label3.TabIndex = 3
+        Me.Label3.TabIndex = 9
         Me.Label3.Text = "PLANNED"
         '
         'tb_CurrentHP
@@ -382,14 +382,14 @@ Partial Class form_main
         Me.tb_CurrentHP.Location = New System.Drawing.Point(202, 82)
         Me.tb_CurrentHP.Name = "tb_CurrentHP"
         Me.tb_CurrentHP.Size = New System.Drawing.Size(100, 20)
-        Me.tb_CurrentHP.TabIndex = 2
+        Me.tb_CurrentHP.TabIndex = 17
         '
         'tb_PlannedHP
         '
         Me.tb_PlannedHP.Location = New System.Drawing.Point(96, 82)
         Me.tb_PlannedHP.Name = "tb_PlannedHP"
         Me.tb_PlannedHP.Size = New System.Drawing.Size(100, 20)
-        Me.tb_PlannedHP.TabIndex = 1
+        Me.tb_PlannedHP.TabIndex = 10
         '
         'Label2
         '
@@ -397,7 +397,7 @@ Partial Class form_main
         Me.Label2.Location = New System.Drawing.Point(6, 85)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(22, 13)
-        Me.Label2.TabIndex = 0
+        Me.Label2.TabIndex = 3
         Me.Label2.Text = "HP"
         '
         'gb_enemy
@@ -421,7 +421,7 @@ Partial Class form_main
         Me.gb_enemy.Location = New System.Drawing.Point(16, 370)
         Me.gb_enemy.Name = "gb_enemy"
         Me.gb_enemy.Size = New System.Drawing.Size(314, 172)
-        Me.gb_enemy.TabIndex = 5
+        Me.gb_enemy.TabIndex = 4
         Me.gb_enemy.TabStop = False
         Me.gb_enemy.Text = "BATTLED POKÉMON"
         '
@@ -432,7 +432,7 @@ Partial Class form_main
         Me.chk_clear.Location = New System.Drawing.Point(16, 135)
         Me.chk_clear.Name = "chk_clear"
         Me.chk_clear.Size = New System.Drawing.Size(76, 33)
-        Me.chk_clear.TabIndex = 34
+        Me.chk_clear.TabIndex = 13
         Me.chk_clear.Text = "Clear after adding?"
         Me.chk_clear.UseVisualStyleBackColor = True
         '
@@ -448,7 +448,7 @@ Partial Class form_main
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Padding = New System.Windows.Forms.Padding(0, 0, 6, 6)
         Me.Panel1.Size = New System.Drawing.Size(125, 42)
-        Me.Panel1.TabIndex = 33
+        Me.Panel1.TabIndex = 14
         '
         'btn_5
         '
@@ -457,7 +457,7 @@ Partial Class form_main
         Me.btn_5.Location = New System.Drawing.Point(84, 10)
         Me.btn_5.Name = "btn_5"
         Me.btn_5.Size = New System.Drawing.Size(32, 23)
-        Me.btn_5.TabIndex = 35
+        Me.btn_5.TabIndex = 2
         Me.btn_5.Text = "× 5"
         Me.btn_5.UseVisualStyleBackColor = True
         '
@@ -468,7 +468,7 @@ Partial Class form_main
         Me.btn_2.Location = New System.Drawing.Point(47, 10)
         Me.btn_2.Name = "btn_2"
         Me.btn_2.Size = New System.Drawing.Size(32, 23)
-        Me.btn_2.TabIndex = 34
+        Me.btn_2.TabIndex = 1
         Me.btn_2.Text = "× 2"
         Me.btn_2.UseVisualStyleBackColor = True
         '
@@ -479,7 +479,7 @@ Partial Class form_main
         Me.btn_1.Location = New System.Drawing.Point(10, 10)
         Me.btn_1.Name = "btn_1"
         Me.btn_1.Size = New System.Drawing.Size(32, 23)
-        Me.btn_1.TabIndex = 33
+        Me.btn_1.TabIndex = 0
         Me.btn_1.Text = "× 1"
         Me.btn_1.UseVisualStyleBackColor = True
         '
@@ -489,7 +489,7 @@ Partial Class form_main
         Me.lb_EnemySpd.Location = New System.Drawing.Point(258, 105)
         Me.lb_EnemySpd.Name = "lb_EnemySpd"
         Me.lb_EnemySpd.Size = New System.Drawing.Size(45, 13)
-        Me.lb_EnemySpd.TabIndex = 29
+        Me.lb_EnemySpd.TabIndex = 12
         Me.lb_EnemySpd.Text = "Label21"
         '
         'lb_EnemySpDef
@@ -498,7 +498,7 @@ Partial Class form_main
         Me.lb_EnemySpDef.Location = New System.Drawing.Point(258, 79)
         Me.lb_EnemySpDef.Name = "lb_EnemySpDef"
         Me.lb_EnemySpDef.Size = New System.Drawing.Size(45, 13)
-        Me.lb_EnemySpDef.TabIndex = 28
+        Me.lb_EnemySpDef.TabIndex = 10
         Me.lb_EnemySpDef.Text = "Label20"
         '
         'lb_EnemySpAtk
@@ -507,7 +507,7 @@ Partial Class form_main
         Me.lb_EnemySpAtk.Location = New System.Drawing.Point(258, 53)
         Me.lb_EnemySpAtk.Name = "lb_EnemySpAtk"
         Me.lb_EnemySpAtk.Size = New System.Drawing.Size(45, 13)
-        Me.lb_EnemySpAtk.TabIndex = 27
+        Me.lb_EnemySpAtk.TabIndex = 8
         Me.lb_EnemySpAtk.Text = "Label19"
         '
         'lb_EnemyDef
@@ -516,7 +516,7 @@ Partial Class form_main
         Me.lb_EnemyDef.Location = New System.Drawing.Point(74, 105)
         Me.lb_EnemyDef.Name = "lb_EnemyDef"
         Me.lb_EnemyDef.Size = New System.Drawing.Size(45, 13)
-        Me.lb_EnemyDef.TabIndex = 26
+        Me.lb_EnemyDef.TabIndex = 6
         Me.lb_EnemyDef.Text = "Label18"
         '
         'btn_details
@@ -529,7 +529,7 @@ Partial Class form_main
         Me.btn_details.Margin = New System.Windows.Forms.Padding(0)
         Me.btn_details.Name = "btn_details"
         Me.btn_details.Size = New System.Drawing.Size(26, 23)
-        Me.btn_details.TabIndex = 6
+        Me.btn_details.TabIndex = 15
         Me.btn_details.Text = "..."
         Me.btn_details.UseVisualStyleBackColor = True
         '
@@ -539,7 +539,7 @@ Partial Class form_main
         Me.lb_EnemyAtk.Location = New System.Drawing.Point(74, 79)
         Me.lb_EnemyAtk.Name = "lb_EnemyAtk"
         Me.lb_EnemyAtk.Size = New System.Drawing.Size(45, 13)
-        Me.lb_EnemyAtk.TabIndex = 25
+        Me.lb_EnemyAtk.TabIndex = 4
         Me.lb_EnemyAtk.Text = "Label17"
         '
         'lb_EnemyHP
@@ -548,7 +548,7 @@ Partial Class form_main
         Me.lb_EnemyHP.Location = New System.Drawing.Point(74, 53)
         Me.lb_EnemyHP.Name = "lb_EnemyHP"
         Me.lb_EnemyHP.Size = New System.Drawing.Size(45, 13)
-        Me.lb_EnemyHP.TabIndex = 24
+        Me.lb_EnemyHP.TabIndex = 2
         Me.lb_EnemyHP.Text = "Label16"
         '
         'Label10
@@ -557,7 +557,7 @@ Partial Class form_main
         Me.Label10.Location = New System.Drawing.Point(159, 105)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(38, 13)
-        Me.Label10.TabIndex = 23
+        Me.Label10.TabIndex = 11
         Me.Label10.Text = "Speed"
         '
         'Label11
@@ -566,7 +566,7 @@ Partial Class form_main
         Me.Label11.Location = New System.Drawing.Point(159, 79)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(86, 13)
-        Me.Label11.TabIndex = 22
+        Me.Label11.TabIndex = 9
         Me.Label11.Text = "Special Defence"
         '
         'Label12
@@ -575,7 +575,7 @@ Partial Class form_main
         Me.Label12.Location = New System.Drawing.Point(159, 53)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(76, 13)
-        Me.Label12.TabIndex = 21
+        Me.Label12.TabIndex = 7
         Me.Label12.Text = "Special Attack"
         '
         'Label13
@@ -584,7 +584,7 @@ Partial Class form_main
         Me.Label13.Location = New System.Drawing.Point(7, 105)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(48, 13)
-        Me.Label13.TabIndex = 20
+        Me.Label13.TabIndex = 5
         Me.Label13.Text = "Defence"
         '
         'Label14
@@ -593,7 +593,7 @@ Partial Class form_main
         Me.Label14.Location = New System.Drawing.Point(7, 79)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(38, 13)
-        Me.Label14.TabIndex = 19
+        Me.Label14.TabIndex = 3
         Me.Label14.Text = "Attack"
         '
         'Label15
@@ -602,7 +602,7 @@ Partial Class form_main
         Me.Label15.Location = New System.Drawing.Point(7, 53)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(22, 13)
-        Me.Label15.TabIndex = 18
+        Me.Label15.TabIndex = 1
         Me.Label15.Text = "HP"
         '
         'cmb_enemy
@@ -613,7 +613,7 @@ Partial Class form_main
         Me.cmb_enemy.Location = New System.Drawing.Point(10, 19)
         Me.cmb_enemy.Name = "cmb_enemy"
         Me.cmb_enemy.Size = New System.Drawing.Size(293, 21)
-        Me.cmb_enemy.TabIndex = 4
+        Me.cmb_enemy.TabIndex = 0
         '
         'ContextMenuStrip_EnemyList
         '
@@ -646,7 +646,7 @@ Partial Class form_main
         Me.btn_addNewPok.Location = New System.Drawing.Point(303, 45)
         Me.btn_addNewPok.Name = "btn_addNewPok"
         Me.btn_addNewPok.Size = New System.Drawing.Size(24, 21)
-        Me.btn_addNewPok.TabIndex = 6
+        Me.btn_addNewPok.TabIndex = 2
         Me.btn_addNewPok.Text = "+"
         Me.btn_addNewPok.UseVisualStyleBackColor = True
         '
