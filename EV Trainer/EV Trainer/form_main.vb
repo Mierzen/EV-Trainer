@@ -31,6 +31,11 @@
             AddHandler tb.TextChanged, AddressOf tbTextChanged
         Next
 
+        For Each btn In Panel1.Controls.OfType(Of Button)()
+            AddHandler btn.MouseDown, AddressOf btnClick
+            AddHandler btn.KeyDown, AddressOf btnKeyPressed
+        Next
+
         Me.Select()
 
         ResumeLayout()
@@ -841,31 +846,56 @@
         ResumeLayout()
     End Sub
 
-    Private Sub btn_1_Click(sender As Object, e As EventArgs) Handles btn_1.Click
-        train(1)
+    Private Sub btnClick(sender As Object, e As MouseEventArgs)
+        Dim count As Integer = Strings.Right(sender.name.ToString, 1)
+        Dim mode As String = Nothing
+
+        If e.Button = Windows.Forms.MouseButtons.Left Then
+            mode = "add"
+        ElseIf e.Button = Windows.Forms.MouseButtons.Right Then
+            mode = "subtract"
+        Else
+            Exit Sub
+        End If
+
+        train(count, mode)
     End Sub
 
-    Private Sub btn_2_Click(sender As Object, e As EventArgs) Handles btn_2.Click
-        train(2)
+    Private Sub btnKeyPressed(sender As Object, e As KeyEventArgs)
+        Dim count As Integer = Strings.Right(sender.name.ToString, 1)
+        Dim mode As String
+
+        If e.KeyCode = Windows.Forms.Keys.Space OrElse e.KeyCode = Windows.Forms.Keys.Return OrElse e.KeyCode = Windows.Forms.Keys.Enter Then
+            mode = "add"
+        Else
+            Exit Sub
+        End If
+
+        train(count, mode)
     End Sub
 
-    Private Sub btn_3_Click(sender As Object, e As EventArgs) Handles btn_5.Click
-        train(5)
-    End Sub
-
-    Private Sub train(enemyCount As Integer)
+    Private Sub train(enemyCount As Integer, mode As String)
         If checkValidAll(True) = False Then
             Exit Sub
         End If
 
         SuspendLayout()
 
-        tb_CurrentHP.Text = Val(tb_CurrentHP.Text) + CInt(lb_EnemyHP.Text) * enemyCount
-        tb_CurrentAtk.Text = Val(tb_CurrentAtk.Text) + CInt(lb_EnemyAtk.Text) * enemyCount
-        tb_CurrentDef.Text = Val(tb_CurrentDef.Text) + CInt(lb_EnemyDef.Text) * enemyCount
-        tb_CurrentSpAtk.Text = Val(tb_CurrentSpAtk.Text) + CInt(lb_EnemySpAtk.Text) * enemyCount
-        tb_CurrentSpDef.Text = Val(tb_CurrentSpDef.Text) + CInt(lb_EnemySpDef.Text) * enemyCount
-        tb_CurrentSpd.Text = Val(tb_CurrentSpd.Text) + CInt(lb_EnemySpd.Text) * enemyCount
+        If mode = "add" Then
+            tb_CurrentHP.Text = Val(tb_CurrentHP.Text) + CInt(lb_EnemyHP.Text) * enemyCount
+            tb_CurrentAtk.Text = Val(tb_CurrentAtk.Text) + CInt(lb_EnemyAtk.Text) * enemyCount
+            tb_CurrentDef.Text = Val(tb_CurrentDef.Text) + CInt(lb_EnemyDef.Text) * enemyCount
+            tb_CurrentSpAtk.Text = Val(tb_CurrentSpAtk.Text) + CInt(lb_EnemySpAtk.Text) * enemyCount
+            tb_CurrentSpDef.Text = Val(tb_CurrentSpDef.Text) + CInt(lb_EnemySpDef.Text) * enemyCount
+            tb_CurrentSpd.Text = Val(tb_CurrentSpd.Text) + CInt(lb_EnemySpd.Text) * enemyCount
+        ElseIf mode = "subtract" Then
+            tb_CurrentHP.Text = Val(tb_CurrentHP.Text) - CInt(lb_EnemyHP.Text) * enemyCount
+            tb_CurrentAtk.Text = Val(tb_CurrentAtk.Text) - CInt(lb_EnemyAtk.Text) * enemyCount
+            tb_CurrentDef.Text = Val(tb_CurrentDef.Text) - CInt(lb_EnemyDef.Text) * enemyCount
+            tb_CurrentSpAtk.Text = Val(tb_CurrentSpAtk.Text) - CInt(lb_EnemySpAtk.Text) * enemyCount
+            tb_CurrentSpDef.Text = Val(tb_CurrentSpDef.Text) - CInt(lb_EnemySpDef.Text) * enemyCount
+            tb_CurrentSpd.Text = Val(tb_CurrentSpd.Text) - CInt(lb_EnemySpd.Text) * enemyCount
+        End If
 
         For Each tb In gb_TrainingPok.Controls.OfType(Of TextBox)()
             If InStr(tb.Name.ToString, "tb_Current") <> 0 Then
@@ -1092,5 +1122,13 @@
         saveData.savePok(newPok)
 
         cmb_SelectedPok.SelectedItem = newPok
+    End Sub
+
+    Private Sub btn_enemyHistory_Click(sender As Object, e As EventArgs) Handles btn_enemyHistory.Click
+        'show the history
+    End Sub
+
+    Private Sub enemyHistoryEdit(ByVal action As String, pok As String, count As Integer)
+
     End Sub
 End Class

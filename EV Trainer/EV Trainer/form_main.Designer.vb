@@ -27,6 +27,7 @@ Partial Class form_main
         Me.cmb_SelectedPok = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FILEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NEWToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SAVEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DELETESAVEFILEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -68,7 +69,7 @@ Partial Class form_main
         Me.lb_EnemySpDef = New System.Windows.Forms.Label()
         Me.lb_EnemySpAtk = New System.Windows.Forms.Label()
         Me.lb_EnemyDef = New System.Windows.Forms.Label()
-        Me.btn_details = New System.Windows.Forms.Button()
+        Me.btn_enemyHistory = New System.Windows.Forms.Button()
         Me.lb_EnemyAtk = New System.Windows.Forms.Label()
         Me.lb_EnemyHP = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -83,7 +84,6 @@ Partial Class form_main
         Me.PokédexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_addNewPok = New System.Windows.Forms.Button()
-        Me.NEWToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.gb_TrainingPok.SuspendLayout()
         Me.gb_enemy.SuspendLayout()
@@ -125,6 +125,12 @@ Partial Class form_main
         Me.FILEToolStripMenuItem.Name = "FILEToolStripMenuItem"
         Me.FILEToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
         Me.FILEToolStripMenuItem.Text = "FILE"
+        '
+        'NEWToolStripMenuItem
+        '
+        Me.NEWToolStripMenuItem.Name = "NEWToolStripMenuItem"
+        Me.NEWToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.NEWToolStripMenuItem.Text = "NEW"
         '
         'SAVEToolStripMenuItem
         '
@@ -409,7 +415,7 @@ Partial Class form_main
         Me.gb_enemy.Controls.Add(Me.lb_EnemySpDef)
         Me.gb_enemy.Controls.Add(Me.lb_EnemySpAtk)
         Me.gb_enemy.Controls.Add(Me.lb_EnemyDef)
-        Me.gb_enemy.Controls.Add(Me.btn_details)
+        Me.gb_enemy.Controls.Add(Me.btn_enemyHistory)
         Me.gb_enemy.Controls.Add(Me.lb_EnemyAtk)
         Me.gb_enemy.Controls.Add(Me.lb_EnemyHP)
         Me.gb_enemy.Controls.Add(Me.Label10)
@@ -520,19 +526,19 @@ Partial Class form_main
         Me.lb_EnemyDef.TabIndex = 6
         Me.lb_EnemyDef.Text = "Label18"
         '
-        'btn_details
+        'btn_enemyHistory
         '
-        Me.btn_details.AutoSize = True
-        Me.btn_details.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btn_details.FlatAppearance.BorderSize = 0
-        Me.btn_details.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_details.Location = New System.Drawing.Point(285, 146)
-        Me.btn_details.Margin = New System.Windows.Forms.Padding(0)
-        Me.btn_details.Name = "btn_details"
-        Me.btn_details.Size = New System.Drawing.Size(26, 23)
-        Me.btn_details.TabIndex = 15
-        Me.btn_details.Text = "..."
-        Me.btn_details.UseVisualStyleBackColor = True
+        Me.btn_enemyHistory.AutoSize = True
+        Me.btn_enemyHistory.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btn_enemyHistory.FlatAppearance.BorderSize = 0
+        Me.btn_enemyHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_enemyHistory.Location = New System.Drawing.Point(285, 146)
+        Me.btn_enemyHistory.Margin = New System.Windows.Forms.Padding(0)
+        Me.btn_enemyHistory.Name = "btn_enemyHistory"
+        Me.btn_enemyHistory.Size = New System.Drawing.Size(26, 23)
+        Me.btn_enemyHistory.TabIndex = 15
+        Me.btn_enemyHistory.Text = "..."
+        Me.btn_enemyHistory.UseVisualStyleBackColor = True
         '
         'lb_EnemyAtk
         '
@@ -651,12 +657,6 @@ Partial Class form_main
         Me.btn_addNewPok.Text = "+"
         Me.btn_addNewPok.UseVisualStyleBackColor = True
         '
-        'NEWToolStripMenuItem
-        '
-        Me.NEWToolStripMenuItem.Name = "NEWToolStripMenuItem"
-        Me.NEWToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
-        Me.NEWToolStripMenuItem.Text = "NEW"
-        '
         'form_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -737,7 +737,7 @@ Partial Class form_main
     Friend WithEvents SortByToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PokédexToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NameToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents btn_details As System.Windows.Forms.Button
+    Friend WithEvents btn_enemyHistory As System.Windows.Forms.Button
     Friend WithEvents lb_TotalCurrent As System.Windows.Forms.Label
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents lb_TotalPlanned As System.Windows.Forms.Label
