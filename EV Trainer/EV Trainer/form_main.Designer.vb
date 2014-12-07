@@ -83,6 +83,7 @@ Partial Class form_main
         Me.PokédexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_addNewPok = New System.Windows.Forms.Button()
+        Me.NEWToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.gb_TrainingPok.SuspendLayout()
         Me.gb_enemy.SuspendLayout()
@@ -120,7 +121,7 @@ Partial Class form_main
         '
         'FILEToolStripMenuItem
         '
-        Me.FILEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SAVEToolStripMenuItem, Me.DELETESAVEFILEToolStripMenuItem})
+        Me.FILEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NEWToolStripMenuItem, Me.SAVEToolStripMenuItem, Me.DELETESAVEFILEToolStripMenuItem})
         Me.FILEToolStripMenuItem.Name = "FILEToolStripMenuItem"
         Me.FILEToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
         Me.FILEToolStripMenuItem.Text = "FILE"
@@ -650,6 +651,12 @@ Partial Class form_main
         Me.btn_addNewPok.Text = "+"
         Me.btn_addNewPok.UseVisualStyleBackColor = True
         '
+        'NEWToolStripMenuItem
+        '
+        Me.NEWToolStripMenuItem.Name = "NEWToolStripMenuItem"
+        Me.NEWToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.NEWToolStripMenuItem.Text = "NEW"
+        '
         'form_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -739,5 +746,6 @@ Partial Class form_main
     Friend WithEvents rd_252 As System.Windows.Forms.RadioButton
     Friend WithEvents rd_255 As System.Windows.Forms.RadioButton
     Friend WithEvents btn_addNewPok As System.Windows.Forms.Button
+    Friend WithEvents NEWToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

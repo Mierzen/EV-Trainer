@@ -1058,16 +1058,7 @@
     End Sub
 
     Private Sub btn_addNewPok_Click(sender As Object, e As EventArgs) Handles btn_addNewPok.Click
-        Dim newPok As String = Nothing
-
-        While newPok = Nothing OrElse cmb_SelectedPok.Items.Contains(newPok) = True
-            newPok = InputBox("Please enter the name of the Pokémon being trained.", "Enter Pokémon name")
-        End While
-
-        clearForm()
-        saveData.savePok(newPok)
-
-        cmb_SelectedPok.SelectedItem = newPok
+        newPok()
     End Sub
 
     Private Sub clearForm()
@@ -1084,5 +1075,22 @@
 
         gb_TrainingPok.Enabled = False
         gb_enemy.Enabled = False
+    End Sub
+
+    Private Sub NEWToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NEWToolStripMenuItem.Click
+        newPok()
+    End Sub
+
+    Private Sub newPok()
+        Dim newPok As String = Nothing
+
+        While newPok = Nothing OrElse cmb_SelectedPok.Items.Contains(newPok) = True
+            newPok = InputBox("Please enter the name of the Pokémon being trained.", "Enter Pokémon name")
+        End While
+
+        clearForm()
+        saveData.savePok(newPok)
+
+        cmb_SelectedPok.SelectedItem = newPok
     End Sub
 End Class
