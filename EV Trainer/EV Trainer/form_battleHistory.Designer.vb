@@ -22,6 +22,8 @@ Partial Class form_battleHistory
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgv_history = New System.Windows.Forms.DataGridView()
         CType(Me.dgv_history, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -30,20 +32,37 @@ Partial Class form_battleHistory
         '
         Me.dgv_history.AllowUserToAddRows = False
         Me.dgv_history.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        Me.dgv_history.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
+        Me.dgv_history.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgv_history.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_history.Location = New System.Drawing.Point(12, 12)
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgv_history.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dgv_history.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgv_history.Location = New System.Drawing.Point(2, 2)
         Me.dgv_history.Name = "dgv_history"
         Me.dgv_history.ReadOnly = True
-        Me.dgv_history.Size = New System.Drawing.Size(554, 310)
+        Me.dgv_history.RowHeadersVisible = False
+        Me.dgv_history.Size = New System.Drawing.Size(287, 181)
         Me.dgv_history.TabIndex = 1
         '
         'form_battleHistory
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(578, 334)
+        Me.ClientSize = New System.Drawing.Size(291, 185)
         Me.Controls.Add(Me.dgv_history)
+        Me.MaximumSize = New System.Drawing.Size(350, 700)
+        Me.MinimumSize = New System.Drawing.Size(307, 224)
         Me.Name = "form_battleHistory"
+        Me.Padding = New System.Windows.Forms.Padding(2)
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Battle history: "
         CType(Me.dgv_history, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
