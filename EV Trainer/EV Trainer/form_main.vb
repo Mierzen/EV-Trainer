@@ -1060,6 +1060,7 @@
             newPok = InputBox("Please enter the name of the Pokémon being trained.", "Enter Pokémon name")
         End While
 
+        clearForm()
         saveData.savePok(newPok)
 
         cmb_SelectedPok.SelectedItem = newPok
