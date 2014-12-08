@@ -1057,6 +1057,7 @@
             testAndSave(previousPok, False, True)
         End If
 
+        tableBattled.Clear()
         saveData.loadStats(cmb_SelectedPok.Text)
 
         Me.Select() 'remove focus from the combobox, so that values can be saved when changing the index again
@@ -1109,6 +1110,8 @@
 
         lb_TotalPlanned.Text = ""
         lb_TotalCurrent.Text = ""
+
+        tableBattled.Clear()
 
         gb_TrainingPok.Enabled = False
         gb_enemy.Enabled = False
