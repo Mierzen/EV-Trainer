@@ -24,6 +24,8 @@
         previousPok = Nothing
         isDirty = False
 
+        SAVEToolStripMenuItem.Enabled = False
+        DELETESAVEFILEToolStripMenuItem.Enabled = False
         gb_TrainingPok.Enabled = False
         gb_enemy.Enabled = False
 
@@ -1044,10 +1046,14 @@
         SuspendLayout()
         If cmb_SelectedPok.Text = "" Then
             clearForm()
+            SAVEToolStripMenuItem.Enabled = False
+            DELETESAVEFILEToolStripMenuItem.Enabled = False
 
             ResumeLayout()
             Exit Sub
         Else
+            SAVEToolStripMenuItem.Enabled = True
+            DELETESAVEFILEToolStripMenuItem.Enabled = True
             gb_TrainingPok.Enabled = True
             gb_enemy.Enabled = True
         End If
@@ -1132,6 +1138,15 @@
         saveData.savePok(newPok)
 
         cmb_SelectedPok.SelectedItem = newPok
+
+        RemoveHandler rd_255.CheckedChanged, AddressOf rd_255_CheckedChanged
+        RemoveHandler rd_252.CheckedChanged, AddressOf rd_252_CheckedChanged
+        rd_255.Checked = False
+        rd_252.Checked = False
+        AddHandler rd_255.CheckedChanged, AddressOf rd_255_CheckedChanged
+        AddHandler rd_252.CheckedChanged, AddressOf rd_252_CheckedChanged
+
+        isDirty = True
     End Sub
 
     Private Sub btn_enemyHistory_Click(sender As Object, e As EventArgs) Handles btn_enemyHistory.Click
