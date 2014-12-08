@@ -63,8 +63,6 @@ Module saveData
         Dim info As Byte() = New UTF8Encoding(True).GetBytes(str)
         fs.Write(info, 0, info.Length)
         fs.Close()
-
-        trainPokemonList()
     End Sub
 
     Public Sub loadStats(pok As String)
