@@ -1143,7 +1143,7 @@
         Dim netEffect As Integer = enemyCount * If(action = "add", 1, -1)
 
         Dim isAlreadyInTable As Boolean = False
-        Dim battleTableIndex As Boolean = -1
+        Dim battleTableIndex As Integer = -1
 
         For Each r In tableBattled.Rows()
             battleTableIndex += 1
@@ -1159,6 +1159,11 @@
 
         ElseIf isAlreadyInTable = True Then
             tableBattled.Rows(battleTableIndex).Item(2) += netEffect
+
+            'remove zero entries:
+            If tableBattled.Rows(battleTableIndex).Item(2) = 0 Then
+                tableBattled.Rows(battleTableIndex).Delete()
+            End If
         End If
 
         tableBattled.DefaultView.Sort = "Pokémon battled ASC"
