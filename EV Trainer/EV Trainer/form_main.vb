@@ -1182,4 +1182,8 @@
 
         Return tableAllPok.Rows(mainTableIndex)(0)
     End Function
+
+    Private Sub EXITToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EXITToolStripMenuItem.Click
+        Me.Close()
+    End Sub
 End Class
