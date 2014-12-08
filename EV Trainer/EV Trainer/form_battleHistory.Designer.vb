@@ -32,7 +32,10 @@ Partial Class form_battleHistory
         '
         Me.dgv_history.AllowUserToAddRows = False
         Me.dgv_history.AllowUserToDeleteRows = False
+        Me.dgv_history.AllowUserToResizeRows = False
         DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle1.SelectionBackColor = DataGridViewCellStyle1.BackColor
+        DataGridViewCellStyle1.SelectionForeColor = DataGridViewCellStyle2.ForeColor
         Me.dgv_history.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgv_history.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
         Me.dgv_history.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -40,8 +43,8 @@ Partial Class form_battleHistory
         DataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke
         DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.SelectionBackColor = DataGridViewCellStyle2.BackColor
+        DataGridViewCellStyle2.SelectionForeColor = DataGridViewCellStyle2.ForeColor
         DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
         Me.dgv_history.DefaultCellStyle = DataGridViewCellStyle2
         Me.dgv_history.Dock = System.Windows.Forms.DockStyle.Fill
