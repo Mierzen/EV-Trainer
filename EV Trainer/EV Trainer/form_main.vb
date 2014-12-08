@@ -32,7 +32,7 @@
             AddHandler tb.TextChanged, AddressOf tbTextChanged
         Next
 
-        For Each btn In Panel1.Controls.OfType(Of Button)()
+        For Each btn In panel_battleBtns.Controls.OfType(Of Button)()
             AddHandler btn.MouseDown, AddressOf btnClick
             AddHandler btn.KeyDown, AddressOf btnKeyPressed
         Next

@@ -61,7 +61,7 @@ Partial Class form_main
         Me.Label2 = New System.Windows.Forms.Label()
         Me.gb_enemy = New System.Windows.Forms.GroupBox()
         Me.chk_clear = New System.Windows.Forms.CheckBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.panel_battleBtns = New System.Windows.Forms.Panel()
         Me.btn_5 = New System.Windows.Forms.Button()
         Me.btn_2 = New System.Windows.Forms.Button()
         Me.btn_1 = New System.Windows.Forms.Button()
@@ -87,7 +87,7 @@ Partial Class form_main
         Me.MenuStrip1.SuspendLayout()
         Me.gb_TrainingPok.SuspendLayout()
         Me.gb_enemy.SuspendLayout()
-        Me.Panel1.SuspendLayout()
+        Me.panel_battleBtns.SuspendLayout()
         Me.ContextMenuStrip_EnemyList.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -410,7 +410,7 @@ Partial Class form_main
         'gb_enemy
         '
         Me.gb_enemy.Controls.Add(Me.chk_clear)
-        Me.gb_enemy.Controls.Add(Me.Panel1)
+        Me.gb_enemy.Controls.Add(Me.panel_battleBtns)
         Me.gb_enemy.Controls.Add(Me.lb_EnemySpd)
         Me.gb_enemy.Controls.Add(Me.lb_EnemySpDef)
         Me.gb_enemy.Controls.Add(Me.lb_EnemySpAtk)
@@ -443,19 +443,19 @@ Partial Class form_main
         Me.chk_clear.Text = "Clear after adding?"
         Me.chk_clear.UseVisualStyleBackColor = True
         '
-        'Panel1
+        'panel_battleBtns
         '
-        Me.Panel1.AutoSize = True
-        Me.Panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Panel1.BackColor = System.Drawing.Color.Transparent
-        Me.Panel1.Controls.Add(Me.btn_5)
-        Me.Panel1.Controls.Add(Me.btn_2)
-        Me.Panel1.Controls.Add(Me.btn_1)
-        Me.Panel1.Location = New System.Drawing.Point(97, 130)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Padding = New System.Windows.Forms.Padding(0, 0, 6, 6)
-        Me.Panel1.Size = New System.Drawing.Size(125, 42)
-        Me.Panel1.TabIndex = 14
+        Me.panel_battleBtns.AutoSize = True
+        Me.panel_battleBtns.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.panel_battleBtns.BackColor = System.Drawing.Color.Transparent
+        Me.panel_battleBtns.Controls.Add(Me.btn_5)
+        Me.panel_battleBtns.Controls.Add(Me.btn_2)
+        Me.panel_battleBtns.Controls.Add(Me.btn_1)
+        Me.panel_battleBtns.Location = New System.Drawing.Point(97, 130)
+        Me.panel_battleBtns.Name = "panel_battleBtns"
+        Me.panel_battleBtns.Padding = New System.Windows.Forms.Padding(0, 0, 6, 6)
+        Me.panel_battleBtns.Size = New System.Drawing.Size(125, 42)
+        Me.panel_battleBtns.TabIndex = 14
         '
         'btn_5
         '
@@ -679,8 +679,8 @@ Partial Class form_main
         Me.gb_TrainingPok.PerformLayout()
         Me.gb_enemy.ResumeLayout(False)
         Me.gb_enemy.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        Me.panel_battleBtns.ResumeLayout(False)
+        Me.panel_battleBtns.PerformLayout()
         Me.ContextMenuStrip_EnemyList.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -729,7 +729,7 @@ Partial Class form_main
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents cmb_enemy As System.Windows.Forms.ComboBox
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents panel_battleBtns As System.Windows.Forms.Panel
     Friend WithEvents btn_5 As System.Windows.Forms.Button
     Friend WithEvents btn_2 As System.Windows.Forms.Button
     Friend WithEvents btn_1 As System.Windows.Forms.Button
