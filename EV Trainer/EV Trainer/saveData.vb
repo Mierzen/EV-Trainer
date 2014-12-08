@@ -53,7 +53,12 @@ Module saveData
             str += Right(tb.Name.ToString, Len(tb.Name.ToString) - Len("tb_")) & "=" & Val(tb.Text) & vbNewLine
         Next
 
-        str += "Battled Pokémon" & vbNewLine '
+        Dim tableBattleRows As Integer = form_main.tableBattled.Rows.Count
+        If tableBattleRows <> 0 Then
+            For i = 0 To tableBattleRows - 1
+                str += "B=" & form_main.tableBattled.Rows(i).Item("Pokédex #") & "," & form_main.tableBattled.Rows(i).Item("Pokémon battled") & "^" & form_main.tableBattled.Rows(i).Item("Count") & vbNewLine
+            Next
+        End If
 
         Dim info As Byte() = New UTF8Encoding(True).GetBytes(str)
         fs.Write(info, 0, info.Length)
@@ -67,7 +72,7 @@ Module saveData
         Dim line As String
         Dim eqPos As Integer
         Dim currentSetting As String
-        Dim currentValue As Integer
+        Dim currentValue As String
         Dim tbName As String
 
         Do While fileReader.Peek() <> -1
@@ -76,7 +81,7 @@ Module saveData
 
             If eqPos <> 0 Then
                 currentSetting = Left(line, eqPos - 1)
-                currentValue = Len(line) - eqPos
+                currentValue = Right(line, Len(line) - eqPos)
 
                 If currentSetting = "MaxEV" Then
                     If currentValue = 255 Then
@@ -84,11 +89,20 @@ Module saveData
                     Else
                         form_main.rd_252.Checked = True
                     End If
+                ElseIf currentSetting = "B" Then 'fill battle history
+                    Dim commaPos As Integer = InStr(currentValue, ",")
+                    Dim caretPos As Integer = InStr(currentValue, "^")
+
+                    Dim dexNo As Integer = Left(currentValue, commaPos - 1)
+                    Dim battledPok As String = Mid(currentValue, commaPos + 1, caretPos - commaPos - 1)
+                    Dim count As Integer = Right(currentValue, Len(currentValue) - caretPos)
+
+                    form_main.tableBattled.Rows.Add(dexNo, battledPok, count)
                 Else
                     tbName = "tb_" & currentSetting
                     Dim myTextbox As TextBox = DirectCast(form_main.Controls.Find(tbName, True)(0), TextBox)
                     Dim value As String = Right(line, currentValue)
-                    myTextbox.Text = If(value = 0, "", value)
+                    myTextbox.Text = If(currentValue = 0, "", currentValue)
                 End If
             End If
         Loop
