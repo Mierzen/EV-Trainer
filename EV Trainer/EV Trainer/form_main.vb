@@ -1134,6 +1134,8 @@
             newPok = InputBox("Please enter the name of the Pokémon being trained.", "Enter Pokémon name")
         End While
 
+        SuspendLayout()
+
         clearForm()
         saveData.savePok(newPok)
 
@@ -1146,6 +1148,8 @@
         rd_252.Checked = False
         AddHandler rd_255.CheckedChanged, AddressOf rd_255_CheckedChanged
         AddHandler rd_252.CheckedChanged, AddressOf rd_252_CheckedChanged
+
+        ResumeLayout()
 
         isDirty = True
     End Sub

@@ -86,7 +86,7 @@ Module saveData
                 If currentSetting = "MaxEV" Then
                     If currentValue = 255 Then
                         form_main.rd_255.Checked = True
-                    Else
+                    ElseIf currentValue = 252 Then
                         form_main.rd_252.Checked = True
                     End If
                 ElseIf currentSetting = "B" Then 'fill battle history
