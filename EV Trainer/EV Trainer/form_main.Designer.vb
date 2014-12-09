@@ -471,7 +471,6 @@ Partial Class form_main
         'chk_clear
         '
         Me.chk_clear.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.chk_clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.chk_clear.Location = New System.Drawing.Point(16, 135)
         Me.chk_clear.Name = "chk_clear"
         Me.chk_clear.Size = New System.Drawing.Size(76, 33)
