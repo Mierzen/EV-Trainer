@@ -684,7 +684,6 @@ Partial Class form_main
         '
         'btn_addNewPok
         '
-        Me.btn_addNewPok.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_addNewPok.Location = New System.Drawing.Point(303, 45)
         Me.btn_addNewPok.Name = "btn_addNewPok"
         Me.btn_addNewPok.Size = New System.Drawing.Size(24, 21)
