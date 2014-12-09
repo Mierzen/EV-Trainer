@@ -207,10 +207,9 @@ Partial Class form_main
         'rd_252
         '
         Me.rd_252.AutoSize = True
-        Me.rd_252.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.rd_252.Location = New System.Drawing.Point(100, 36)
         Me.rd_252.Name = "rd_252"
-        Me.rd_252.Size = New System.Drawing.Size(84, 17)
+        Me.rd_252.Size = New System.Drawing.Size(85, 17)
         Me.rd_252.TabIndex = 2
         Me.rd_252.TabStop = True
         Me.rd_252.Text = "252 (Gen VI)"
@@ -219,10 +218,9 @@ Partial Class form_main
         'rd_255
         '
         Me.rd_255.AutoSize = True
-        Me.rd_255.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.rd_255.Location = New System.Drawing.Point(100, 18)
         Me.rd_255.Name = "rd_255"
-        Me.rd_255.Size = New System.Drawing.Size(93, 17)
+        Me.rd_255.Size = New System.Drawing.Size(94, 17)
         Me.rd_255.TabIndex = 1
         Me.rd_255.TabStop = True
         Me.rd_255.Text = "255 (Gen III-V)"
