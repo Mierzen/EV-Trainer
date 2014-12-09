@@ -86,6 +86,7 @@ Partial Class form_main
         Me.PokédexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_addNewPok = New System.Windows.Forms.Button()
+        Me.tooltip_main_form = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.gb_TrainingPok.SuspendLayout()
         Me.gb_enemy.SuspendLayout()
@@ -573,6 +574,7 @@ Partial Class form_main
         Me.btn_enemyHistory.Size = New System.Drawing.Size(28, 25)
         Me.btn_enemyHistory.TabIndex = 15
         Me.btn_enemyHistory.Text = "..."
+        Me.tooltip_main_form.SetToolTip(Me.btn_enemyHistory, "View battled Pokémon history")
         Me.btn_enemyHistory.UseVisualStyleBackColor = True
         '
         'lb_EnemyAtk
@@ -691,6 +693,12 @@ Partial Class form_main
         Me.btn_addNewPok.Text = "+"
         Me.btn_addNewPok.UseVisualStyleBackColor = True
         '
+        'tooltip_main_form
+        '
+        Me.tooltip_main_form.AutoPopDelay = 5000
+        Me.tooltip_main_form.InitialDelay = 300
+        Me.tooltip_main_form.ReshowDelay = 100
+        '
         'form_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -783,5 +791,6 @@ Partial Class form_main
     Friend WithEvents NEWToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents EXITToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents tooltip_main_form As System.Windows.Forms.ToolTip
 
 End Class
