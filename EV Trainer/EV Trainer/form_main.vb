@@ -1186,10 +1186,26 @@
 
     Private Sub newPok()
         Dim newPok As String = Nothing
+        Dim hasFailed As Boolean = True
 
-        While newPok = Nothing OrElse cmb_SelectedPok.Items.Contains(newPok) = True
+        Do While hasFailed = True
             newPok = InputBox("Please enter the name of the Pokémon being trained.", "Enter Pokémon name")
-        End While
+
+            If validateName(newPok) = False Then
+                Dim msg As String = "An invalid name has been entered." & vbNewLine & vbNewLine & "Please do not use any of the following characters:"
+                Dim invalidString As String = "# % & { } \ / < > * ? $ ! ‘ ' "" : @ + ` | ="
+                MsgBox(msg & vbNewLine & invalidString, vbOKOnly Or vbCritical, "Invalid Pokémon name")
+
+                hasFailed = True
+            ElseIf cmb_SelectedPok.Items.Contains(newPok) = True Then
+                MsgBox("Please enter a name that is not already in the list.", vbOKOnly Or vbCritical, "Duplicate entries")
+                hasFailed = True
+            ElseIf newPok = "" Then 'cancelled or typed ""
+                Exit Sub
+            Else
+                hasFailed = False
+            End If
+        Loop
 
         SuspendLayout()
 
@@ -1206,6 +1222,18 @@
         isDirty = False
         newHasBeenAdded = True
     End Sub
+
+    Private Function validateName(name As String)
+        Dim invalidCharacters() As Char = {"#", "%", "&", "{", "}", "\", "<", ">", "*", "?", "/", " ", "$", "!", "‘", "'", """,""", ":", "@", "+", "`", "|", "="}
+
+        For Each symbol As Char In invalidCharacters
+            If InStr(name, symbol) <> 0 Then
+                Return False
+            End If
+        Next
+
+        Return True
+    End Function
 
     Private Sub btn_enemyHistory_Click(sender As Object, e As EventArgs) Handles btn_enemyHistory.Click
         'show the history
