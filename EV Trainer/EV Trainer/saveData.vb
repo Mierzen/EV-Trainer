@@ -106,12 +106,22 @@ Module saveData
         fileReader.Close()
     End Sub
 
-    Public Sub delete(pok As String)
-        form_main.cmb_SelectedPok.SelectedIndex = -1
+    Public Sub delete(pok As String, Optional ByVal shouldDeselect As Boolean = True)
+        If shouldDeselect = True Then
+            form_main.cmb_SelectedPok.SelectedIndex = -1
+        End If
 
         My.Computer.FileSystem.DeleteFile(saveDirMain & "\" & pok & ".txt")
 
+        Dim reselect As String = form_main.cmb_SelectedPok.Text
+
         trainPokemonList()
+
+        If shouldDeselect = False Then
+            RemoveHandler form_main.cmb_SelectedPok.SelectedIndexChanged, AddressOf form_main.cmb_SelectedPok_SelectedIndexChanged
+            form_main.cmb_SelectedPok.SelectedItem = reselect
+            AddHandler form_main.cmb_SelectedPok.SelectedIndexChanged, AddressOf form_main.cmb_SelectedPok_SelectedIndexChanged
+        End If
     End Sub
 
     Private Sub checkDirMain()

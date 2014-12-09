@@ -4,6 +4,7 @@
     Dim previousPok As String
     Dim isDirty As Boolean
     Dim saveWasCancelled As Boolean = False
+    Dim newHasBeenAdded As Boolean = False
 
     Private Sub form_main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SuspendLayout()
@@ -994,6 +995,11 @@
     End Sub
 
     Private Sub form_main_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If newHasBeenAdded = True AndAlso isDirty = False Then
+            saveData.delete(cmb_SelectedPok.Text)
+            Exit Sub
+        End If
+
         If isDirty = True Then
             testAndSave(cmb_SelectedPok.Text, False, True)
             If saveWasCancelled = True Then
@@ -1063,6 +1069,20 @@
         End If
         ResumeLayout()
 
+        Dim reselect As String = cmb_SelectedPok.Text
+
+        If newHasBeenAdded = True AndAlso isDirty = False Then
+            SuspendLayout()
+
+            newHasBeenAdded = False
+            saveData.delete(previousPok)
+
+            cmb_SelectedPok.SelectedItem = reselect
+
+            ResumeLayout()
+            Exit Sub
+        End If
+
         If isDirty = True Then
             testAndSave(previousPok, False, True)
             If saveWasCancelled = True Then
@@ -1071,11 +1091,12 @@
         End If
 
         tableBattled.Clear()
-        saveData.loadStats(cmb_SelectedPok.Text)
+        saveData.loadStats(reselect)
 
         Me.Select() 'remove focus from the combobox, so that values can be saved when changing the index again
 
         isDirty = False
+        newHasBeenAdded = False
     End Sub
 
     Private Sub testAndSave(pokToCheck As String, shouldCheckBattleAsWell As Boolean, shouldAskToSave As Boolean)
@@ -1102,6 +1123,12 @@
             saveWasCancelled = True
 
             Exit Sub
+        End If
+
+        If newHasBeenAdded = True AndAlso askResult = vbNo Then
+            saveData.delete(pokToCheck, False)
+
+            newHasBeenAdded = False
         End If
 
         If pokToCheck <> Nothing AndAlso askResult = vbYes Then
@@ -1170,7 +1197,8 @@
 
         ResumeLayout()
 
-        isDirty = True
+        isDirty = False
+        newHasBeenAdded = True
     End Sub
 
     Private Sub btn_enemyHistory_Click(sender As Object, e As EventArgs) Handles btn_enemyHistory.Click
