@@ -1137,6 +1137,7 @@
         clearForm()
         saveData.savePok(newPok)
 
+        trainPokemonList()
         cmb_SelectedPok.SelectedItem = newPok
 
         RemoveHandler rd_255.CheckedChanged, AddressOf rd_255_CheckedChanged
