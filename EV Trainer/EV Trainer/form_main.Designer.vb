@@ -238,13 +238,13 @@ Partial Class form_main
         '
         'lb_TotalCurrent
         '
-        Me.lb_TotalCurrent.AutoSize = True
         Me.lb_TotalCurrent.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lb_TotalCurrent.Location = New System.Drawing.Point(222, 249)
         Me.lb_TotalCurrent.Name = "lb_TotalCurrent"
-        Me.lb_TotalCurrent.Size = New System.Drawing.Size(53, 13)
+        Me.lb_TotalCurrent.Size = New System.Drawing.Size(60, 13)
         Me.lb_TotalCurrent.TabIndex = 25
         Me.lb_TotalCurrent.Text = "CURRENT"
+        Me.lb_TotalCurrent.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'Label17
         '
@@ -258,13 +258,13 @@ Partial Class form_main
         '
         'lb_TotalPlanned
         '
-        Me.lb_TotalPlanned.AutoSize = True
         Me.lb_TotalPlanned.Font = New System.Drawing.Font("Segoe UI Semilight", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lb_TotalPlanned.Location = New System.Drawing.Point(117, 249)
         Me.lb_TotalPlanned.Name = "lb_TotalPlanned"
-        Me.lb_TotalPlanned.Size = New System.Drawing.Size(55, 13)
+        Me.lb_TotalPlanned.Size = New System.Drawing.Size(58, 13)
         Me.lb_TotalPlanned.TabIndex = 24
         Me.lb_TotalPlanned.Text = "PLANNED"
+        Me.lb_TotalPlanned.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'tb_CurrentSpd
         '
