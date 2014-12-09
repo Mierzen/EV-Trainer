@@ -1152,6 +1152,8 @@
     End Sub
 
     Private Sub clearForm()
+        forceClearRadios()
+
         For Each tb In gb_TrainingPok.Controls.OfType(Of TextBox)()
             RemoveHandler tb.TextChanged, AddressOf tbTextChanged
 
@@ -1167,6 +1169,15 @@
 
         gb_TrainingPok.Enabled = False
         gb_enemy.Enabled = False
+    End Sub
+
+    Private Sub forceClearRadios()
+        RemoveHandler rd_255.CheckedChanged, AddressOf rd_255_CheckedChanged
+        RemoveHandler rd_252.CheckedChanged, AddressOf rd_252_CheckedChanged
+        rd_255.Checked = False
+        rd_252.Checked = False
+        AddHandler rd_255.CheckedChanged, AddressOf rd_255_CheckedChanged
+        AddHandler rd_252.CheckedChanged, AddressOf rd_252_CheckedChanged
     End Sub
 
     Private Sub NEWToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NEWToolStripMenuItem.Click
@@ -1188,12 +1199,7 @@
         trainPokemonList()
         cmb_SelectedPok.SelectedItem = newPok
 
-        RemoveHandler rd_255.CheckedChanged, AddressOf rd_255_CheckedChanged
-        RemoveHandler rd_252.CheckedChanged, AddressOf rd_252_CheckedChanged
-        rd_255.Checked = False
-        rd_252.Checked = False
-        AddHandler rd_255.CheckedChanged, AddressOf rd_255_CheckedChanged
-        AddHandler rd_252.CheckedChanged, AddressOf rd_252_CheckedChanged
+        forceClearRadios()
 
         ResumeLayout()
 
