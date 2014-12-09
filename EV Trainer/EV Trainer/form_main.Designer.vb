@@ -565,12 +565,12 @@ Partial Class form_main
         '
         Me.btn_enemyHistory.AutoSize = True
         Me.btn_enemyHistory.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btn_enemyHistory.FlatAppearance.BorderSize = 0
+        Me.btn_enemyHistory.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray
         Me.btn_enemyHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_enemyHistory.Location = New System.Drawing.Point(285, 146)
         Me.btn_enemyHistory.Margin = New System.Windows.Forms.Padding(0)
         Me.btn_enemyHistory.Name = "btn_enemyHistory"
-        Me.btn_enemyHistory.Size = New System.Drawing.Size(26, 23)
+        Me.btn_enemyHistory.Size = New System.Drawing.Size(28, 25)
         Me.btn_enemyHistory.TabIndex = 15
         Me.btn_enemyHistory.Text = "..."
         Me.btn_enemyHistory.UseVisualStyleBackColor = True
