@@ -25,15 +25,11 @@ Module saveData
         End If
     End Sub
 
-    Public Function askSave(pok As String) As Boolean
+    Public Function askSave(pok As String) As MsgBoxResult
         Dim result As MsgBoxResult
-        result = MsgBox("Do you want to save changes to " & pok & "?", MsgBoxStyle.YesNo, "Save changes?")
+        result = MsgBox("Do you want to save changes to " & pok & "?", MsgBoxStyle.YesNoCancel, "Save changes?")
 
-        If result = vbYes Then
-            Return True
-        Else
-            Return False
-        End If
+        Return result
     End Function
 
     Public Sub savePok(pok As String)

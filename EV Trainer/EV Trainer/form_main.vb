@@ -3,6 +3,7 @@
     Public tableBattled As New DataTable
     Dim previousPok As String
     Dim isDirty As Boolean
+    Dim saveWasCancelled As Boolean = False
 
     Private Sub form_main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SuspendLayout()
@@ -1061,6 +1062,9 @@
 
         If isDirty = True Then
             testAndSave(previousPok, False, True)
+            If saveWasCancelled = True Then
+                Exit Sub
+            End If
         End If
 
         tableBattled.Clear()
@@ -1072,20 +1076,32 @@
     End Sub
 
     Private Sub testAndSave(pokToCheck As String, shouldCheckBattleAsWell As Boolean, shouldAskToSave As Boolean)
+        saveWasCancelled = False
+
         If checkValidAll(shouldCheckBattleAsWell) = False Then
             Exit Sub
         End If
 
         'Dim currentPok As String = cmb_SelectedPok.Text
 
-        Dim askResult As Boolean
+        Dim askResult As MsgBoxResult
         If shouldAskToSave = True Then
             askResult = saveData.askSave(pokToCheck)
         Else
-            askResult = True
+            askResult = vbYes
         End If
 
-        If pokToCheck <> Nothing AndAlso askResult = True Then
+        If askResult = vbCancel Then
+            RemoveHandler cmb_SelectedPok.SelectedIndexChanged, AddressOf cmb_SelectedPok_SelectedIndexChanged
+            cmb_SelectedPok.SelectedItem = previousPok
+            AddHandler cmb_SelectedPok.SelectedIndexChanged, AddressOf cmb_SelectedPok_SelectedIndexChanged
+
+            saveWasCancelled = True
+
+            Exit Sub
+        End If
+
+        If pokToCheck <> Nothing AndAlso askResult = vbYes Then
             saveData.savePok(pokToCheck)
             isDirty = False
         End If
