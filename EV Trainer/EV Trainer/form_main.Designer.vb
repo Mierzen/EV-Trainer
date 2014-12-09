@@ -30,6 +30,8 @@ Partial Class form_main
         Me.NEWToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SAVEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DELETESAVEFILEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.EXITToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ABOUTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.gb_TrainingPok = New System.Windows.Forms.GroupBox()
@@ -84,8 +86,6 @@ Partial Class form_main
         Me.PokédexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_addNewPok = New System.Windows.Forms.Button()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.EXITToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.gb_TrainingPok.SuspendLayout()
         Me.gb_enemy.SuspendLayout()
@@ -145,6 +145,17 @@ Partial Class form_main
         Me.DELETESAVEFILEToolStripMenuItem.Name = "DELETESAVEFILEToolStripMenuItem"
         Me.DELETESAVEFILEToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.DELETESAVEFILEToolStripMenuItem.Text = "DELETE SAVE FILE"
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(164, 6)
+        '
+        'EXITToolStripMenuItem
+        '
+        Me.EXITToolStripMenuItem.Name = "EXITToolStripMenuItem"
+        Me.EXITToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.EXITToolStripMenuItem.Text = "EXIT"
         '
         'ToolStripMenuItem1
         '
@@ -256,16 +267,20 @@ Partial Class form_main
         'tb_CurrentSpd
         '
         Me.tb_CurrentSpd.Location = New System.Drawing.Point(202, 212)
+        Me.tb_CurrentSpd.MaxLength = 3
         Me.tb_CurrentSpd.Name = "tb_CurrentSpd"
         Me.tb_CurrentSpd.Size = New System.Drawing.Size(100, 20)
         Me.tb_CurrentSpd.TabIndex = 22
+        Me.tb_CurrentSpd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'tb_PlannedSpd
         '
         Me.tb_PlannedSpd.Location = New System.Drawing.Point(96, 212)
+        Me.tb_PlannedSpd.MaxLength = 3
         Me.tb_PlannedSpd.Name = "tb_PlannedSpd"
         Me.tb_PlannedSpd.Size = New System.Drawing.Size(100, 20)
         Me.tb_PlannedSpd.TabIndex = 15
+        Me.tb_PlannedSpd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label9
         '
@@ -279,16 +294,20 @@ Partial Class form_main
         'tb_CurrentSpDef
         '
         Me.tb_CurrentSpDef.Location = New System.Drawing.Point(202, 186)
+        Me.tb_CurrentSpDef.MaxLength = 3
         Me.tb_CurrentSpDef.Name = "tb_CurrentSpDef"
         Me.tb_CurrentSpDef.Size = New System.Drawing.Size(100, 20)
         Me.tb_CurrentSpDef.TabIndex = 21
+        Me.tb_CurrentSpDef.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'tb_PlannedSpDef
         '
         Me.tb_PlannedSpDef.Location = New System.Drawing.Point(96, 186)
+        Me.tb_PlannedSpDef.MaxLength = 3
         Me.tb_PlannedSpDef.Name = "tb_PlannedSpDef"
         Me.tb_PlannedSpDef.Size = New System.Drawing.Size(100, 20)
         Me.tb_PlannedSpDef.TabIndex = 14
+        Me.tb_PlannedSpDef.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label8
         '
@@ -302,16 +321,20 @@ Partial Class form_main
         'tb_CurrentSpAtk
         '
         Me.tb_CurrentSpAtk.Location = New System.Drawing.Point(202, 160)
+        Me.tb_CurrentSpAtk.MaxLength = 3
         Me.tb_CurrentSpAtk.Name = "tb_CurrentSpAtk"
         Me.tb_CurrentSpAtk.Size = New System.Drawing.Size(100, 20)
         Me.tb_CurrentSpAtk.TabIndex = 20
+        Me.tb_CurrentSpAtk.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'tb_PlannedSpAtk
         '
         Me.tb_PlannedSpAtk.Location = New System.Drawing.Point(96, 160)
+        Me.tb_PlannedSpAtk.MaxLength = 3
         Me.tb_PlannedSpAtk.Name = "tb_PlannedSpAtk"
         Me.tb_PlannedSpAtk.Size = New System.Drawing.Size(100, 20)
         Me.tb_PlannedSpAtk.TabIndex = 13
+        Me.tb_PlannedSpAtk.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label7
         '
@@ -325,16 +348,20 @@ Partial Class form_main
         'tb_CurrentDef
         '
         Me.tb_CurrentDef.Location = New System.Drawing.Point(202, 134)
+        Me.tb_CurrentDef.MaxLength = 3
         Me.tb_CurrentDef.Name = "tb_CurrentDef"
         Me.tb_CurrentDef.Size = New System.Drawing.Size(100, 20)
         Me.tb_CurrentDef.TabIndex = 19
+        Me.tb_CurrentDef.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'tb_PlannedDef
         '
         Me.tb_PlannedDef.Location = New System.Drawing.Point(96, 134)
+        Me.tb_PlannedDef.MaxLength = 3
         Me.tb_PlannedDef.Name = "tb_PlannedDef"
         Me.tb_PlannedDef.Size = New System.Drawing.Size(100, 20)
         Me.tb_PlannedDef.TabIndex = 12
+        Me.tb_PlannedDef.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label6
         '
@@ -348,16 +375,20 @@ Partial Class form_main
         'tb_CurrentAtk
         '
         Me.tb_CurrentAtk.Location = New System.Drawing.Point(202, 108)
+        Me.tb_CurrentAtk.MaxLength = 3
         Me.tb_CurrentAtk.Name = "tb_CurrentAtk"
         Me.tb_CurrentAtk.Size = New System.Drawing.Size(100, 20)
         Me.tb_CurrentAtk.TabIndex = 18
+        Me.tb_CurrentAtk.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'tb_PlannedAtk
         '
         Me.tb_PlannedAtk.Location = New System.Drawing.Point(96, 108)
+        Me.tb_PlannedAtk.MaxLength = 3
         Me.tb_PlannedAtk.Name = "tb_PlannedAtk"
         Me.tb_PlannedAtk.Size = New System.Drawing.Size(100, 20)
         Me.tb_PlannedAtk.TabIndex = 11
+        Me.tb_PlannedAtk.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label5
         '
@@ -389,16 +420,20 @@ Partial Class form_main
         'tb_CurrentHP
         '
         Me.tb_CurrentHP.Location = New System.Drawing.Point(202, 82)
+        Me.tb_CurrentHP.MaxLength = 3
         Me.tb_CurrentHP.Name = "tb_CurrentHP"
         Me.tb_CurrentHP.Size = New System.Drawing.Size(100, 20)
         Me.tb_CurrentHP.TabIndex = 17
+        Me.tb_CurrentHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'tb_PlannedHP
         '
         Me.tb_PlannedHP.Location = New System.Drawing.Point(96, 82)
+        Me.tb_PlannedHP.MaxLength = 3
         Me.tb_PlannedHP.Name = "tb_PlannedHP"
         Me.tb_PlannedHP.Size = New System.Drawing.Size(100, 20)
         Me.tb_PlannedHP.TabIndex = 10
+        Me.tb_PlannedHP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label2
         '
@@ -658,17 +693,6 @@ Partial Class form_main
         Me.btn_addNewPok.TabIndex = 2
         Me.btn_addNewPok.Text = "+"
         Me.btn_addNewPok.UseVisualStyleBackColor = True
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(164, 6)
-        '
-        'EXITToolStripMenuItem
-        '
-        Me.EXITToolStripMenuItem.Name = "EXITToolStripMenuItem"
-        Me.EXITToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
-        Me.EXITToolStripMenuItem.Text = "EXIT"
         '
         'form_main
         '
