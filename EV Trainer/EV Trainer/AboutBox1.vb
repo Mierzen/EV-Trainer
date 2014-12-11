@@ -23,6 +23,9 @@
 
         Me.TextBoxDescription2.Text = "Please report any issues "
         Me.TextBoxDescription2.InsertLink("here", "http://github.com/Mierzen/EV-Trainer/issues", Me.TextBoxDescription2.TextLength)
+
+        AddHandler Me.TextBoxDescription.LinkClicked, AddressOf Link_Clicked
+        AddHandler Me.TextBoxDescription2.LinkClicked, AddressOf Link_Clicked
     End Sub
 
     Private Sub OKButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OKButton.Click
@@ -33,5 +36,10 @@
         Dim disclaimer As String
         disclaimer = "Not affiliated with Nintendo or The Pokémon Company." & vbNewLine & "This is a fan-made app for other fans of the Pokémon series to use while playing the game." & vbNewLine & vbNewLine & "All Pokémon references used in this app are copyright to their respective owners and usage of this information falls within US Copyright law guidelines of ""Fair Use"" and equivalent in other jurisdictions." & vbNewLine & "Pokémon, Pokémon character names and other references are trademark of Nintendo. © 2014 Pokémon. © 1995-2014 Nintendo/Creatures Inc./GAME FREAK inc."
         MsgBox(disclaimer, MsgBoxStyle.OkOnly Or MsgBoxStyle.Information, "Disclaimer")
+    End Sub
+
+    Private Sub Link_Clicked(ByVal sender As Object, ByVal e As System.Windows.Forms.LinkClickedEventArgs)
+        Dim UrlLink = Split(e.LinkText, "#")
+        If UrlLink.Length > 1 Then System.Diagnostics.Process.Start(UrlLink(1)) 'System.Diagnostics.Process.Start("IEXPLORE.EXE", UrlLink(1))
     End Sub
 End Class
