@@ -1,4 +1,8 @@
-﻿Public NotInheritable Class AboutBox1
+﻿Imports System.Net
+Imports System.IO
+
+Public NotInheritable Class AboutBox1
+    Dim latestVersion As String
 
     Private Sub AboutBox1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         ' Set the title of the form.
@@ -26,6 +30,8 @@
 
         AddHandler Me.TextBoxDescription.LinkClicked, AddressOf Link_Clicked
         AddHandler Me.TextBoxDescription2.LinkClicked, AddressOf Link_Clicked
+
+        updateCheck()
     End Sub
 
     Private Sub OKButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OKButton.Click
@@ -41,5 +47,31 @@
     Private Sub Link_Clicked(ByVal sender As Object, ByVal e As System.Windows.Forms.LinkClickedEventArgs)
         Dim UrlLink = Split(e.LinkText, "#")
         If UrlLink.Length > 1 Then System.Diagnostics.Process.Start(UrlLink(1)) 'System.Diagnostics.Process.Start("IEXPLORE.EXE", UrlLink(1))
+    End Sub
+
+    Private Async Sub updateCheck()
+        Dim clientVersion As String = My.Application.Info.Version.ToString
+
+        Dim callVersioinCheck As String = Await getVersion()
+
+        If latestVersion <> clientVersion Then
+            MsgBox("update me")
+        End If
+    End Sub
+
+    Private Async Function getVersion() As Task(Of String)
+        Dim webclient As New WebClient
+
+        Dim url As Uri = New Uri("http://pastebin.com/raw.php?i=dEsgeNEk")
+
+        AddHandler webclient.DownloadStringCompleted, AddressOf webClient_DownloadStringCompleted
+
+        webclient.DownloadStringAsync(url)
+
+        Return "garbage"
+    End Function
+
+    Private Sub webClient_DownloadStringCompleted(ByVal sender As Object, ByVal e As DownloadStringCompletedEventArgs)
+        latestVersion = e.Result
     End Sub
 End Class
