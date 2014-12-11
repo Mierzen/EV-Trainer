@@ -19,7 +19,7 @@ Partial Class AboutBox1
     Friend WithEvents LabelProductName As System.Windows.Forms.Label
     Friend WithEvents LabelVersion As System.Windows.Forms.Label
     Friend WithEvents LabelCompanyName As System.Windows.Forms.Label
-    Friend WithEvents TextBoxDescription As System.Windows.Forms.TextBox
+    Friend WithEvents TextBoxDescription As RichTextBoxLinks.RichTextBoxNew
     Friend WithEvents OKButton As System.Windows.Forms.Button
     Friend WithEvents LabelCopyright As System.Windows.Forms.Label
 
@@ -38,8 +38,8 @@ Partial Class AboutBox1
         Me.LabelVersion = New System.Windows.Forms.Label()
         Me.LabelCopyright = New System.Windows.Forms.Label()
         Me.LabelCompanyName = New System.Windows.Forms.Label()
-        Me.TextBoxDescription = New System.Windows.Forms.TextBox()
         Me.OKButton = New System.Windows.Forms.Button()
+        Me.TextBoxDescription = New EV_Trainer.RichTextBoxLinks.RichTextBoxNew()
         Me.TableLayoutPanel.SuspendLayout()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -129,20 +129,6 @@ Partial Class AboutBox1
         Me.LabelCompanyName.Text = "Company Name"
         Me.LabelCompanyName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBoxDescription
-        '
-        Me.TextBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBoxDescription.Location = New System.Drawing.Point(136, 103)
-        Me.TextBoxDescription.Margin = New System.Windows.Forms.Padding(6, 3, 3, 3)
-        Me.TextBoxDescription.Multiline = True
-        Me.TextBoxDescription.Name = "TextBoxDescription"
-        Me.TextBoxDescription.ReadOnly = True
-        Me.TextBoxDescription.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBoxDescription.Size = New System.Drawing.Size(257, 123)
-        Me.TextBoxDescription.TabIndex = 0
-        Me.TextBoxDescription.TabStop = False
-        Me.TextBoxDescription.Text = resources.GetString("TextBoxDescription.Text")
-        '
         'OKButton
         '
         Me.OKButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -152,6 +138,19 @@ Partial Class AboutBox1
         Me.OKButton.Size = New System.Drawing.Size(75, 23)
         Me.OKButton.TabIndex = 0
         Me.OKButton.Text = "&OK"
+        '
+        'TextBoxDescription
+        '
+        Me.TextBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBoxDescription.Location = New System.Drawing.Point(136, 103)
+        Me.TextBoxDescription.Margin = New System.Windows.Forms.Padding(6, 3, 3, 3)
+        Me.TextBoxDescription.Name = "TextBoxDescription"
+        Me.TextBoxDescription.ReadOnly = True
+        Me.TextBoxDescription.Size = New System.Drawing.Size(257, 123)
+        Me.TextBoxDescription.TabIndex = 0
+        Me.TextBoxDescription.TabStop = False
+        Me.TextBoxDescription.Text = resources.GetString("TextBoxDescription.Text")
         '
         'AboutBox1
         '
@@ -169,7 +168,6 @@ Partial Class AboutBox1
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "AboutBox1"
         Me.TableLayoutPanel.ResumeLayout(False)
-        Me.TableLayoutPanel.PerformLayout()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
