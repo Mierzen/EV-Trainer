@@ -1287,4 +1287,8 @@
     Private Sub EXITToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EXITToolStripMenuItem.Click
         Me.Close()
     End Sub
+
+    Private Sub ABOUTToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ABOUTToolStripMenuItem.Click
+        AboutBox1.Show()
+    End Sub
 End Class
