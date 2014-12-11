@@ -481,6 +481,7 @@ Partial Class form_main
         Me.chk_clear.Size = New System.Drawing.Size(76, 33)
         Me.chk_clear.TabIndex = 13
         Me.chk_clear.Text = "Clear after adding?"
+        Me.tooltip_main_form.SetToolTip(Me.chk_clear, "Clear the selected Pokémon after adding its effort values")
         Me.chk_clear.UseVisualStyleBackColor = True
         '
         'panel_battleBtns
@@ -506,6 +507,7 @@ Partial Class form_main
         Me.btn_5.Size = New System.Drawing.Size(32, 23)
         Me.btn_5.TabIndex = 2
         Me.btn_5.Text = "× 5"
+        Me.tooltip_main_form.SetToolTip(Me.btn_5, "Add the effort values from five battled Pokémon")
         Me.btn_5.UseVisualStyleBackColor = True
         '
         'btn_2
@@ -517,6 +519,7 @@ Partial Class form_main
         Me.btn_2.Size = New System.Drawing.Size(32, 23)
         Me.btn_2.TabIndex = 1
         Me.btn_2.Text = "× 2"
+        Me.tooltip_main_form.SetToolTip(Me.btn_2, "Add the effort values from two battled Pokémon")
         Me.btn_2.UseVisualStyleBackColor = True
         '
         'btn_1
@@ -528,6 +531,7 @@ Partial Class form_main
         Me.btn_1.Size = New System.Drawing.Size(32, 23)
         Me.btn_1.TabIndex = 0
         Me.btn_1.Text = "× 1"
+        Me.tooltip_main_form.SetToolTip(Me.btn_1, "Add the effort values from one battled Pokémon")
         Me.btn_1.UseVisualStyleBackColor = True
         '
         'lb_EnemySpd
@@ -662,6 +666,7 @@ Partial Class form_main
         Me.cmb_enemy.Name = "cmb_enemy"
         Me.cmb_enemy.Size = New System.Drawing.Size(293, 21)
         Me.cmb_enemy.TabIndex = 0
+        Me.tooltip_main_form.SetToolTip(Me.cmb_enemy, "Select the Pokémon that you are battling against")
         '
         'ContextMenuStrip_EnemyList
         '
@@ -695,6 +700,7 @@ Partial Class form_main
         Me.btn_addNewPok.Size = New System.Drawing.Size(24, 21)
         Me.btn_addNewPok.TabIndex = 2
         Me.btn_addNewPok.Text = "+"
+        Me.tooltip_main_form.SetToolTip(Me.btn_addNewPok, "Add new Pokémon")
         Me.btn_addNewPok.UseVisualStyleBackColor = True
         '
         'tooltip_main_form

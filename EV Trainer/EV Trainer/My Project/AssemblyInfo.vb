@@ -9,7 +9,7 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("EV Trainer")> 
-<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyDescription("Easily track and manage your Pokémon effort values!")> 
 <Assembly: AssemblyCompany("")> 
 <Assembly: AssemblyProduct("EV Trainer")> 
 <Assembly: AssemblyCopyright("Copyright ©  2014")> 
