@@ -32,7 +32,6 @@ Partial Class form_main
         Me.DELETESAVEFILEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.EXITToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ABOUTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.gb_TrainingPok = New System.Windows.Forms.GroupBox()
         Me.rd_252 = New System.Windows.Forms.RadioButton()
@@ -111,11 +110,12 @@ Partial Class form_main
         Me.cmb_SelectedPok.Name = "cmb_SelectedPok"
         Me.cmb_SelectedPok.Size = New System.Drawing.Size(189, 21)
         Me.cmb_SelectedPok.TabIndex = 1
+        Me.tooltip_main_form.SetToolTip(Me.cmb_SelectedPok, "Select Pokémon being trained")
         '
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ControlLight
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FILEToolStripMenuItem, Me.ToolStripMenuItem1, Me.ABOUTToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FILEToolStripMenuItem, Me.ABOUTToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(346, 24)
@@ -157,12 +157,6 @@ Partial Class form_main
         Me.EXITToolStripMenuItem.Name = "EXITToolStripMenuItem"
         Me.EXITToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
         Me.EXITToolStripMenuItem.Text = "EXIT"
-        '
-        'ToolStripMenuItem1
-        '
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(47, 20)
-        Me.ToolStripMenuItem1.Text = "HELP"
         '
         'ABOUTToolStripMenuItem
         '
@@ -507,7 +501,8 @@ Partial Class form_main
         Me.btn_5.Size = New System.Drawing.Size(32, 23)
         Me.btn_5.TabIndex = 2
         Me.btn_5.Text = "× 5"
-        Me.tooltip_main_form.SetToolTip(Me.btn_5, "Add the effort values from five battled Pokémon")
+        Me.tooltip_main_form.SetToolTip(Me.btn_5, "Add the effort values from five battled Pokémon." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Left click to add" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Right clic" & _
+        "k to remove")
         Me.btn_5.UseVisualStyleBackColor = True
         '
         'btn_2
@@ -519,7 +514,8 @@ Partial Class form_main
         Me.btn_2.Size = New System.Drawing.Size(32, 23)
         Me.btn_2.TabIndex = 1
         Me.btn_2.Text = "× 2"
-        Me.tooltip_main_form.SetToolTip(Me.btn_2, "Add the effort values from two battled Pokémon")
+        Me.tooltip_main_form.SetToolTip(Me.btn_2, "Add the effort values from two battled Pokémon." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Left click to add" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Right click" & _
+        " to remove")
         Me.btn_2.UseVisualStyleBackColor = True
         '
         'btn_1
@@ -531,7 +527,8 @@ Partial Class form_main
         Me.btn_1.Size = New System.Drawing.Size(32, 23)
         Me.btn_1.TabIndex = 0
         Me.btn_1.Text = "× 1"
-        Me.tooltip_main_form.SetToolTip(Me.btn_1, "Add the effort values from one battled Pokémon")
+        Me.tooltip_main_form.SetToolTip(Me.btn_1, "Add the effort values from one battled Pokémon." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Left click to add" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Right click" & _
+        " to remove")
         Me.btn_1.UseVisualStyleBackColor = True
         '
         'lb_EnemySpd
@@ -741,7 +738,6 @@ Partial Class form_main
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents cmb_SelectedPok As System.Windows.Forms.ComboBox
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
-    Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ABOUTToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents FILEToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SAVEToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
