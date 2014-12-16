@@ -46,7 +46,7 @@ Public NotInheritable Class AboutBox1
 
     Private Sub Link_Clicked(ByVal sender As Object, ByVal e As System.Windows.Forms.LinkClickedEventArgs)
         Dim UrlLink = Split(e.LinkText, "#")
-        If UrlLink.Length > 1 Then System.Diagnostics.Process.Start(UrlLink(1)) 'System.Diagnostics.Process.Start("IEXPLORE.EXE", UrlLink(1))
+        If UrlLink.Length > 1 Then System.Diagnostics.Process.Start(UrlLink(1))
     End Sub
 
     Private Sub updateCheck()
@@ -61,7 +61,8 @@ Public NotInheritable Class AboutBox1
 
             If latestVersion <> clientVersion AndAlso latestVersion <> Nothing Then
                 form_main.NotifyIcon1.BalloonTipTitle = "An update is available!"
-                form_main.NotifyIcon1.BalloonTipText = "Your version: " & clientVersion & vbNewLine & "Latest versioin: " & latestVersion
+                form_main.NotifyIcon1.BalloonTipText = "Your version: " & clientVersion & vbNewLine & "Latest version: " & latestVersion
+                form_main.NotifyIcon1.BalloonTipText &= vbNewLine & vbNewLine & "Click here to update."
                 form_main.NotifyIcon1.Visible = True
                 form_main.NotifyIcon1.ShowBalloonTip(3000)
             End If

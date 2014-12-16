@@ -1291,4 +1291,9 @@
     Private Sub ABOUTToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ABOUTToolStripMenuItem.Click
         AboutBox1.Show()
     End Sub
+
+    Private Sub NotifyIcon1_BalloonTipClicked(sender As Object, e As EventArgs) Handles NotifyIcon1.BalloonTipClicked
+        Dim UrlLink = "https://github.com/Mierzen/EV-Trainer/releases"
+        System.Diagnostics.Process.Start(UrlLink)
+    End Sub
 End Class
