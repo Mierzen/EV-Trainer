@@ -49,29 +49,23 @@ Public NotInheritable Class AboutBox1
         If UrlLink.Length > 1 Then System.Diagnostics.Process.Start(UrlLink(1)) 'System.Diagnostics.Process.Start("IEXPLORE.EXE", UrlLink(1))
     End Sub
 
-    Private Async Sub updateCheck()
+    Private Sub updateCheck()
         Dim clientVersion As String = My.Application.Info.Version.ToString
 
-        Dim callVersioinCheck As String = Await getVersion()
-
-        If latestVersion <> clientVersion Then
-            MsgBox("update me")
-        End If
-    End Sub
-
-    Private Async Function getVersion() As Task(Of String)
         Dim webclient As New WebClient
 
         Dim url As Uri = New Uri("http://pastebin.com/raw.php?i=dEsgeNEk")
 
-        AddHandler webclient.DownloadStringCompleted, AddressOf webClient_DownloadStringCompleted
+        Try
+            latestVersion = webclient.DownloadString(url)
 
-        webclient.DownloadStringAsync(url)
-
-        Return "garbage"
-    End Function
-
-    Private Sub webClient_DownloadStringCompleted(ByVal sender As Object, ByVal e As DownloadStringCompletedEventArgs)
-        latestVersion = e.Result
+            If latestVersion <> clientVersion AndAlso latestVersion <> Nothing Then
+                form_main.NotifyIcon1.BalloonTipTitle = "An update is available!"
+                form_main.NotifyIcon1.BalloonTipText = "Your version: " & clientVersion & vbNewLine & "Latest versioin: " & latestVersion
+                form_main.NotifyIcon1.Visible = True
+                form_main.NotifyIcon1.ShowBalloonTip(3000)
+            End If
+        Catch ex As Exception
+        End Try
     End Sub
 End Class

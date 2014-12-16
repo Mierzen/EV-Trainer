@@ -87,6 +87,7 @@ Partial Class form_main
         Me.NameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.btn_addNewPok = New System.Windows.Forms.Button()
         Me.tooltip_main_form = New System.Windows.Forms.ToolTip(Me.components)
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.gb_TrainingPok.SuspendLayout()
         Me.gb_enemy.SuspendLayout()
@@ -707,6 +708,14 @@ Partial Class form_main
         Me.tooltip_main_form.InitialDelay = 300
         Me.tooltip_main_form.ReshowDelay = 100
         '
+        'NotifyIcon1
+        '
+        Me.NotifyIcon1.BalloonTipText = "text"
+        Me.NotifyIcon1.BalloonTipTitle = "title"
+        Me.NotifyIcon1.Icon = CType(resources.GetObject("NotifyIcon1.Icon"), System.Drawing.Icon)
+        Me.NotifyIcon1.Text = "NotifyIcon1"
+        Me.NotifyIcon1.Visible = True
+        '
         'form_main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -800,5 +809,6 @@ Partial Class form_main
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents EXITToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents tooltip_main_form As System.Windows.Forms.ToolTip
+    Friend WithEvents NotifyIcon1 As System.Windows.Forms.NotifyIcon
 
 End Class

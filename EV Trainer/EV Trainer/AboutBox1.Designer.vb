@@ -32,14 +32,14 @@ Partial Class AboutBox1
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AboutBox1))
         Me.TableLayoutPanel = New System.Windows.Forms.TableLayoutPanel()
-        Me.TextBoxDescription2 = New EV_Trainer.RichTextBoxLinks.RichTextBoxNew()
         Me.LogoPictureBox = New System.Windows.Forms.PictureBox()
         Me.LabelProductName = New System.Windows.Forms.Label()
         Me.LabelVersion = New System.Windows.Forms.Label()
         Me.LabelCopyright = New System.Windows.Forms.Label()
-        Me.TextBoxDescription = New EV_Trainer.RichTextBoxLinks.RichTextBoxNew()
         Me.OKButton = New System.Windows.Forms.Button()
         Me.btn_disclaimer = New System.Windows.Forms.Button()
+        Me.TextBoxDescription2 = New EV_Trainer.RichTextBoxLinks.RichTextBoxNew()
+        Me.TextBoxDescription = New EV_Trainer.RichTextBoxLinks.RichTextBoxNew()
         Me.TableLayoutPanel.SuspendLayout()
         CType(Me.LogoPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -69,21 +69,6 @@ Partial Class AboutBox1
         Me.TableLayoutPanel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34.0!))
         Me.TableLayoutPanel.Size = New System.Drawing.Size(396, 258)
         Me.TableLayoutPanel.TabIndex = 0
-        '
-        'TextBoxDescription2
-        '
-        Me.TextBoxDescription2.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBoxDescription2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBoxDescription2.Location = New System.Drawing.Point(136, 140)
-        Me.TextBoxDescription2.Margin = New System.Windows.Forms.Padding(6, 0, 3, 3)
-        Me.TextBoxDescription2.Name = "TextBoxDescription2"
-        Me.TextBoxDescription2.ReadOnly = True
-        Me.TextBoxDescription2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.TextBoxDescription2.Size = New System.Drawing.Size(257, 37)
-        Me.TextBoxDescription2.TabIndex = 0
-        Me.TextBoxDescription2.TabStop = False
-        Me.TextBoxDescription2.Text = "sample text sample text sample text sample text sample text sample text sample te" & _
-    "xt "
         '
         'LogoPictureBox
         '
@@ -133,20 +118,6 @@ Partial Class AboutBox1
         Me.LabelCopyright.Text = "Copyright"
         Me.LabelCopyright.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'TextBoxDescription
-        '
-        Me.TextBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TextBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBoxDescription.Location = New System.Drawing.Point(136, 82)
-        Me.TextBoxDescription.Margin = New System.Windows.Forms.Padding(6, 3, 3, 0)
-        Me.TextBoxDescription.Name = "TextBoxDescription"
-        Me.TextBoxDescription.ReadOnly = True
-        Me.TextBoxDescription.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
-        Me.TextBoxDescription.Size = New System.Drawing.Size(257, 58)
-        Me.TextBoxDescription.TabIndex = 0
-        Me.TextBoxDescription.TabStop = False
-        Me.TextBoxDescription.Text = resources.GetString("TextBoxDescription.Text")
-        '
         'OKButton
         '
         Me.OKButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -165,6 +136,35 @@ Partial Class AboutBox1
         Me.btn_disclaimer.TabIndex = 1
         Me.btn_disclaimer.Text = "Disclaimer"
         Me.btn_disclaimer.UseVisualStyleBackColor = True
+        '
+        'TextBoxDescription2
+        '
+        Me.TextBoxDescription2.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxDescription2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBoxDescription2.Location = New System.Drawing.Point(136, 140)
+        Me.TextBoxDescription2.Margin = New System.Windows.Forms.Padding(6, 0, 3, 3)
+        Me.TextBoxDescription2.Name = "TextBoxDescription2"
+        Me.TextBoxDescription2.ReadOnly = True
+        Me.TextBoxDescription2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.TextBoxDescription2.Size = New System.Drawing.Size(257, 37)
+        Me.TextBoxDescription2.TabIndex = 0
+        Me.TextBoxDescription2.TabStop = False
+        Me.TextBoxDescription2.Text = "sample text sample text sample text sample text sample text sample text sample te" & _
+    "xt "
+        '
+        'TextBoxDescription
+        '
+        Me.TextBoxDescription.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TextBoxDescription.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBoxDescription.Location = New System.Drawing.Point(136, 82)
+        Me.TextBoxDescription.Margin = New System.Windows.Forms.Padding(6, 3, 3, 0)
+        Me.TextBoxDescription.Name = "TextBoxDescription"
+        Me.TextBoxDescription.ReadOnly = True
+        Me.TextBoxDescription.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None
+        Me.TextBoxDescription.Size = New System.Drawing.Size(257, 58)
+        Me.TextBoxDescription.TabIndex = 0
+        Me.TextBoxDescription.TabStop = False
+        Me.TextBoxDescription.Text = resources.GetString("TextBoxDescription.Text")
         '
         'AboutBox1
         '
