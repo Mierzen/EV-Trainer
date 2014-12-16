@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("Easily track and manage your Pokémon effort values!")> 
 <Assembly: AssemblyCompany("")> 
 <Assembly: AssemblyProduct("EV Trainer")> 
-<Assembly: AssemblyCopyright("Copyright ©  2014")> 
+<Assembly: AssemblyCopyright("Copyright ©  2014  Stéphan Taljaard")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
