@@ -1177,6 +1177,13 @@
     End Sub
 
     Private Sub newPok()
+        If isDirty = True Then
+            testAndSave(cmb_SelectedPok.Text, False, True)
+            If saveWasCancelled = True Then
+                Exit Sub
+            End If
+        End If
+
         Dim newPok As String = Nothing
         Dim hasFailed As Boolean = True
 
