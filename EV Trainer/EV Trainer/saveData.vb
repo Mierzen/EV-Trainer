@@ -46,13 +46,13 @@ Module saveData
                 "MaxEV=" & If(form_main.rd_255.Checked = True, "255", "252") & vbNewLine
 
         For Each tb In form_main.gb_TrainingPok.Controls.OfType(Of TextBox)()
-            str += Right(tb.Name.ToString, Len(tb.Name.ToString) - Len("tb_")) & "=" & Val(tb.Text) & vbNewLine
+            str &= Right(tb.Name.ToString, Len(tb.Name.ToString) - Len("tb_")) & "=" & Val(tb.Text) & vbNewLine
         Next
 
         Dim tableBattleRows As Integer = form_main.tableBattled.Rows.Count
         If tableBattleRows <> 0 Then
             For i = 0 To tableBattleRows - 1
-                str += "B=" & form_main.tableBattled.Rows(i).Item("Pokédex #") & "," & form_main.tableBattled.Rows(i).Item("Pokémon battled") & "^" & form_main.tableBattled.Rows(i).Item("Count") & vbNewLine
+                str &= "B=" & form_main.tableBattled.Rows(i).Item("Pokédex #") & "," & form_main.tableBattled.Rows(i).Item("Pokémon battled") & "^" & form_main.tableBattled.Rows(i).Item("Count") & vbNewLine
             Next
         End If
 

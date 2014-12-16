@@ -1106,8 +1106,6 @@
             Exit Sub
         End If
 
-        'Dim currentPok As String = cmb_SelectedPok.Text
-
         Dim askResult As MsgBoxResult
         If shouldAskToSave = True Then
             askResult = saveData.askSave(pokToCheck)
@@ -1139,12 +1137,6 @@
 
     Private Sub cmb_SelectedPok_Enter(sender As Object, e As EventArgs) Handles cmb_SelectedPok.Enter
         previousPok = cmb_SelectedPok.Text
-
-        'If cmb_SelectedPok.Items.Count = 0 Then
-        '    cmb_SelectedPok.Items.Add(InputBox("No Pokémon being trained has been added yet." & vbNewLine & vbNewLine & "Please enter the name of your first Pokémon.", "Enter Pokémon name"))
-        'End If
-
-        'saveData.trainPokemonList()
     End Sub
 
     Private Sub btn_addNewPok_Click(sender As Object, e As EventArgs) Handles btn_addNewPok.Click

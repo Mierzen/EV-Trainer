@@ -13,17 +13,14 @@ Public NotInheritable Class AboutBox1
             ApplicationTitle = System.IO.Path.GetFileNameWithoutExtension(My.Application.Info.AssemblyName)
         End If
         Me.Text = String.Format("About {0}", ApplicationTitle)
-        ' Initialize all of the text displayed on the About Box.
-        ' TODO: Customize the application's assembly information in the "Application" pane of the project 
-        '    properties dialog (under the "Project" menu).
+
         Me.LabelProductName.Text = My.Application.Info.ProductName
         Me.LabelVersion.Text = String.Format("Version {0}", My.Application.Info.Version.ToString)
         Me.LabelCopyright.Text = My.Application.Info.Copyright
         Me.TextBoxDescription.Text = My.Application.Info.Description & vbNewLine & vbNewLine & vbNewLine
 
-        Me.TextBoxDescription.Text += "Feel free to "
+        Me.TextBoxDescription.Text &= "Feel free to "
         Me.TextBoxDescription.InsertLink("contribute", "http://github.com/Mierzen/EV-Trainer", Me.TextBoxDescription.TextLength)
-        'Me.TextBoxDescription.Text += "!"
 
         Me.TextBoxDescription2.Text = "Please report any issues "
         Me.TextBoxDescription2.InsertLink("here", "http://github.com/Mierzen/EV-Trainer/issues", Me.TextBoxDescription2.TextLength)
