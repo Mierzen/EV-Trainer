@@ -54,7 +54,7 @@ Public NotInheritable Class AboutBox1
 
         Dim webclient As New WebClient
 
-        Dim url As Uri = New Uri("http://pastebin.com/raw.php?i=dEsgeNEk")
+        Dim url As Uri = New Uri("https://raw.githubusercontent.com/Mierzen/EV-Trainer/master/latestVersion.txt")
 
         Try
             latestVersion = webclient.DownloadString(url)
