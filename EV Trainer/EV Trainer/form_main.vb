@@ -5,6 +5,7 @@
     Dim isDirty As Boolean
     Dim saveWasCancelled As Boolean = False
     Dim newHasBeenAdded As Boolean = False
+    Dim previousBattled As String = Nothing
 
     Private Sub form_main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SuspendLayout()
@@ -891,6 +892,11 @@
         playSound()
         SuspendLayout()
 
+        previousBattled = ""
+        tooltip_main_form.SetToolTip(gb_enemy, "")
+        previousBattled = cmb_SelectedPok.Text & ":" & vbNewLine & vbNewLine
+        previousBattled &= Strings.Right((System.DateTime.Now).ToString, 8) & "⇝   "
+
         If action = "add" Then
             tb_CurrentHP.Text = Val(tb_CurrentHP.Text) + CInt(lb_EnemyHP.Text) * enemyCount
             tb_CurrentAtk.Text = Val(tb_CurrentAtk.Text) + CInt(lb_EnemyAtk.Text) * enemyCount
@@ -898,6 +904,7 @@
             tb_CurrentSpAtk.Text = Val(tb_CurrentSpAtk.Text) + CInt(lb_EnemySpAtk.Text) * enemyCount
             tb_CurrentSpDef.Text = Val(tb_CurrentSpDef.Text) + CInt(lb_EnemySpDef.Text) * enemyCount
             tb_CurrentSpd.Text = Val(tb_CurrentSpd.Text) + CInt(lb_EnemySpd.Text) * enemyCount
+            previousBattled &= "+"
         ElseIf action = "subtract" Then
             tb_CurrentHP.Text = Val(tb_CurrentHP.Text) - CInt(lb_EnemyHP.Text) * enemyCount
             tb_CurrentAtk.Text = Val(tb_CurrentAtk.Text) - CInt(lb_EnemyAtk.Text) * enemyCount
@@ -905,7 +912,11 @@
             tb_CurrentSpAtk.Text = Val(tb_CurrentSpAtk.Text) - CInt(lb_EnemySpAtk.Text) * enemyCount
             tb_CurrentSpDef.Text = Val(tb_CurrentSpDef.Text) - CInt(lb_EnemySpDef.Text) * enemyCount
             tb_CurrentSpd.Text = Val(tb_CurrentSpd.Text) - CInt(lb_EnemySpd.Text) * enemyCount
+            previousBattled &= "-"
         End If
+
+        previousBattled &= enemy & "×" & enemyCount
+        tooltip_main_form.SetToolTip(gb_enemy, previousBattled)
 
         enemyHistoryEdit(action, enemy, enemyCount)
 
