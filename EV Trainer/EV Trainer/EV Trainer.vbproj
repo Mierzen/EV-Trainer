@@ -144,6 +144,39 @@
   <ItemGroup>
     <None Include="Resources\110619_DW_Dream_Catalogue.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magic4.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Magic13.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Magic14.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Magic15.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Magic16.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magic20.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magic22.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magic27.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magic37.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\magic142.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Notification.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

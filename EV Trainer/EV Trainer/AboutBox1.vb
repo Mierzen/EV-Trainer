@@ -62,6 +62,8 @@ Public NotInheritable Class AboutBox1
                 form_main.NotifyIcon1.BalloonTipText &= vbNewLine & vbNewLine & "Click here to update."
                 form_main.NotifyIcon1.Visible = True
                 form_main.NotifyIcon1.ShowBalloonTip(3000)
+
+                My.Computer.Audio.Play(My.Resources.Notification, AudioPlayMode.Background)
             End If
         Catch ex As Exception
         End Try

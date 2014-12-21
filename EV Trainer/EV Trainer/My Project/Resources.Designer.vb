@@ -69,5 +69,104 @@ Namespace My.Resources
                 Return CType(obj,System.Drawing.Icon)
             End Get
         End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property Magic13() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Magic13", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property Magic14() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Magic14", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property magic142() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("magic142", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property Magic15() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Magic15", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property Magic16() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Magic16", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property magic20() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("magic20", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property magic22() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("magic22", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property magic27() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("magic27", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property magic37() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("magic37", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property magic4() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("magic4", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        '''</summary>
+        Friend ReadOnly Property Notification() As System.IO.UnmanagedMemoryStream
+            Get
+                Return ResourceManager.GetStream("Notification", resourceCulture)
+            End Get
+        End Property
     End Module
 End Namespace

@@ -888,6 +888,7 @@
             Exit Sub
         End If
 
+        playSound()
         SuspendLayout()
 
         If action = "add" Then
@@ -1294,5 +1295,36 @@
     Private Sub NotifyIcon1_BalloonTipClicked(sender As Object, e As EventArgs) Handles NotifyIcon1.BalloonTipClicked
         Dim UrlLink = "https://github.com/Mierzen/EV-Trainer/releases"
         System.Diagnostics.Process.Start(UrlLink)
+    End Sub
+
+    Private Sub playSound() 'sounds taken from http://www.pokecommunity.com/showthread.php?t=286879
+        Dim randomValue As Integer = CInt(Int((10 * Rnd()) + 1))
+
+        Select Case randomValue
+
+            Case 1
+                My.Computer.Audio.Play(My.Resources.Magic13, AudioPlayMode.Background)
+            Case 2
+                My.Computer.Audio.Play(My.Resources.Magic14, AudioPlayMode.Background)
+            Case 3
+                My.Computer.Audio.Play(My.Resources.magic142, AudioPlayMode.Background)
+            Case 4
+                My.Computer.Audio.Play(My.Resources.Magic15, AudioPlayMode.Background)
+            Case 5
+                My.Computer.Audio.Play(My.Resources.Magic16, AudioPlayMode.Background)
+            Case 6
+                My.Computer.Audio.Play(My.Resources.magic20, AudioPlayMode.Background)
+            Case 7
+                My.Computer.Audio.Play(My.Resources.magic22, AudioPlayMode.Background)
+            Case 8
+                My.Computer.Audio.Play(My.Resources.magic27, AudioPlayMode.Background)
+            Case 9
+                My.Computer.Audio.Play(My.Resources.magic37, AudioPlayMode.Background)
+            Case 10
+                My.Computer.Audio.Play(My.Resources.magic4, AudioPlayMode.Background)
+
+        End Select
+
+
     End Sub
 End Class
